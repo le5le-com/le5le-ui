@@ -1,0 +1,169 @@
+.button, a.button {
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: .02rem;
+  color: #333;
+  padding: .07rem .12rem;
+  background-color: transparent;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #e0e0e0;
+}
+
+a.button:hover {
+  color: #fff!important;
+}
+
+.button[disabled],.button[disabled]:hover {
+  color: color($color a(85%))!important;
+  background-color: #efefef!important;
+  border: 1px solid #bbb!important;
+  cursor: default;
+}
+
+.button.primary {
+  border: 1px solid $color-main;
+  color: #fff;
+  background-color: color($color-main a(95%));
+}
+
+.button.primary:hover {
+  color: #fff;
+  background-color: $color-main;
+}
+
+.button.primary.border.active {
+  color: #fff;
+  background-color: $color-main;
+}
+
+.button.cyan {
+  border: 1px solid $color-cyan;
+  color: #fff;
+  background-color: color($color-cyan a(95%));
+}
+
+.button.cyan:hover {
+  color: #fff;
+  background-color: $color-cyan;
+}
+
+.button.cyan.border.active {
+  color: #fff;
+  background-color: $color-cyan;
+}
+
+.button.success {
+  border: 1px solid $color-success;
+  color: #fff;
+  background-color: color($color-success a(95%));
+}
+
+.button.success:hover {
+  background-color: $color-success;
+}
+
+.button.warning {
+  border: 1px solid $color-warning;
+  color: #fff;
+  background-color: color($color-warning a(95%));
+}
+
+.button.warning:hover {
+  color: #fff;
+  background-color: $color-warning;
+}
+
+.button.error {
+  border: 1px solid $color-error;
+  color: #fff;
+  background-color: color($color-error a(95%));
+}
+
+.button.error:hover {
+  color: #fff;
+  background-color: $color-error;
+}
+
+.button.weixin {
+  color: #fff;
+  border-color: $color-weixin;
+  background-color: color($color-weixin a(85%));
+}
+
+.button.weixin:hover {
+  background-color: $color-weixin;
+}
+
+.button.qq {
+  color: #fff;
+  border-color: $color-qq;
+  background-color: color($color-qq a(85%));
+}
+
+.button.qq:hover {
+  background-color: $color-qq;
+}
+
+.button.weibo {
+  color: #fff;
+  border-color: $color-weibo;
+  background-color: color($color-weibo a(85%));
+}
+
+.button.weibo:hover {
+  background-color: $color-weibo;
+}
+
+.button.border {
+  color: $color;
+  background-color: transparent;
+}
+
+.button.primary.border {
+  color: $color-main;
+  border: 1px solid $color-main;
+}
+
+.button.primary.border:hover {
+  color: #fff;
+  background-color: $color-main;
+}
+
+.button.weixin.border {
+  color: $color-weixin;
+  border: 1px solid $color-weixin;
+}
+
+.button.weibo.border {
+  color: $color-weibo;
+  border: 1px solid $color-weibo;
+}
+
+.button.weibo.border:hover {
+  color: #fff;
+  background-color: $color-weibo;
+}
+
+.button.weixin.border:hover {
+  color: #fff;
+  background-color: $color-weixin;
+}
+
+.button.radius {
+  padding: .08rem .2rem;
+  border-radius: .2rem;
+}
+
+.button.circle {
+  padding: 0;
+  width: .4rem;
+  height: .4rem;
+  line-height: .4rem;
+  border-radius: 50%;
+}

@@ -1,0 +1,276 @@
+input {
+  padding-left: .06rem;
+  padding-right: .06rem;
+}
+
+.input {
+  padding: .06rem;
+  outline: none;
+  border: 1px solid  $color-input-border;
+  line-height: 1.4;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.input:hover, .input:focus {
+  border-color: color($color-input-border-hover a(70%));
+}
+
+.input:focus {
+  border-color: $color-input-border-hover;
+}
+
+.input:read-only{
+  background-color: #eee;
+}
+
+.input:read-only:hover, .input:read-only:focus{
+  border: 1px solid  $color-input-border;
+}
+
+div.input {
+  display: flex;
+  align-items: center ;
+  background-color: #fff!important;
+}
+
+div.input input {
+  border: none;
+  outline: none;
+  padding: 0;
+  flex-grow: 1;
+}
+
+div.input>i {
+  color: $color-placeholder;
+}
+
+.input-group {
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.input-group .input {
+  padding-left: .3rem;
+  box-sizing: border-box;
+}
+
+.input-group .fa {
+  position: absolute;
+  left: .16rem;
+  font-size: .16rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0,0,0,.55);
+}
+
+.checkbox {
+  vertical-align: middle;
+}
+
+.checkbox input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+input.ng-touched.ng-invalid{
+  border: 1px solid $color-error;
+}
+
+.input-group.captcha {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-group.captcha .input {
+  width: 1.5rem;
+  display: inline-block;
+}
+
+.input-group.captcha .button {
+
+}
+
+.required::after {
+  content: "*";
+  color: #f30;
+  font-size: .2rem;
+  vertical-align: middle;
+  margin: .05rem;
+  position: relative;
+  top: .03rem;
+}
+
+.form {
+  font-size: .14rem;
+}
+
+.form .tip {
+  font-size: .12rem;
+  color: #999;
+}
+
+.form .image-list {
+  display: flex;
+}
+
+.form .image-list .item {
+  height: 2rem;
+  padding: 0!important;
+  position: relative;
+}
+
+.form .image-list .item img {
+  height: 2rem;
+}
+
+.form .image-list .bk {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+
+.form .image-list .bk:hover {
+  opacity: 1;
+}
+
+.form .image-list .bk .fa-close {
+  position: absolute;
+  top: .1rem;
+  right: .1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form .image-list .bk .fa-close:hover {
+  color: $color-main;
+}
+
+.form .image-list .upload-image {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .28rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.form .image-list .upload-image input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2rem;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.checkbox .fa {
+  width: .12rem;
+}
+
+.ui-switch {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  border-radius: 1px;
+  border: 1px solid $color-main;
+  min-width: .8rem;
+  background-color: $color-main;
+  cursor: pointer;
+}
+
+.ui-switch .desc {
+  display: inline-block;
+  width: 50%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.ui-switch.on .desc {
+  float: right;
+}
+
+.ui-switch.off .desc {
+  float: left;
+}
+
+.ui-switch.off {
+  border: 1px solid $color-gray;
+  background-color: $color-gray;
+}
+
+.ui-switch.green {
+  border: 1px solid #080;
+  background-color: #080;
+}
+
+.ui-switch.red {
+  border: 1px solid $color-main;
+  background-color: $color-main;
+}
+
+.panel .bottom.fixed{
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid $color-main;
+  background-color: #fff;
+}
+
+td.td-input{
+  padding: 0;
+}
+
+td.td-input:hover{
+  outline: 1px solid color($color-input-border-hover a(70%));
+}
+
+td.td-input .input{
+  border: none;
+  resize: none;
+  background: transparent;
+  outline: none;
+  border: none!important;
+}
+
+.input.comment textarea {
+  border: none;
+  outline: none;
+}
+
+.input.comment .user {
+  position: absolute;
+  color: #fb8c00;
+  top: .08rem;
+}
+
+.input.comment .user>label {
+  color: $color;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: $color-placeholder;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $color-placeholder;
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: $color-placeholder;
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: $color-placeholder;
+}

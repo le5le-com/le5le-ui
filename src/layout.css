@@ -1,0 +1,15 @@
+.flex {
+  display: flex;
+}
+
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
+.flex.middle {
+  align-items: center ;
+}
+
+.flex .full {
+  flex-grow: 1;
+}

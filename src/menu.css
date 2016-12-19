@@ -1,0 +1,41 @@
+.menu-tree {
+  border-right: 1px solid $color-border;
+  min-height: 5.5rem;
+  width: 2.8rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-top: .1rem;
+  overflow: auto;
+}
+
+.menu-tree ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.menu-tree ul li a{
+  color: #000;
+}
+
+.menu-tree ul li .fa {
+  width: .15rem;
+}
+
+.menu-tree ul li .item.active, .menu-tree ul li .item:hover {
+  color: $color-url-hover;
+}
+
+.menu-tree ul li .item{
+  display: block;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+}
+
+.menu-tree ul li .item.flex{
+  display: flex;
+}
+
+.menu-tree ul li .item.small{
+  padding-top: .07rem;
+  padding-bottom: .07rem;
+}

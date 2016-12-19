@@ -1,0 +1,21 @@
+table {
+  border-spacing: 0;
+}
+
+tr th {
+  text-align: left;
+  padding:  .1rem .12rem;
+  border: 1px solid color($color-border a(80%));
+  border-right: none;
+}
+
+tr th:last-child, tr td:last-child {
+  border-right: 1px solid color($color-border a(80%));
+}
+
+tr td {
+  text-align: left;
+  padding:  .1rem .12rem;
+  border-left: 1px solid color($color-border a(80%));
+  border-bottom: 1px solid color($color-border a(80%));
+}

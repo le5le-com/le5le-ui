@@ -1,0 +1,72 @@
+.cell {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  margin: 0 .2rem;
+  line-height: .4rem;
+}
+
+.cell .label {
+  width: 1rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.cell .primary {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.cell input, .cell select {
+  outline: none;
+  border: none;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.cell input[type="checkbox"] {
+  width: inherit;
+}
+
+.cell select {
+  outline: none;
+  border: none;
+  vertical-align: middle;
+}
+
+.cell .dropdown{
+  top: 0;
+}
+
+.cell .dropdown-container:hover .dropdown{
+  display: block;
+}
+
+.cell.avatar .label{
+  line-height: .5rem;
+}
+
+.cell.avatar input[type="file"]{
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  width: .5rem;
+  height: .5rem;
+  float: right;
+  cursor: pointer;
+}
+
+.cell img {
+  height: .5rem;
+}
+
+.cell .ui-switch {
+  position: relative;
+  top: -.02rem;
+}
+
+.cell.head {
+  padding: 0 .2rem;
+  margin: 0;
+  background-color: #a9a9a9;
+  color: #fff;
+}

@@ -1,0 +1,17 @@
+footer {
+  color: #777;
+  padding: .1rem .2rem;
+  text-align: center;
+  border-top: 1px solid $color-border;
+  background-color: #fff;
+}
+
+footer ul>li {
+  list-style: none;
+  display: inline-block;
+  padding: .05rem .1rem;
+}
+
+footer .copyright {
+  color: #aaa;
+}

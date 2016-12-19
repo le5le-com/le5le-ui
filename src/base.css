@@ -1,0 +1,281 @@
+html {
+  font-size: 100px;
+  font-family: $font-family;
+  line-height: $line-height;
+}
+
+body {
+  font-size: $font-size;
+  color: $color;
+  min-height: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $color-url;
+}
+
+a:hover, .hover:hover {
+  color: $color-url-hover!important;
+}
+
+a.orange {
+  color: $color-orange!important;
+}
+
+a.orange:hover {
+  color: $color-orange-hover!important;
+}
+
+blockquote {
+  border-left: .05rem solid $color-main;
+  background-color: #e1e1e1;
+  padding: .1rem;
+  margin: .1rem;
+}
+
+pre {
+  white-space: pre-line;
+  word-wrap: break-word;
+  word-break: normal;
+  line-height: 1.5;
+  margin: 0;
+}
+
+textarea, table {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 移除上下小箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+input[type="number"]{
+  -moz-appearance:textfield;
+}
+
+.abs {
+  position: absolute;
+}
+
+.rel {
+  position: relative;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.clearfix{
+  overflow:hidden;
+  _zoom:1;
+}
+.clearfix:after {
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+
+.block {
+  display: block!important;
+}
+
+.full {
+  width: 100%!important;
+}
+
+@each $item in $padding-list {
+  .m$item {
+    margin: calc($padding-unit * $item)!important;
+  }
+  .mv$item {
+    margin-top: calc($padding-unit * $item)!important;
+    margin-bottom: calc($padding-unit * $item)!important;
+  }
+  .mh$item {
+    margin-left: calc($padding-unit * $item)!important;
+    margin-right: calc($padding-unit * $item)!important;
+  }
+  .ml$item {
+    margin-left: calc($padding-unit * $item)!important;
+  }
+  .mt$item {
+    margin-top: calc($padding-unit * $item)!important;
+  }
+  .mr$item {
+    margin-right: calc($padding-unit * $item)!important;
+  }
+  .mb$item {
+    margin-bottom: calc($padding-unit * $item)!important;
+  }
+
+  .p$item {
+    padding: calc($padding-unit * $item)!important;
+  }
+  .pv$item {
+    padding-top: calc($padding-unit * $item)!important;
+    padding-bottom: calc($padding-unit * $item)!important;
+  }
+  .ph$item {
+    padding-left: calc($padding-unit * $item)!important;
+    padding-right: calc($padding-unit * $item)!important;
+  }
+  .pl$item {
+    padding-left: calc($padding-unit * $item)!important;
+  }
+  .pt$item {
+    padding-top: calc($padding-unit * $item)!important;
+  }
+  .pr$item {
+    padding-right: calc($padding-unit * $item)!important;
+  }
+  .pb$item {
+    padding-bottom: calc($padding-unit * $item)!important;
+  }
+}
+
+.text-center {
+  text-align: center!important;
+}
+
+.text-right {
+  text-align: right!important;
+}
+
+.middle {
+  vertical-align: middle!important;
+  align-items: center ;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.no-radius {
+  border-radius: 0;
+}
+
+.no-warp {
+  white-space:nowrap;
+}
+
+.main {
+  color: $color-main;
+}
+
+.warning {
+  color: $color-warning;
+}
+
+.success {
+  color: $color-success;
+}
+
+.error {
+  color: $color-error;
+}
+
+.cyan {
+  color: $color-cyan;
+}
+
+.orange {
+  color: $color-orange;
+}
+
+.gray {
+  color: $color-gray;
+}
+
+.normal {
+  font-weight: normal!important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $color-gray;
+}
+
+.text-desc {
+  color: $color-desc;
+}
+
+.line-height {
+  line-height: 1.5;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.pre {
+  white-space: pre;
+}
+
+
+.border-left {
+  border-left: 1px solid $color-border;
+  padding-right: 3px;
+}
+
+.text-line {
+  width: 100%;
+  border-bottom: 1px solid color($color-border a(90%));
+  height: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+  width: .1rem;
+  height: .1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(50,50,50,0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(50,50,50,0.6);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(50,50,50,0.1);
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(50,50,50,0.2);
+}

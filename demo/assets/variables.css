@@ -1,0 +1,38 @@
+$font-family: 'Hiragino Sans GB', Helvetica, 'microsoft yahei', '微软雅黑', SimSun, '宋体', Arial;
+$font-size: .14rem;
+$color: #555;
+$line-height: 1.8;
+
+$color-main: #0288d1;
+$color-success: #5cb85c;
+$color-warning: #f90;
+$color-error: #f00;
+$color-cyan: #00e5ff;
+$color-orange: #fb8c00;
+$color-orange-hover: #ff9800;
+
+$color-weixin:#50c332;
+$color-qq:#34C8F4;
+$color-weibo:#e6162d;
+
+$color-url: #3c80f6;
+$color-url-hover: #0288d1;
+
+$color-border: #d0d0d0;
+$color-input-border: rgba(0,0,0,.2);
+$color-input-border-hover: #66afe9;
+
+$color-gray: #ccc;
+$color-desc: #999;
+
+$color-placeholder: #aaa;
+
+$color-lightgray: #eee;
+
+$header-height: .5rem;
+$page-width: 10rem;
+
+$padding-list:(0,5,10,15,20,30,50);
+$padding-unit: .01rem;
+
+$panel-large: 10rem;
