@@ -56,18 +56,74 @@
     </div>
   </div>
 </div>
-<div class="text-center" style="background-image: url(http://www.i-dengta.com/assets/img/dengta.jpg);height: 5rem">
-  <div class="abs full text-center" style="height: 5rem;background: rgba(0, 0, 0, 0.4);color:#fff;">
-    <div class="abs full text-center" style="top: 1.5rem;font-size: .28rem;">
-      <h1>乐吾乐UI</h1>
-      <div class="mt50">
-        简洁、语义化、按需加载的前端css框架，让项目构建更灵活、方便 、快捷。
+<div class="flex mt50" >
+  <div class="pv20 border-right" style="min-width: 2rem">
+    <div class="tree">
+      <div class="item active">
+        <a href="/go.html">
+          <i class="fa fa-television"></i>
+          概况
+        </a>
+      </div>
+      <div class="item">
+        <a href="/go-layout.html">
+          <i class="fa fa-caret-down"></i>
+          布局
+          <div class="item">
+            <a href="/go-layout.html">
+              <i class="fa fa-angle-right"></i>
+              flex
+            </a>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a >
+          <i class="fa fa-caret-down"></i>
+          组件
+          <div class="item">
+            <a href="/go-button.html">
+              <i class="fa fa-angle-right"></i>
+              button
+            </a>
+          </div>
+        </a>
       </div>
     </div>
   </div>
-</div>
-<div class="p20">
-  主要采用postcss和webpack构建项目。您可以把webpack替换成其他构建工具，比如gulp等。
+  <div class="p20">
+    <h2>le5le - UI</h2>
+    <div>
+      le5le - UI是用在le5le各项目中基于html5和css3的css框架。适用于支持html5和css3的浏览器。
+      主要采用flex、calc等css3新特性去实现布局，更加简单、方便、优雅的实现垂直居中，grid布局等。
+      <br><br>
+      在项目构建方面，通过postcss去实现按需导入。采用precss插件，支持scss和less语法。本工程采用的是webpack打包。
+    </div>
+    <h2>安装</h2>
+    1. 安装node和npm。<br>
+    &nbsp;&nbsp; npm安装postcss插件： autoprefixer、postcss、postcss-import、precss。如果您使用webpack打包工具，参考本项目中
+    package.json安装打包所依赖的插件。<br><br>
+    2. 编译<br>
+    &nbsp;&nbsp; A. webpack按需集成到项目中<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;在您的项目中定义一个index.css文件，@import相关模块编译打包即可。可以参考本项目源码中的demo。<br>
+    &nbsp;&nbsp; B. 直接使用整个css<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;下载源码到本地。在命令行执行npm install安装依赖文件，然后在运行编译命令npm run build，在www/assets下的css文件
+    即为编译后文件，直接在html中引用即可。<br><br>
+
+    <h2>常用属性封装</h2>
+    <b>src/base.css</b>定义了基本属性（类似reset）、常用属性的简写封装、公共基础类。<br>
+    常用属性的简单封装有：<br>
+    abs - position: absolute<br>
+    rel - position: relative<br>
+    fl  - float: left<br>
+    fr  - float: right<br>
+    fr  - float: right<br>
+    inline、hidden、block、fixed、full、 ...<br>
+    m5、m10、...、mt5、mt10、...、mr5、mr10、...等m（xx）、p（xx）格式类型。代表 margin、padding等。
+    其中（xx）可以由您自己在postcss变量文件里面定制，参考demo/assets/variables.css。<br>
+    ......<br><br>
+    更多请查看源码<br>
+  </div>
 </div>
 <footer>
   <div class="copyright mt5">

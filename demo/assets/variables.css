@@ -3,7 +3,7 @@ $font-size: .14rem;
 $color: #555;
 $line-height: 1.8;
 
-$color-main: #0288d1;
+$color-primary: #0288d1;
 $color-success: #5cb85c;
 $color-warning: #f90;
 $color-error: #f00;
@@ -29,6 +29,9 @@ $color-placeholder: #aaa;
 
 $color-lightgray: #eee;
 
+$color-button: #555;
+$color-button-hover: #333;
+
 $header-height: .5rem;
 $page-width: 10rem;
 
@@ -36,3 +39,5 @@ $padding-list:(0,5,10,15,20,30,50);
 $padding-unit: .01rem;
 
 $panel-large: 10rem;
+
+$tree-indent: .2rem;

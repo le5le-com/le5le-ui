@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <title>乐吾乐 - UI</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <meta name="baidu-site-verification" content="PXhzvGJ9hu"/>
+  <link href="/assets/img/logo.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!--[if lt IE 10]>
+<script type="text/javascript">
+  location.href = '/browser.html';
+</script>
+<![endif]-->
+<div class="header">
+  <div class="item">
+    <a href="/"><img src="/assets/img/logo.png"> 乐吾乐UI</a>
+  </div>
+  <div class="item active">
+    <a href="/go.html">开始</a>
+  </div>
+  <div class="item">
+    <a href="/component.html">组件</a>
+  </div>
+  <div class="item">
+    <a href="/customer.html">定制</a>
+  </div>
+  <div class="item full ph10">
+    <div class="input" style="max-width: 3rem">
+      <input>
+      <i class="fa fa-search right"></i>
+    </div>
+  </div>
+  <div class="item sign">
+    <div class="user">
+      <span style="padding: 0 .08rem">
+        <img src="/assets/img/user.jpg">
+        <label>小乐</label>
+        <i class="fa fa-caret-down"></i>
+      </span>
+      <div class="dropdown">
+        <div class="item">
+          <a>我的主页</a>
+        </div>
+        <div class="item">
+          <a>退出</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex mt50" >
+  <div class="pv20 border-right" style="min-width: 2rem">
+    <div class="tree">
+      <div class="item">
+        <a href="/go.html">
+          <i class="fa fa-television"></i>
+          概况
+        </a>
+      </div>
+      <div class="item">
+        <a href="/go-layout.html">
+          <i class="fa fa-caret-down"></i>
+          布局
+          <div class="item">
+            <a href="/go-layout.html">
+              <i class="fa fa-angle-right"></i>
+              flex
+            </a>
+          </div>
+        </a>
+      </div>
+      <div class="item active">
+        <a >
+          <i class="fa fa-caret-down"></i>
+          组件
+          <div class="item active">
+            <a href="/go-button.html">
+              <i class="fa fa-angle-right"></i>
+              button
+            </a>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="p20 full">
+    <h2>组件 - button</h2>
+    <h2>使用</h2>
+    <h4>默认button</h4>
+    <div class="mt5 flex middle">
+      <button class="button nowrap">默认按钮</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button">默认按钮</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">禁用button</h4>
+    <div class="mt5 flex middle">
+      <button class="button nowrap" disabled="disabled">禁用按钮</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button" disabled="disabled">默认按钮</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button primary</h4>
+    <div class="mt5 flex middle">
+      <button class="button primary nowrap">button primary</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button primary">button primary</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button cyan</h4>
+    <div class="mt5 flex middle">
+      <button class="button cyan nowrap">button cyan</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button cyan">button cyan</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button success</h4>
+    <div class="mt5 flex middle">
+      <button class="button success nowrap">button success</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button success">button success</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button warning</h4>
+    <div class="mt5 flex middle">
+      <button class="button warning nowrap">button warning</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button warning">button warning</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button error</h4>
+    <div class="mt5 flex middle">
+      <button class="button error nowrap">button error</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button error">button error</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button weixin</h4>
+    <div class="mt5 flex middle">
+      <button class="button weixin nowrap">button weixin</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button weixin">button weixin</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button qq</h4>
+    <div class="mt5 flex middle">
+      <button class="button qq nowrap">button qq</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button qq">button qq</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button weibo</h4>
+    <div class="mt5 flex middle">
+      <button class="button weibo nowrap">button weibo</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button weibo">button weibo</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button primary border</h4>
+    <div class="mt5 flex middle">
+      <button class="button primary border nowrap">button primary border</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button primary border">button primary border</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button cyan border</h4>
+    <div class="mt5 flex middle">
+      <button class="button cyan border nowrap">button cyan</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button cyan border">button cyan border</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button success border</h4>
+    <div class="mt5 flex middle">
+      <button class="button success border nowrap">button success border</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button success border">button success border</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button warning border</h4>
+    <div class="mt5 flex middle">
+      <button class="button warning border nowrap">button warning border</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button warning border">button warning border</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button error border</h4>
+    <div class="mt5 flex middle">
+      <button class="button error border nowrap">button error border</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button error border">button error border</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button weixin border</h4>
+    <div class="mt5 flex middle">
+      <button class="button weixin border nowrap">button weixin border</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button weixin">button weixin</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button qq border</h4>
+    <div class="mt5 flex middle">
+      <button class="button qq border nowrap">button qq border</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button qq border">button qq border</button>    </textarea>
+    </div>
+
+    <h4 class="mt50">button weibo border</h4>
+    <div class="mt5 flex middle">
+      <button class="button weibo border nowrap">button weibo border</button>
+      <textarea class="full input" rows="1" style="resize: none;border: none; background-color: #fff" readonly="readonly">
+        <button class="button weibo border">button weibo border</button>    </textarea>
+    </div>
+
+  </div>
+</div>
+<footer>
+  <div class="copyright mt5">
+    Copyright© le5le。 <br>
+    Email: alsmile123@qq.com
+  </div>
+</footer>
+</body>
+</html>

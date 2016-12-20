@@ -15,7 +15,7 @@
 
 .modal .modal-content {
   box-shadow: 0 5px 15px rgba(0,0,0,.5);
-  border-top: 1px solid $color-main;
+  border-top: 1px solid $color-primary;
   background-color: #fff;
   max-width: 70%;
   max-height: 80%;
@@ -38,7 +38,7 @@
 }
 
 .modal-header {
-  border-bottom: 1px solid color($color-main a(70%));
+  border-bottom: 1px solid color($color-primary a(70%));
   padding: .1rem;
   font-size: .14rem;
 }
@@ -50,7 +50,7 @@
 }
 
 .modal-header .fa:hover {
-  color: $color-main;
+  color: $color-primary;
 }
 
 .modal-body {
@@ -61,7 +61,7 @@
 
 .modal-footer {
   padding: .1rem .15rem;
-  border-top: 1px solid color($color-main a(70%));
+  border-top: 1px solid color($color-primary a(70%));
 }
 
 .modal-content.occupation {

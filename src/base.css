@@ -34,7 +34,7 @@ a.orange:hover {
 }
 
 blockquote {
-  border-left: .05rem solid $color-main;
+  border-left: .05rem solid $color-primary;
   background-color: #e1e1e1;
   padding: .1rem;
   margin: .1rem;
@@ -44,11 +44,10 @@ pre {
   white-space: pre-line;
   word-wrap: break-word;
   word-break: normal;
-  line-height: 1.5;
   margin: 0;
 }
 
-textarea, table {
+table {
   width: 100%;
 }
 
@@ -90,6 +89,14 @@ input[type="number"]{
   display: none;
 }
 
+.block {
+  display: block!important;
+}
+
+.full {
+  width: 100%!important;
+}
+
 .fixed {
   position: fixed;
 }
@@ -104,14 +111,6 @@ input[type="number"]{
   height:0;
   clear:both;
   visibility:hidden;
-}
-
-.block {
-  display: block!important;
-}
-
-.full {
-  width: 100%!important;
 }
 
 @each $item in $padding-list {
@@ -185,12 +184,12 @@ input[type="number"]{
   border-radius: 0;
 }
 
-.no-warp {
+.nowrap {
   white-space:nowrap;
 }
 
-.main {
-  color: $color-main;
+.primary {
+  color: $color-primary;
 }
 
 .warning {
@@ -248,7 +247,10 @@ input[type="number"]{
 
 .border-left {
   border-left: 1px solid $color-border;
-  padding-right: 3px;
+}
+
+.border-right {
+  border-right: 1px solid $color-border;
 }
 
 .text-line {

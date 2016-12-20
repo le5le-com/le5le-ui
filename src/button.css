@@ -2,9 +2,9 @@
   outline: none;
   border: 1px solid #aaa;
   border-radius: .02rem;
-  color: #333;
-  padding: .07rem .12rem;
+  color: $color-button;
   background-color: transparent;
+  padding: .07rem .12rem;
   line-height: 1;
   cursor: pointer;
   display: inline-block;
@@ -12,7 +12,8 @@
 }
 
 .button:hover {
-  background-color: #e0e0e0;
+  color: $color-button-hover;
+  border-color: color($color-button-hover a(50%));
 }
 
 a.button:hover {
@@ -27,19 +28,14 @@ a.button:hover {
 }
 
 .button.primary {
-  border: 1px solid $color-main;
+  border: 1px solid $color-primary;
   color: #fff;
-  background-color: color($color-main a(95%));
+  background-color: color($color-primary a(95%));
 }
 
 .button.primary:hover {
   color: #fff;
-  background-color: $color-main;
-}
-
-.button.primary.border.active {
-  color: #fff;
-  background-color: $color-main;
+  background-color: $color-primary;
 }
 
 .button.cyan {
@@ -49,11 +45,6 @@ a.button:hover {
 }
 
 .button.cyan:hover {
-  color: #fff;
-  background-color: $color-cyan;
-}
-
-.button.cyan.border.active {
   color: #fff;
   background-color: $color-cyan;
 }
@@ -121,18 +112,18 @@ a.button:hover {
 }
 
 .button.border {
-  color: $color;
+  color: $color-button;
   background-color: transparent;
 }
 
 .button.primary.border {
-  color: $color-main;
-  border: 1px solid $color-main;
+  color: $color-primary;
+  border: 1px solid $color-primary;
 }
 
 .button.primary.border:hover {
   color: #fff;
-  background-color: $color-main;
+  background-color: $color-primary;
 }
 
 .button.weixin.border {

@@ -60,6 +60,14 @@ module.exports = {
       template: 'demo/go.html',
       filename: 'go.html'
     }),
+    new HtmlWebpackPlugin({
+      template: 'demo/go-button.html',
+      filename: 'go-button.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: 'demo/go-layout.html',
+      filename: 'go-layout.html'
+    }),
     new CopyWebpackPlugin([
       { from: 'demo/assets/img', to: 'assets/img' },
       { from: 'demo/browser.html', to: 'browser.html' },

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <title>乐吾乐 - UI</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <meta name="baidu-site-verification" content="PXhzvGJ9hu"/>
+  <link href="/assets/img/logo.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!--[if lt IE 10]>
+<script type="text/javascript">
+  location.href = '/browser.html';
+</script>
+<![endif]-->
+<div class="header">
+  <div class="item">
+    <a href="/"><img src="/assets/img/logo.png"> 乐吾乐UI</a>
+  </div>
+  <div class="item active">
+    <a href="/go.html">开始</a>
+  </div>
+  <div class="item">
+    <a href="/component.html">组件</a>
+  </div>
+  <div class="item">
+    <a href="/customer.html">定制</a>
+  </div>
+  <div class="item full ph10">
+    <div class="input" style="max-width: 3rem">
+      <input>
+      <i class="fa fa-search right"></i>
+    </div>
+  </div>
+  <div class="item sign">
+    <div class="user">
+      <span style="padding: 0 .08rem">
+        <img src="/assets/img/user.jpg">
+        <label>小乐</label>
+        <i class="fa fa-caret-down"></i>
+      </span>
+      <div class="dropdown">
+        <div class="item">
+          <a>我的主页</a>
+        </div>
+        <div class="item">
+          <a>退出</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex mt50" >
+  <div class="pv20 border-right" style="min-width: 2rem">
+    <div class="tree">
+      <div class="item">
+        <a href="/go.html">
+          <i class="fa fa-television"></i>
+          概况
+        </a>
+      </div>
+      <div class="item active">
+        <a href="/go-layout.html">
+          <i class="fa fa-caret-down"></i>
+          布局
+          <div class="item active">
+            <a href="/go-layout.html">
+              <i class="fa fa-angle-right"></i>
+              flex
+            </a>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a >
+          <i class="fa fa-caret-down"></i>
+          组件
+          <div class="item">
+            <a href="/go-button.html">
+              <i class="fa fa-angle-right"></i>
+              button
+            </a>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="p20">
+    <h2>布局 - flex</h2>
+    <div>
+      css3的flex布局比传统grid更方便友好。缺点是老浏览器的兼容问题。 <br><br>
+      flex本身，是非常强大的。目前，仅仅根据本项目要求，只做了很简单的基础封装（后续有需求在完善）。更多可以参考阮一峰的
+      <a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank">Flex 布局教程</a>
+      。
+    </div>
+    <h2>使用</h2>
+    <h4>1. 自适应宽度从左到右排列</h4>
+    <div>使用class: flex进行基本的flex布局。</div>
+    <div class="flex mt5" style="color: #fff;">
+      <div class="ph10 nowrap" style="width: 100px;line-height: 50px;background-color: #4caf50">宽度100px</div>
+      <div class="ph10 nowrap" style="line-height: 50px;background-color: #4dcc51">自生长宽度</div>
+      <div class="ph10 nowrap" style="width: 20%;line-height: 50px;background-color: #4caf50">宽度20%</div>
+      <div class="ph10 full nowrap" style="line-height: 50px;background-color: #4dcc51">填满剩余</div>
+    </div>
+    <textarea class="input mt20 full" rows="6" style="resize: none;" readonly="readonly">
+      <div class="flex" style="color: #fff;">
+        <div class="ph10 nowrap" style="width: 100px;line-height: 50px;background-color: #4caf50">宽度100px</div>
+        <div class="ph10 nowrap" style="line-height: 50px;background-color: #4dcc51">自生长宽度</div>
+        <div class="ph10 nowrap" style="width: 20%;line-height: 50px;background-color: #4caf50">宽度20%</div>
+        <div class="ph10 full nowrap" style="line-height: 50px;background-color: #4dcc51">填满剩余</div>
+      </div></textarea>
+
+    <h4>2. 自动换行</h4>
+    <div>flex默认是不换行的。当使用 flex wrap组合时，才换行。</div>
+    <div class="flex wrap" style="color: #fff;">
+      <div class="ph10 nowrap" style="width: 100px;line-height: 50px;background-color: #4caf50">宽度100px</div>
+      <div class="ph10 nowrap" style="line-height: 50px;background-color: #4dcc51">自生长宽度</div>
+      <div class="ph10 nowrap" style="width: 20%;line-height: 50px;background-color: #4caf50">宽度20%</div>
+      <div class="ph10 nowrap mt5" style="width: 100%;line-height: 50px;background-color: #4dcc51">宽度100%</div>
+    </div>
+    <textarea class="input mt20 full" rows="6" style="resize: none;" readonly="readonly">
+      <div class="flex wrap" style="color: #fff;">
+        <div class="ph10 nowrap" style="width: 100px;line-height: 50px;background-color: #4caf50">宽度100px</div>
+        <div class="ph10 nowrap" style="line-height: 50px;background-color: #4dcc51">自生长宽度</div>
+        <div class="ph10 nowrap" style="width: 20%;line-height: 50px;background-color: #4caf50">宽度20%</div>
+        <div class="ph10 nowrap mt5" style="width: 100%;line-height: 50px;background-color: #4dcc51">宽度100%</div>
+      </div> </textarea>
+    <h4>3. 自动填充宽度</h4>
+    <div>当左右两列固定， 中间自动填充时，可以给中间栏加上full类。</div>
+    <div class="flex" style="color: #fff;">
+      <div class="ph10 nowrap" style="width: 100px;line-height: 50px;background-color: #4caf50">宽度100px</div>
+      <div class="ph10 full" style="line-height: 50px;background-color: #4dcc51">自生长宽度</div>
+      <div class="ph10 nowrap" style="width: 200px;line-height: 50px;background-color: #4caf50">宽度200px</div>
+    </div>
+    <textarea class="input mt20 full" rows="5" style="resize: none;" readonly="readonly">
+      <div class="flex" style="color: #fff;">
+        <div class="ph10 nowrap" style="width: 100px;line-height: 50px;background-color: #4caf50">宽度100px</div>
+        <div class="ph10 full" style="line-height: 50px;background-color: #4dcc51">自生长宽度</div>
+        <div class="ph10 nowrap" style="width: 200px;line-height: 50px;background-color: #4caf50">宽度200px</div>
+      </div> </textarea>
+
+    <h4>4. 垂直居中</h4>
+    <div>flex middle</div>
+    <div class="flex middle" style="color: #fff;">
+      <div class="ph10 nowrap" style="width: 100px;line-height: 50px;background-color: #4caf50">宽度100px</div>
+      <div class="ph10 full" style="line-height: 100px;background-color: #4dcc51">自生长宽度</div>
+      <div class="ph10 nowrap" style="width: 200px;line-height: 50px;background-color: #4caf50">宽度200px</div>
+    </div>
+    <textarea class="input mt20 full" rows="5" style="resize: none;" readonly="readonly">
+      <div class="flex middle" style="color: #fff;">
+        <div class="ph10 nowrap" style="width: 100px;line-height: 50px;background-color: #4caf50">宽度100px</div>
+        <div class="ph10 full" style="line-height: 100px;background-color: #4dcc51">自生长宽度</div>
+        <div class="ph10 nowrap" style="width: 200px;line-height: 50px;background-color: #4caf50">宽度200px</div>
+      </div> </textarea>
+  </div>
+</div>
+<footer>
+  <div class="copyright mt5">
+    Copyright© le5le。 <br>
+    Email: alsmile123@qq.com
+  </div>
+</footer>
+</body>
+</html>

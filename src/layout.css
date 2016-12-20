@@ -6,6 +6,10 @@
   flex-wrap: wrap;
 }
 
+.flex.nowrap {
+  flex-wrap: nowrap;
+}
+
 .flex.middle {
   align-items: center ;
 }
