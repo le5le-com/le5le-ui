@@ -4,16 +4,24 @@ $color: #555;
 $line-height: 1.8;
 
 $color-primary: #0288d1;
+$color-primary-hover: #007cbf;
 $color-success: #5cb85c;
+$color-success-hover: #48a948;
 $color-warning: #f90;
-$color-error: #f00;
-$color-cyan: #00e5ff;
+$color-warning-hover: #ec8400;
+$color-error: #f30707;
+$color-error-hover: #d00;
+$color-cyan: #00cbea;
+$color-cyan-hover: #02c1de;
 $color-orange: #fb8c00;
 $color-orange-hover: #ff9800;
 
 $color-weixin:#50c332;
+$color-weixin-hover: #46ad2c;
 $color-qq:#34C8F4;
-$color-weibo:#e6162d;
+$color-qq-hover: #30b9e2;
+$color-weibo:#d81228;
+$color-weibo-hover: #e6162d;
 
 $color-url: #3c80f6;
 $color-url-hover: #0288d1;

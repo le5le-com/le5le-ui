@@ -2,6 +2,8 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var path = require('path');
+var glob = require('glob');
 var helpers = require('./helpers');
 
 const AUTOPREFIXER_BROWSERS = [
@@ -14,7 +16,7 @@ const AUTOPREFIXER_BROWSERS = [
   'Safari >= 7.1',
 ];
 
-module.exports = {
+var config = {
   entry: {
     'app': './demo/assets/index.js'
   },
@@ -25,14 +27,6 @@ module.exports = {
 
   module: {
     loaders: [
-      {
-        test: /\.html$/,
-        loader: 'html'
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
-      },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss-loader')
@@ -53,24 +47,12 @@ module.exports = {
       name: ['app']
     }),
     new HtmlWebpackPlugin({
-      template: 'demo/index.html',
-      filename: 'index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: 'demo/go.html',
-      filename: 'go.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: 'demo/go-button.html',
-      filename: 'go-button.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: 'demo/go-layout.html',
-      filename: 'go-layout.html'
+      filename: 'go.html',
+      template: 'demo/go-button.html'
     }),
     new CopyWebpackPlugin([
       { from: 'demo/assets/img', to: 'assets/img' },
-      { from: 'demo/browser.html', to: 'browser.html' },
+      { from: 'demo/browser/browser.html', to: 'browser.html' }
     ], {
       ignore: [
         '*.txt',
@@ -79,3 +61,39 @@ module.exports = {
     })
   ]
 };
+
+function getEntry(globPath, pathDir) {
+  var files = glob.sync(globPath);
+
+  var paths = [];
+  for (var i = 0; i < files.length; i++) {
+    paths.push(path.basename(files[i], path.extname(files[i])));
+  }
+  return paths;
+}
+
+// html
+var files = getEntry('demo/*.html');
+files.forEach(function(filename) {
+  var conf = {
+    filename: filename + '.html',
+    template: 'demo/' + filename + '.html',
+    minify: {                         //压缩HTML文件
+      removeComments: true,         //移除HTML中的注释
+      collapseWhitespace: false    //删除空白符与换行符
+    }
+  };
+  // config.plugins.push(new HtmlWebpackPlugin(conf));
+});
+
+// ejs
+var ejsFiles = getEntry('demo/*.ejs');
+ejsFiles.forEach(function(filename) {
+  var conf = {
+    filename: filename + '.html',
+    template: 'demo/' + filename + '.ejs'
+  };
+  // config.plugins.push(new HtmlWebpackPlugin(conf));
+});
+
+module.exports = config;

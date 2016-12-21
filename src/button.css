@@ -30,81 +30,81 @@ a.button:hover {
 .button.primary {
   border: 1px solid $color-primary;
   color: #fff;
-  background-color: color($color-primary a(95%));
+  background-color: $color-primary;
 }
 
 .button.primary:hover {
   color: #fff;
-  background-color: $color-primary;
+  background-color: $color-primary-hover;
 }
 
 .button.cyan {
   border: 1px solid $color-cyan;
   color: #fff;
-  background-color: color($color-cyan a(95%));
+  background-color: $color-cyan;
 }
 
 .button.cyan:hover {
   color: #fff;
-  background-color: $color-cyan;
+  background-color: $color-cyan-hover;
 }
 
 .button.success {
   border: 1px solid $color-success;
   color: #fff;
-  background-color: color($color-success a(95%));
+  background-color: $color-success;
 }
 
 .button.success:hover {
-  background-color: $color-success;
+  background-color: $color-success-hover;
 }
 
 .button.warning {
   border: 1px solid $color-warning;
   color: #fff;
-  background-color: color($color-warning a(95%));
+  background-color: $color-warning;
 }
 
 .button.warning:hover {
   color: #fff;
-  background-color: $color-warning;
+  background-color: $color-warning-hover;
 }
 
 .button.error {
   border: 1px solid $color-error;
   color: #fff;
-  background-color: color($color-error a(95%));
+  background-color: $color-error;
 }
 
 .button.error:hover {
   color: #fff;
-  background-color: $color-error;
+  background-color: $color-error-hover;
 }
 
 .button.weixin {
   color: #fff;
   border-color: $color-weixin;
-  background-color: color($color-weixin a(85%));
+  background-color: $color-weixin;
 }
 
 .button.weixin:hover {
-  background-color: $color-weixin;
+  background-color: $color-weixin-hover;
 }
 
 .button.qq {
   color: #fff;
   border-color: $color-qq;
-  background-color: color($color-qq a(85%));
+  background-color: $color-qq;
 }
 
 .button.qq:hover {
-  background-color: $color-qq;
+  background-color: $color-qq-hover;
 }
 
 .button.weibo {
   color: #fff;
   border-color: $color-weibo;
-  background-color: color($color-weibo a(85%));
+  background-color: $color-weibo-hover;
 }
 
 .button.weibo:hover {
