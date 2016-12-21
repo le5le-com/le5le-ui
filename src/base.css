@@ -224,8 +224,20 @@ input[type="number"]{
   font-weight: bold;
 }
 
+.border {
+  border: 1px solid $color-border;
+}
+
 .border-bottom {
-  border-bottom: 1px solid $color-gray;
+  border-bottom: 1px solid $color-border;
+}
+
+.border-left {
+  border-left: 1px solid $color-border;
+}
+
+.border-right {
+  border-right: 1px solid $color-border;
 }
 
 .text-desc {
@@ -242,15 +254,6 @@ input[type="number"]{
 
 .pre {
   white-space: pre;
-}
-
-
-.border-left {
-  border-left: 1px solid $color-border;
-}
-
-.border-right {
-  border-right: 1px solid $color-border;
 }
 
 .text-line {

@@ -18,7 +18,7 @@
   width: .15rem;
 }
 
-.tree .item.active, .tree .item.active a, .tree .item:hover {
+.tree .item.active, .tree .item.active a, .tree .item a.active, .tree .item:hover {
   color: $color-url-hover;
 }
 

@@ -126,9 +126,54 @@ a.button:hover {
   background-color: $color-primary;
 }
 
+.button.cyan.border {
+  color: $color-cyan;
+  border: 1px solid $color-cyan;
+}
+
+.button.success.border:hover {
+  color: #fff;
+  background-color: $color-success;
+}
+
+.button.success.border {
+  color: $color-success;
+  border: 1px solid $color-success;
+}
+
+.button.success.border:hover {
+  color: #fff;
+  background-color: $color-success;
+}
+
+.button.warning.border {
+  color: $color-warning;
+  border: 1px solid $color-warning;
+}
+
+.button.warning.border:hover {
+  color: #fff;
+  background-color: $color-warning;
+}
+
+.button.error.border {
+  color: $color-error;
+  border: 1px solid $color-error;
+}
+
+.button.error.border:hover {
+  color: #fff;
+  background-color: $color-error;
+}
+
 .button.weixin.border {
   color: $color-weixin;
   border: 1px solid $color-weixin;
+}
+
+.button.qq.border {
+  color: $color-qq;
+  border: 1px solid $color-qq;
 }
 
 .button.weibo.border {
@@ -136,14 +181,19 @@ a.button:hover {
   border: 1px solid $color-weibo;
 }
 
-.button.weibo.border:hover {
-  color: #fff;
-  background-color: $color-weibo;
-}
-
 .button.weixin.border:hover {
   color: #fff;
   background-color: $color-weixin;
+}
+
+.button.qq.border:hover {
+  color: #fff;
+  background-color: $color-qq;
+}
+
+.button.weibo.border:hover {
+  color: #fff;
+  background-color: $color-weibo;
 }
 
 .button.radius {

@@ -46,10 +46,6 @@ var config = {
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app']
     }),
-    new HtmlWebpackPlugin({
-      filename: 'go.html',
-      template: 'demo/go-button.html'
-    }),
     new CopyWebpackPlugin([
       { from: 'demo/assets/img', to: 'assets/img' },
       { from: 'demo/browser/browser.html', to: 'browser.html' }
@@ -83,7 +79,7 @@ files.forEach(function(filename) {
       collapseWhitespace: false    //删除空白符与换行符
     }
   };
-  // config.plugins.push(new HtmlWebpackPlugin(conf));
+  config.plugins.push(new HtmlWebpackPlugin(conf));
 });
 
 // ejs
@@ -91,9 +87,9 @@ var ejsFiles = getEntry('demo/*.ejs');
 ejsFiles.forEach(function(filename) {
   var conf = {
     filename: filename + '.html',
-    template: 'demo/' + filename + '.ejs'
+    template: '!!ejs-compiled-loader!demo/' + filename + '.ejs'
   };
-  // config.plugins.push(new HtmlWebpackPlugin(conf));
+  config.plugins.push(new HtmlWebpackPlugin(conf));
 });
 
 module.exports = config;

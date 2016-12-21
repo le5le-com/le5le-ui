@@ -46,6 +46,9 @@ $page-width: 10rem;
 $padding-list:(0,5,10,15,20,30,50);
 $padding-unit: .01rem;
 
-$panel-large: 10rem;
+$panel-width: 10rem;
+
+$box-width: 2rem;
+$box-height: 1.28rem;
 
 $tree-indent: .2rem;

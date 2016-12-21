@@ -10,86 +10,13 @@
         content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
   <meta name="baidu-site-verification" content="PXhzvGJ9hu"/>
   <link href="/assets/img/logo.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-
-<!--[if lt IE 10]>
-<script type="text/javascript">
-  location.href = '/browser.html';
-</script>
-<![endif]-->
-<div class="header">
-  <div class="item">
-    <a href="/"><img src="/assets/img/logo.png"> 乐吾乐UI</a>
-  </div>
-  <div class="item active">
-    <a href="/go.html">开始</a>
-  </div>
-  <div class="item">
-    <a href="/component.html">组件</a>
-  </div>
-  <div class="item">
-    <a href="/customer.html">定制</a>
-  </div>
-  <div class="item full ph10">
-    <div class="input" style="max-width: 3rem">
-      <input>
-      <i class="fa fa-search right"></i>
-    </div>
-  </div>
-  <div class="item sign">
-    <div class="user">
-      <span style="padding: 0 .08rem">
-        <img src="/assets/img/user.jpg">
-        <label>小乐</label>
-        <i class="fa fa-caret-down"></i>
-      </span>
-      <div class="dropdown">
-        <div class="item">
-          <a>我的主页</a>
-        </div>
-        <div class="item">
-          <a>退出</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<% include demo/go/header.ejs %>
 <div class="flex mt50" >
   <div class="pv20 border-right" style="min-width: 2rem">
-    <div class="tree">
-      <div class="item">
-        <a href="/go.html">
-          <i class="fa fa-television"></i>
-          概况
-        </a>
-      </div>
-      <div class="item active">
-        <a href="/go-layout.html">
-          <i class="fa fa-caret-down"></i>
-          布局
-          <div class="item active">
-            <a href="/go-layout.html">
-              <i class="fa fa-angle-right"></i>
-              flex
-            </a>
-          </div>
-        </a>
-      </div>
-      <div class="item">
-        <a >
-          <i class="fa fa-caret-down"></i>
-          组件
-          <div class="item">
-            <a href="/go-button.html">
-              <i class="fa fa-angle-right"></i>
-              button
-            </a>
-          </div>
-        </a>
-      </div>
-    </div>
+    <% include demo/go/menu.ejs %>
   </div>
   <div class="p20">
     <h2>布局 - flex</h2>
@@ -160,11 +87,6 @@
       </div> </textarea>
   </div>
 </div>
-<footer>
-  <div class="copyright mt5">
-    Copyright© le5le。 <br>
-    Email: alsmile123@qq.com
-  </div>
-</footer>
+<% include demo/footer/footer.ejs %>
 </body>
 </html>
