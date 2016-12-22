@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <title>乐吾乐 - UI</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <meta name="baidu-site-verification" content="PXhzvGJ9hu"/>
+  <link href="/assets/img/logo.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<% include demo/component/header.ejs %>
+<div class="flex mt50">
+  <div class="pv20 border-right" style="min-width: 2rem">
+    <% include demo/component/menu.ejs %>
+  </div>
+  <div class="p20 full">
+    <h2>组件 - box</h2>
+    <div>
+      box是带有边框的方形小面板。
+    </div>
+    <h3>使用</h3>
+    <h4>1. 默认</h4>
+    <div class="box mt5">
+      <div class="content"> <i class="fa fa-plus fa-2x"></i> </div>
+    </div>
+    <textarea class="input mt20 full" rows="3" style="resize: none;" readonly="readonly">
+      <div class="box mt5">
+        <div class="content"> <i class="fa fa-plus fa-2x"></i> </div>
+      </div></textarea>
+
+    <h4>2. 带bottom</h4>
+    <div class="box mt5">
+      <div class="content">相册</div>
+      <div class="bottom"><a>查看</a></div>
+    </div>
+    <textarea class="input mt20 full" rows="4" style="resize: none;" readonly="readonly">
+      <div class="box mt5">
+        <div class="content">相册</div>
+        <div class="bottom"><a>查看</a></div>
+      </div></textarea>
+    <h4>3. 虚线边框</h4>
+    <div class="box dash mt5">
+      <div class="content"> <i class="fa fa-plus fa-2x"></i> </div>
+    </div>
+    <textarea class="input mt20 full" rows="3" style="resize: none;" readonly="readonly">
+       <div class="box dash mt5">
+          <div class="content"> <i class="fa fa-plus fa-2x"></i> </div>
+       </div></textarea>
+
+  </div>
+</div>
+<% include demo/footer/footer.ejs %>
+</body>
+</html>

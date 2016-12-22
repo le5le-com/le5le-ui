@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <title>乐吾乐 - UI</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <meta name="baidu-site-verification" content="PXhzvGJ9hu"/>
+  <link href="/assets/img/logo.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<% include demo/component/header.ejs %>
+<div class="flex mt50">
+  <div class="pv20 border-right" style="min-width: 2rem">
+    <% include demo/component/menu.ejs %>
+  </div>
+  <div class="p20 full">
+    <h2>组件 - modal</h2>
+    <div>
+      <b>【注意】</b>这里仅涉及model样式。显示或隐藏需要您自己用js去控制。无论您用JQuery、angular、react还是vue，这都是非常简单的不是吗？
+    </div>
+    <h3>使用</h3>
+    <button class="button primary" id="show-modal"> 单击弹出modal</button>
+    <div class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="caption">提示</div>
+          <i class="fr fa fa-close"></i>
+        </div>
+        <div class="modal-body">
+          这是弹出对话框。<br>
+          这是body。
+        </div>
+        <div class="modal-footer">
+          <button class="button primary mr5">确定</button>
+          <button class="button">取消</button>
+        </div>
+      </div>
+    </div>
+    <textarea class="input mt20 full" rows="20" style="resize: none;" readonly="readonly">
+       <div class="modal" style="display: none;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="caption">提示</div>
+            <i class="fr fa fa-close"></i>
+          </div>
+          <div class="modal-body">
+            这是弹出对话框。<br>
+            这是body。
+          </div>
+          <div class="modal-footer">
+            <button class="button primary mr5">确定</button>
+            <button class="button">取消</button>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(function(){
+          $('#show-modal').click(function () {
+            $('.modal').show();
+          });
+
+          $('.modal-content').click(function (event) {
+            event.stopPropagation();
+          });
+
+          $('.modal,.modal .fa, .modal button').click(function () {
+            $('.modal').hide();
+          });
+        });
+      </script></textarea>
+  </div>
+</div>
+<% include demo/footer/footer.ejs %>
+
+<script>
+  $(function(){
+    $('#show-modal').click(function () {
+      $('.modal').show();
+    });
+
+    $('.modal-content').click(function (event) {
+      event.stopPropagation();
+    });
+
+    $('.modal,.modal .fa, .modal button').click(function () {
+      $('.modal').hide();
+    });
+  });
+</script>
+</body>
+</html>

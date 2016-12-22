@@ -1,74 +1,19 @@
-.panel.large {
-  max-width: $panel-large;
+.panel {
+  max-width: $panel-width;
   margin: auto;
 }
 
 .panel>.caption {
   font-size: .2rem;
-  padding-bottom: .1rem;
-  margin-bottom: .1rem;
+  padding: .05rem .1rem;
   border-bottom: 1px solid $color-lightgray;
 }
 
-.panel .body {
-  flex: 1;
-  white-space: normal;
-  word-break: break-word;
-}
-
-.panel>.right {
-  width: 3rem;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-.search.input {
-  position: relative;
-  padding-right: .25rem;
-}
-
-.search.input input {
-  width: 100%;
-  border: none;
-  outline: none;
-  padding-left: 0;
-  padding-right: .1rem;
-}
-
-.search.input .fa {
-  cursor: pointer;
-  position: absolute;
-  right: .1rem;
-  top: .01rem;
-  border: 0;
-  color: $color-placeholder;
-  line-height: .3rem;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  width: 2rem;
-  height: 1.28rem;
-  border: 1px solid $color-border;
-  margin: .2rem .1rem .1rem 0;
-}
-
-.box .content {
-  flex-grow: 1;
+.panel>.content {
   padding: .1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.box .bottom {
-  line-height: .3rem;
-  background-color: $color-lightgray;
-  text-align: center;
-  overflow: hidden;
-}
-
-.box.dash {
-  border-style: dashed;
+.panel>.bottom {
+  padding: .05rem .1rem;
+  border-top: 1px solid $color-lightgray;
 }

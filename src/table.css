@@ -4,7 +4,7 @@ table {
 
 tr th {
   text-align: left;
-  padding:  .1rem .12rem;
+  padding:  .05rem .12rem;
   border: 1px solid color($color-border a(80%));
   border-right: none;
 }
@@ -15,7 +15,7 @@ tr th:last-child, tr td:last-child {
 
 tr td {
   text-align: left;
-  padding:  .1rem .12rem;
+  padding:  .05rem .12rem;
   border-left: 1px solid color($color-border a(80%));
   border-bottom: 1px solid color($color-border a(80%));
 }

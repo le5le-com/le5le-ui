@@ -9,6 +9,10 @@
   text-align: left;
 }
 
+.dropdown-container:hover .dropdown {
+  display: block;
+}
+
 .dropdown .item {
   line-height: 2!important;
   list-style: none;
@@ -31,7 +35,11 @@
 }
 
 .dropdown .item:hover {
-  background-color: $color-url-hover!important;
+  background-color: $color-url!important;
+  color: #fff!important;
+}
+
+.dropdown .item:hover a {
   color: #fff!important;
 }
 
@@ -47,6 +55,3 @@
   border-bottom: 1px solid #a9a9a9;
 }
 
-.dropdown.padding {
-  padding: .1rem!important;
-}

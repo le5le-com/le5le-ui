@@ -248,10 +248,6 @@ input[type="number"]{
   line-height: 1.5;
 }
 
-.overflow-auto {
-  overflow: auto;
-}
-
 .pre {
   white-space: pre;
 }
@@ -262,6 +258,18 @@ input[type="number"]{
   height: 10px;
   text-align: center;
   margin-bottom: 10px;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-x: auto;
 }
 
 ::-webkit-scrollbar {

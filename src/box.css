@@ -1,0 +1,27 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  width: $box-width;
+  height: calc($box-width*$box-aspect-ratio);
+  border: 1px solid $color-border;
+  margin: .2rem .1rem .1rem 0;
+}
+
+.box .content {
+  flex-grow: 1;
+  padding: .1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .bottom {
+  line-height: .3rem;
+  background-color: $color-lightgray;
+  text-align: center;
+  overflow: hidden;
+}
+
+.box.dash {
+  border-style: dashed;
+}

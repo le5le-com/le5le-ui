@@ -24,7 +24,7 @@ $color-weibo:#d81228;
 $color-weibo-hover: #e6162d;
 
 $color-url: #3c80f6;
-$color-url-hover: #0288d1;
+$color-url-hover: #f60;
 
 $color-border: #d0d0d0;
 $color-input-border: rgba(0,0,0,.2);
@@ -49,6 +49,6 @@ $padding-unit: .01rem;
 $panel-width: 10rem;
 
 $box-width: 2rem;
-$box-height: 1.28rem;
+$box-aspect-ratio: .64;
 
 $tree-indent: .2rem;

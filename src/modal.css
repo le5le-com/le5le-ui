@@ -15,17 +15,13 @@
 
 .modal .modal-content {
   box-shadow: 0 5px 15px rgba(0,0,0,.5);
-  border-top: 1px solid $color-primary;
+  border-top: .03rem solid $color-primary;
   background-color: #fff;
   max-width: 70%;
   max-height: 80%;
+  min-width: 3rem;
   display: flex;
   flex-direction: column;
-}
-
-.modal .sign {
-  width: 3rem;
-  padding: .2rem;
 }
 
 .modal a {
@@ -38,34 +34,43 @@
 }
 
 .modal-header {
-  border-bottom: 1px solid color($color-primary a(70%));
-  padding: .1rem;
+  border-bottom: 1px solid $color-border;
+  padding: .05rem .1rem;
   font-size: .14rem;
+  display: flex;
+  align-items: center ;
 }
 
-.modal-header .fa {
+.modal-header .caption {
+  flex-grow: 1;
+}
+
+.modal-header i {
   float: right;
   font-size: .18rem;
   cursor: pointer;
 }
 
-.modal-header .fa:hover {
-  color: $color-primary;
+.modal-header i:hover {
+  color: $color-warning;
 }
 
 .modal-body {
-  padding: .15rem;
+  padding: .1rem;
   overflow-y: auto;
   margin-right: .01rem;
 }
 
 .modal-footer {
-  padding: .1rem .15rem;
-  border-top: 1px solid color($color-primary a(70%));
+  padding: .1rem;
+  border-top: 1px solid $color-border;
+  display: flex;
+  align-items: center ;
+  justify-content: center;
 }
 
-.modal-content.occupation {
-  min-width: 3.5rem;
+.modal-footer.right {
+  justify-content: flex-end;
 }
 
 .modal-content select {
