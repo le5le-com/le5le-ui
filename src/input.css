@@ -1,22 +1,18 @@
 input {
-  padding-left: .06rem;
-  padding-right: .06rem;
+  padding-left: $input-padding;
+  padding-right: $input-padding;
 }
 
 .input {
-  padding: .06rem;
+  padding: 0 $input-padding;
   outline: none;
   border: 1px solid  $color-input-border;
-  line-height: 1.4;
+  line-height: 2;
   box-sizing: border-box;
   background-color: #fff;
 }
 
 .input:hover, .input:focus {
-  border-color: color($color-input-border-hover a(70%));
-}
-
-.input:focus {
   border-color: $color-input-border-hover;
 }
 
@@ -28,69 +24,77 @@ input {
   border: 1px solid  $color-input-border;
 }
 
-div.input {
+.input.container {
   display: flex;
   align-items: center ;
   background-color: #fff!important;
+  padding: 0;
 }
 
-div.input input {
+.input.container input {
   border: none;
   outline: none;
-  padding: 0;
+  padding: 0 $input-padding;
   flex-grow: 1;
 }
 
-div.input>i {
+.input.container button {
+  border: none;
+  outline: none;
+  padding: 0 $input-padding;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.input.container button:hover {
+  color: $color-url-hover;
+}
+
+.input.container .left:nth-child(1n+0) {
+  padding: 0 $input-padding;
+  border-right: 1px solid $color-border;
+  background-color: color($color-border a(60%));
+}
+
+.input.container .right:nth-child(1n+0){
+  padding: 0 $input-padding;
+  border-left: 1px solid $color-border;
+  background-color: color($color-border a(60%));
+}
+
+.input.container i.left {
   color: $color-placeholder;
+  background-color: transparent!important;
+  border: none!important;
+  padding-right: 0!important;
 }
 
-.input-group {
-  position: relative;
-  white-space: nowrap;
-  vertical-align: middle;
-  text-align: left;
-}
-
-.input-group .input {
-  padding-left: .3rem;
-  box-sizing: border-box;
-}
-
-.input-group .fa {
-  position: absolute;
-  left: .16rem;
-  font-size: .16rem;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(0,0,0,.55);
-}
-
-.checkbox {
-  vertical-align: middle;
-}
-
-.checkbox input[type="checkbox"] {
-  vertical-align: middle;
+.input.container i.right {
+  color: $color-placeholder;
+  background-color: transparent!important;
+  border: none!important;
+  padding-left: 0!important;
 }
 
 input.ng-touched.ng-invalid{
   border: 1px solid $color-error;
 }
 
-.input-group.captcha {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+.comment.input textarea {
+  border: none;
+  outline: none;
+  resize: none;
 }
 
-.input-group.captcha .input {
-  width: 1.5rem;
-  display: inline-block;
+.comment.input .user {
+  position: absolute;
+  color: $color-url-hover;
+  top: .02rem;
+  left: $input-padding;
 }
 
-.input-group.captcha .button {
-
+.comment.input .user>label {
+  color: $color;
 }
 
 .required::after {
@@ -103,84 +107,18 @@ input.ng-touched.ng-invalid{
   top: .03rem;
 }
 
-.form {
-  font-size: .14rem;
-}
-
-.form .tip {
-  font-size: .12rem;
-  color: #999;
-}
-
-.form .image-list {
-  display: flex;
-}
-
-.form .image-list .item {
-  height: 2rem;
-  padding: 0!important;
+.checkbox input[type="checkbox"] {
+  vertical-align: middle;
   position: relative;
+  min-height: $font-size;
 }
 
-.form .image-list .item img {
-  height: 2rem;
-}
-
-.form .image-list .bk {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-}
-
-.form .image-list .bk:hover {
-  opacity: 1;
-}
-
-.form .image-list .bk .fa-close {
-  position: absolute;
-  top: .1rem;
-  right: .1rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-.form .image-list .bk .fa-close:hover {
-  color: $color-primary;
-}
-
-.form .image-list .upload-image {
-  width: 2rem;
-  height: 2rem;
-  padding: 0;
-  border: 1px solid #aaa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .28rem;
-  cursor: pointer;
-  position: relative;
-}
-
-.form .image-list .upload-image input[type="file"] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 2rem;
-  cursor: pointer;
-  opacity: 0;
-}
-
-.checkbox .fa {
+.checkbox i {
   width: .12rem;
 }
 
 .ui-switch {
+  color: $color!important;
   display: inline-block;
   vertical-align: middle;
   line-height: 1.5;
@@ -189,6 +127,11 @@ input.ng-touched.ng-invalid{
   min-width: .8rem;
   background-color: $color-primary;
   cursor: pointer;
+}
+
+.ui-switch.disable {
+  color: $color-desc!important;
+  cursor: default;
 }
 
 .ui-switch .desc {
@@ -207,70 +150,46 @@ input.ng-touched.ng-invalid{
 }
 
 .ui-switch.off {
-  border: 1px solid $color-gray;
-  background-color: $color-gray;
+  border: 1px solid $color-gray!important;
+  background-color: $color-gray!important;
 }
 
-.ui-switch.green {
-  border: 1px solid #080;
-  background-color: #080;
+.ui-switch.success {
+  border: 1px solid $color-success;
+  background-color: $color-success;
 }
 
-.ui-switch.red {
-  border: 1px solid $color-primary;
-  background-color: $color-primary;
+.ui-switch.warning {
+  border: 1px solid $color-warning;
+  background-color: $color-warning;
 }
 
-.panel .bottom.fixed{
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-top: 1px solid $color-primary;
-  background-color: #fff;
+.ui-switch.error {
+  border: 1px solid $color-error;
+  background-color: $color-error;
 }
 
-td.td-input{
-  padding: 0;
+.ui-switch.cyan {
+  border: 1px solid $color-cyan;
+  background-color: $color-cyan;
 }
 
-td.td-input:hover{
-  outline: 1px solid color($color-input-border-hover a(70%));
+.ui-switch.orange {
+  border: 1px solid $color-orange;
+  background-color: $color-orange;
 }
 
-td.td-input .input{
-  border: none;
-  resize: none;
-  background: transparent;
-  outline: none;
-  border: none!important;
-}
-
-.input.comment textarea {
-  border: none;
-  outline: none;
-}
-
-.input.comment .user {
-  position: absolute;
-  color: #fb8c00;
-  top: .08rem;
-}
-
-.input.comment .user>label {
-  color: $color;
-}
-
-::-webkit-input-placeholder { /* WebKit browsers */
-  color: $color-placeholder;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: $color-placeholder;
-  opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color: $color-placeholder;
-  opacity:  1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-  color: $color-placeholder;
-}
+/*::-webkit-input-placeholder { !* WebKit browsers *!*/
+  /*color: $color-placeholder;*/
+/*}*/
+/*:-moz-placeholder { !* Mozilla Firefox 4 to 18 *!*/
+  /*color: $color-placeholder;*/
+  /*opacity:  1;*/
+/*}*/
+/*::-moz-placeholder { !* Mozilla Firefox 19+ *!*/
+  /*color: $color-placeholder;*/
+  /*opacity:  1;*/
+/*}*/
+/*:-ms-input-placeholder { !* Internet Explorer 10+ *!*/
+  /*color: $color-placeholder;*/
+/*}*/

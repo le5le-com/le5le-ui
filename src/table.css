@@ -19,3 +19,19 @@ tr td {
   border-left: 1px solid color($color-border a(80%));
   border-bottom: 1px solid color($color-border a(80%));
 }
+
+td.td-input{
+  padding: 0;
+}
+
+td.td-input:hover{
+  outline: 1px solid color($color-input-border-hover a(70%));
+}
+
+td.td-input .input{
+  border: none;
+  resize: none;
+  background: transparent;
+  outline: none;
+  border: none!important;
+}

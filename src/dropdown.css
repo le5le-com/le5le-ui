@@ -9,6 +9,10 @@
   text-align: left;
 }
 
+.dropdown-container {
+  position: relative;
+}
+
 .dropdown-container:hover .dropdown {
   display: block;
 }

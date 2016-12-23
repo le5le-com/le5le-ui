@@ -1,0 +1,63 @@
+.image-list {
+  display: flex;
+}
+
+.image-list .item {
+  height: 2rem;
+  padding: 0!important;
+  position: relative;
+}
+
+.image-list .item img {
+  height: 2rem;
+}
+
+.image-list .bk {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+
+.image-list .bk:hover {
+  opacity: 1;
+}
+
+.image-list .bk .close {
+  position: absolute;
+  top: .1rem;
+  right: .1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.image-list .bk .close:hover {
+  color: $color-primary;
+}
+
+.image-list .upload-image {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .28rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.image-list .upload-image input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2rem;
+  cursor: pointer;
+  opacity: 0;
+}

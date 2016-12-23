@@ -12,7 +12,4 @@
 @import "../../src/box.css";
 @import "../../src/modal.css";
 @import "../../src/table.css";
-/*@import "../src/cell.css";*/
-
-/*@import "../src/page.css";*/
-/*@import "../src/navbar.css";*/
+@import "../../src/cell.css";

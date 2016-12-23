@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <title>乐吾乐 - UI</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <meta name="baidu-site-verification" content="PXhzvGJ9hu"/>
+  <link href="/assets/img/logo.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<% include demo/component/header.ejs %>
+<div class="flex mt50">
+  <div class="pv20 border-right" style="min-width: 2rem">
+    <% include demo/component/menu.ejs %>
+  </div>
+  <div class="p20 full">
+    <h2>组件 - checkbox、ui-switch</h2>
+
+    <h3>使用</h3>
+    <h4>1. checkbox</h4>
+    <div class="mt5">
+      <label class="checkbox">
+        <input type="checkbox" > 下次自动登录
+      </label>
+    </div>
+    <textarea class="input mt20 full" rows="3" style="resize: none;" readonly="readonly">
+      <label class="checkbox">
+        <input type="checkbox" > 下次自动登录
+      </label></textarea>
+
+    <h4>2. ui-switch</h4>
+    <div class="mt5">
+      不带js切换状态。需要您用js去实现。可参看实例jquery的实现。可以和相应主题结合使用：
+      ui-switch success、 ui-switch warning、 ui-switch error、 ui-switch cyan、 ui-switch orange
+    </div>
+    <div class="mt5 ">
+      <span class="ui-switch on mr10" >
+        <span class="desc">ON</span>
+      </span>
+
+      <span class="ui-switch on success mr10" >
+        <span class="desc">ON</span>
+      </span>
+
+      <span class="ui-switch on warning mr10" >
+        <span class="desc">ON</span>
+      </span>
+
+      <span class="ui-switch on error mr10" >
+        <span class="desc">ON</span>
+      </span>
+
+      <span class="ui-switch on cyan mr10" >
+        <span class="desc">ON</span>
+      </span>
+
+      <span class="ui-switch on orange mr10" >
+        <span class="desc">ON</span>
+      </span>
+    </div>
+
+    <textarea class="input mt20 full" rows="21" style="resize: none;" readonly="readonly">
+      <span class="ui-switch on mr10" >
+        <span class="desc">ON</span>
+      </span>
+      <span class="ui-switch on success" >
+        <span class="desc">ON</span>
+      </span>
+      <script>
+        $(function(){
+          $('.ui-switch').click(function () {
+            if ($(this).hasClass('on')) {
+              $(this).removeClass('on');
+              $(this).addClass('off');
+              $(this).find('.desc').text('OFF');
+            } else {
+              $(this).removeClass('off');
+              $(this).addClass('on');
+              $(this).find('.desc').text('ON');
+            }
+          });
+        });
+      </script> </textarea>
+
+  </div>
+</div>
+<% include demo/footer/footer.ejs %>
+<script>
+  $(function(){
+    $('.ui-switch').click(function () {
+      if ($(this).hasClass('on')) {
+        $(this).removeClass('on');
+        $(this).addClass('off');
+        $(this).find('.desc').text('OFF');
+      } else {
+        $(this).removeClass('off');
+        $(this).addClass('on');
+        $(this).find('.desc').text('ON');
+      }
+    });
+  });
+</script>
+</body>
+</html>

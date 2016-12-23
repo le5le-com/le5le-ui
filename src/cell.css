@@ -1,17 +1,16 @@
 .cell {
   display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, .12);
-  margin: 0 .2rem;
   line-height: .4rem;
 }
 
-.cell .label {
+.cell .desc {
   width: 1rem;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-.cell .primary {
+.cell .full {
   flex-shrink: 1;
   flex-grow: 1;
 }
@@ -19,8 +18,8 @@
 .cell input, .cell select {
   outline: none;
   border: none;
+  padding: 0;
   vertical-align: middle;
-  width: 100%;
 }
 
 .cell input[type="checkbox"] {
@@ -33,19 +32,18 @@
   vertical-align: middle;
 }
 
-.cell .dropdown{
-  top: 0;
+.cell img {
+  height: .5rem;
 }
 
-.cell .dropdown-container:hover .dropdown{
-  display: block;
+.cell .file .desc{
+  color: $color-desc;
+  position: relative;
+  left: .1rem;
+  top: -.2rem;
 }
 
-.cell.avatar .label{
-  line-height: .5rem;
-}
-
-.cell.avatar input[type="file"]{
+.cell .file input[type="file"]{
   position: absolute;
   left: 0;
   opacity: 0;
@@ -55,18 +53,11 @@
   cursor: pointer;
 }
 
-.cell img {
-  height: .5rem;
-}
-
 .cell .ui-switch {
   position: relative;
   top: -.02rem;
 }
 
-.cell.head {
-  padding: 0 .2rem;
-  margin: 0;
-  background-color: #a9a9a9;
-  color: #fff;
+.cell .ui-switch .desc{
+  width: 50%;
 }
