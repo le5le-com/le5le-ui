@@ -1,6 +1,8 @@
 #le5le-ui
 le5le-ui是le5le采用的公用web前端css基础框架。主要用flex布局和postcss构成。仅支持html5和css3环境。主要用于对ie8及以下兼容要求不高的后台管理系统或移动app环境。  
 
+使用教程，参考 [官网](https://le5le-com.github.io/le5le-ui/go.html)
+
 #为什么重复造轮子
 bootstrap、semantic-ui目前对flex和postcss支持不够友好，定制目前没有采用import方式。
   
@@ -36,10 +38,10 @@ npm run build
 ```  
 
 ###B、定制使用
-复制src文件夹下的index.css，按照自己的需求修改变量和导入即可。
+复制src文件夹下的index.css，并且按照自己的需求修改变量和导入即可。
 
 #其他
-postcss很多插件，我们只使用了几个基本的插件，这样避免的更多的学习成本。根据自己的环境，够用就好。  
+postcss很多插件，我们主要使用precss插件，和scss和less很类似。根据自己的环境，够用就好。  
 
 
 

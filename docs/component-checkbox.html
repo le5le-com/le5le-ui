@@ -241,7 +241,7 @@
   var path = window.location.href.substring(window.location.href.lastIndexOf('/'));
   $(function(){
     $('.tree .item>a').each(function () {
-      if ($(this).attr('href') === path) $(this).addClass('active');
+      if (path.indexOf($(this).attr('href')) > -1) $(this).addClass('active');
       else $(this).removeClass('active');
     });
   });
