@@ -28,11 +28,11 @@ webpack、postcss、precss、autoprefixer、postcss-loader等。
 #编译
 生产环境编译：    
 npm run build  
-编译后的生产文件在www文件夹下。
+编译后的生产文件在docs文件夹下。
 
 #使用
 ###A.导入全部  
-编译后，直接引用www/assets下的css文件即可  
+编译后，直接引用docs/assets下的css文件即可  
 ```  
 <link href="/assets/app.80a2d024f84456ffdfa7.css" rel="stylesheet"></head>  
 ```  
