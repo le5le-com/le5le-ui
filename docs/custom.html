@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <title>乐吾乐 - UI</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width">
+  <meta name="baidu-site-verification" content="PXhzvGJ9hu">
+  <link href="/assets/img/logo.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/app.3e6935a9745953126590.css" rel="stylesheet"></head>
+<body>
+
+<!--[if lt IE 10]>
+<script type="text/javascript">
+  location.href = '/browser.html';
+</script>
+<![endif]-->
+<div class="header">
+  <div class="item">
+    <a href="/"><img src="/assets/img/logo.png"> 乐吾乐UI</a>
+  </div>
+  <div class="item">
+    <a href="/go.html">开始</a>
+  </div>
+  <div class="item">
+    <a href="/component.html">组件</a>
+  </div>
+  <div class="item active">
+    <a href="/custom.html">定制</a>
+  </div>
+  <div class="item full ph10">
+    <div class="input container" style="max-width: 3rem">
+      <input placeholder="仅提供样式，不支持搜索">
+      <i class="fa fa-search right"></i>
+    </div>
+  </div>
+  <div class="item sign">
+    <div class="user">
+      <span style="padding: 0 .08rem">
+        <img src="/assets/img/user.jpg">
+        <label>小乐</label>
+        <i class="fa fa-caret-down"></i>
+      </span>
+      <div class="dropdown">
+        <div class="item">
+          <a>我的主页</a>
+        </div>
+        <div class="item">
+          <a>退出</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel mt50 pv10">
+  <h3>1、如何定制</h3>
+  <div>
+    按照postcss方式按需导入即可。postcss教程参考<a href="http://www.w3cplus.com/blog/tags/516.html" target="_blank">postcss入门</a>。
+    建议结合打包工具一起使用。webpack打包方式，参考<a href="https://github.com/le5le-com/le5le-ui" target="_blank">源码</a>中的demo。
+    在demo/assets/index.css中定义了需要导入的css模块。
+    在demo/assets/variables.css中定义了您自己的需要的主题样式变量。
+  </div>
+
+  <h3 class="mt50">2、变量说明</h3>
+  <div>
+    $font-family: 全局字体 <br>
+    $font-size: 全局字体大小 <br>
+    $color: 全局字体颜色 <br>
+    $line-height: 全局行高 <br>
+
+    $color-primary: 主颜色 <br>
+    $color-primary-hover: 主hover颜色 <br>
+    $color-success: success主题颜色 <br>
+    $color-success-hover: success下的hover主题颜色 <br>
+    $color-warning: warning主题颜色 <br>
+    $color-warning-hover: warning下的hover主题颜色 <br>
+    $color-error: error主题颜色 <br>
+    $color-error-hover: error下的hover主题颜色 <br>
+    $color-cyan: 青色主题 <br>
+    $color-cyan-hover: 青色hover主题 <br>
+    $color-orange: 橙色主题 <br>
+    $color-orange-hover: 橙色hover主题 <br>
+
+    $color-weixin: 微信颜色<br>
+    $color-weixin-hover: 微信hover颜色<br>
+    $color-qq: qq颜色<br>
+    $color-qq-hover: qq  hover颜色<br>
+    $color-weibo: 微博颜色<br>
+    $color-weibo-hover: 微博hover颜色<br>
+
+    $color-url: 链接颜色<br>
+    $color-url-hover: 链接hover颜色<br>
+
+    $color-border: 边框颜色<br>
+    $color-input-border: input边框颜色<br>
+    $color-input-border-hover: input  hover边框颜色<br>
+
+    $color-gray: 灰色<br>
+    $color-desc: 文本描述主题颜色<br>
+
+    $color-placeholder: placeholder 颜色<br>
+
+    $color-lightgray: 浅灰色<br>
+
+    $color-button: 按钮颜色<br>
+    $color-button-hover: 按钮hover颜色<br>
+
+    $header-height: 网页顶部header高度<br>
+
+    $padding-list: 定义一组常用margin和padding。 具体参考 base.css中用法<br>
+    $padding-unit: 配合上面变量计算使用。<br>
+
+    $panel-width: panel宽度<br>
+
+    $box-width: box宽度<br>
+    $box-aspect-ratio: box长宽比<br>
+
+    $tree-indent: tree层级缩进宽度<br>
+
+    $input-padding: input内左右padding<br>
+
+  </div>
+  <h3 class="mt50">3、其他</h3>
+  <div>
+    有任何使用问题，可以email： alsmile123@qq.com
+  </div>
+</div>
+<footer>
+  <div class="copyright mt5">
+    Copyright© le5le。 <br>
+    Email: alsmile123@qq.com
+  </div>
+</footer>
+<script type="text/javascript" src="assets/app.3e6935a9745953126590.js"></script></body>
+</html>
