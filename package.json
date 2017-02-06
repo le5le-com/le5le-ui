@@ -1,6 +1,6 @@
 {
   "name": "le5le-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Css design for flex, postcss.",
   "main": "index.ts",
   "scripts": {
@@ -26,7 +26,7 @@
     "css-loader": "^0.23.1",
     "ejs-compiled-loader": "^1.1.0",
     "ejs-loader": "^0.3.0",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "~2.0.0-rc.3",
     "file-loader": "^0.8.5",
     "glob": "^7.1.1",
     "html-loader": "^0.4.3",
@@ -53,8 +53,8 @@
     "ts-loader": "^0.8.1",
     "typescript": "^2.0.3",
     "typings": "^1.4.0",
-    "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1",
-    "webpack-merge": "^0.14.0"
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.3.0",
+    "webpack-merge": "^2.6.1"
   }
 }

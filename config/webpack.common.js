@@ -20,32 +20,41 @@ var config = {
   entry: {
     'app': './demo/assets/index.js'
   },
-
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['.js', '.json'],
+    modules: [helpers.root('src'), helpers.root('node_modules')]
   },
-
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss-loader')
+        loader: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: [{
+            loader: "css-loader"
+          },{
+            loader: "postcss-loader"
+          }]
+        })
       }
     ]
   },
-  postcss: function (bundler) {
-    return [
-      require('postcss-import')({ addDependencyTo: bundler }),
-      require('precss')(),
-      require('autoprefixer')({
-        browsers: AUTOPREFIXER_BROWSERS
-      })
-    ];
-  },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ['app']
+    new webpack.LoaderOptionsPlugin({
+      test: /\.css$/,
+      options: {
+        postcss: function (bundler) {
+          return [
+            require('postcss-import')({ addDependencyTo: bundler }),
+            require('precss')(),
+            require('autoprefixer')({
+              browsers: AUTOPREFIXER_BROWSERS
+            })
+          ];
+        },
+      }
     }),
+    new webpack.optimize.UglifyJsPlugin(),
     new CopyWebpackPlugin([
       { from: 'demo/assets/img', to: 'assets/img' },
       { from: 'demo/browser/browser.html', to: 'browser.html' }
