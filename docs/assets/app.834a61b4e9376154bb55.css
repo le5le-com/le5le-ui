@@ -438,6 +438,22 @@ img {
   max-width: 100%;
 }
 
+.font-2x {
+  font-size: 2em;
+}
+
+.font-3x {
+  font-size: 3em;
+}
+
+.font-4x {
+  font-size: 4em;
+}
+
+.font-5x {
+  font-size: 5em;
+}
+
 /* 移除上下小箭头*/
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
@@ -1521,6 +1537,7 @@ footer .copyright {
 
 .tree .item i {
   width: .15rem;
+  vertical-align: middle;
 }
 
 .tree .item.active, .tree .item.active a, .tree .item a.active, .tree .item:hover {
