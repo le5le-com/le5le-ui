@@ -16,6 +16,7 @@
 
 .tree .item i {
   width: .15rem;
+  vertical-align: middle;
 }
 
 .tree .item.active, .tree .item.active a, .tree .item a.active, .tree .item:hover {
