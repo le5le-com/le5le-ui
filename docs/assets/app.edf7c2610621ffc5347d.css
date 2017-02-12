@@ -1860,7 +1860,6 @@ a.button:hover {
 
 .modal .modal-content {
   box-shadow: 0 5px 15px rgba(0,0,0,.5);
-  border-top: .03rem solid #0288d1;
   background-color: #fff;
   max-width: 70%;
   max-height: 80%;
@@ -1887,7 +1886,7 @@ a.button:hover {
 
 .modal-header {
   border-bottom: 1px solid #d0d0d0;
-  padding: .05rem .1rem;
+  padding: .02rem .1rem;
   font-size: .14rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1897,6 +1896,36 @@ a.button:hover {
   -webkit-align-items: center ;
       -ms-flex-align: center ;
           align-items: center ;
+}
+
+.primary .modal-header {
+  background-color: #0288d1;
+  color: #fff;
+}
+
+.success .modal-header {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.warning .modal-header {
+  background-color: #f90;
+  color: #fff;
+}
+
+.error .modal-header {
+  background-color: #f30707;
+  color: #fff;
+}
+
+.cyan .modal-header {
+  background-color: #00cbea;
+  color: #fff;
+}
+
+.orange .modal-header {
+  background-color: #fb8c00;
+  color: #fff;
 }
 
 .modal-header .caption {
@@ -1923,8 +1952,7 @@ a.button:hover {
 }
 
 .modal-footer {
-  padding: .1rem;
-  border-top: 1px solid #d0d0d0;
+  padding: 0 .1rem .1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1933,13 +1961,6 @@ a.button:hover {
   -webkit-align-items: center ;
       -ms-flex-align: center ;
           align-items: center ;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.modal-footer.right {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;

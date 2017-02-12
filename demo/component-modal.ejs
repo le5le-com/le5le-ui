@@ -23,8 +23,11 @@
       <b>【注意】</b>这里仅涉及model样式。显示或隐藏需要您自己用js去控制。无论您用JQuery、angular、react还是vue，这都是非常简单的不是吗？
     </div>
     <h3>使用</h3>
+    <div>
+      modal可以结合primary、success、warning、error、orange（或者不结合theme）等theme使用。例如下面结合的是primary。
+    </div>
     <button class="button primary" id="show-modal"> 单击弹出modal</button>
-    <div class="modal" style="display: none;">
+    <div class="modal primary" style="display: none;">
       <div class="modal-content">
         <div class="modal-header">
           <div class="caption">提示</div>
@@ -41,7 +44,7 @@
       </div>
     </div>
     <textarea class="input mt20 full" rows="20" style="resize: none;" readonly="readonly">
-       <div class="modal" style="display: none;">
+       <div class="modal primary" style="display: none;">
         <div class="modal-content">
           <div class="modal-header">
             <div class="caption">提示</div>

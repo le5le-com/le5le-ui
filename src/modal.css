@@ -15,7 +15,6 @@
 
 .modal .modal-content {
   box-shadow: 0 5px 15px rgba(0,0,0,.5);
-  border-top: .03rem solid $color-primary;
   background-color: #fff;
   max-width: 70%;
   max-height: 80%;
@@ -35,10 +34,41 @@
 
 .modal-header {
   border-bottom: 1px solid $color-border;
-  padding: .05rem .1rem;
+  padding: .02rem .1rem;
   font-size: .14rem;
   display: flex;
   align-items: center ;
+}
+
+.primary .modal-header {
+  background-color: $color-primary;
+  color: #fff;
+}
+
+.success .modal-header {
+  background-color: $color-success;
+  color: #fff;
+}
+
+.warning .modal-header {
+  background-color: $color-warning;
+  color: #fff;
+}
+
+.error .modal-header {
+  background-color: $color-error;
+  color: #fff;
+}
+
+.cyan .modal-header {
+  background-color: $color-cyan;
+  color: #fff;
+}
+
+
+.orange .modal-header {
+  background-color: $color-orange;
+  color: #fff;
 }
 
 .modal-header .caption {
@@ -62,14 +92,9 @@
 }
 
 .modal-footer {
-  padding: .1rem;
-  border-top: 1px solid $color-border;
+  padding: 0 .1rem .1rem;
   display: flex;
   align-items: center ;
-  justify-content: center;
-}
-
-.modal-footer.right {
   justify-content: flex-end;
 }
 
