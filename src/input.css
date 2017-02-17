@@ -3,6 +3,11 @@ input {
   padding-right: $input-padding;
 }
 
+input[type='file'] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .input {
   padding: 0 $input-padding;
   outline: none;
