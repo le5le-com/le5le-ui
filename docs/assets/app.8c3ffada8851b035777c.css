@@ -1214,6 +1214,12 @@ input {
   padding-right: .07rem;
 }
 
+input[type='file'] {
+  padding-left: 0;
+  padding-right: 0;
+  cursor: pointer;
+}
+
 .input {
   padding: 0 .07rem;
   outline: none;
@@ -1330,7 +1336,7 @@ input.ng-touched.ng-invalid{
   color: #f30;
   font-size: .2rem;
   vertical-align: middle;
-  margin: .05rem;
+  line-height: 1;
   position: relative;
   top: .03rem;
 }
@@ -1788,10 +1794,10 @@ a.button:hover {
 }
 
 .box {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1800,7 +1806,6 @@ a.button:hover {
   width: 2rem;
   height: calc(2rem*.64);
   border: 1px solid #d0d0d0;
-  margin: .2rem .1rem .1rem 0;
 }
 
 .box .content {
