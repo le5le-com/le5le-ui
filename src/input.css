@@ -108,7 +108,7 @@ input.ng-touched.ng-invalid{
   color: #f30;
   font-size: .2rem;
   vertical-align: middle;
-  margin: .05rem;
+  line-height: 1;
   position: relative;
   top: .03rem;
 }
