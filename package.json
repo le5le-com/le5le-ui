@@ -1,5 +1,5 @@
 {
-  "name": "@le5le/css",
+  "name": "@le5le/ui-css",
   "version": "0.1.0",
   "description": "Css design for flex, postcss.",
   "main": "index.ts",
@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --inline --progress --port 8100",
     "test": "karma start",
     "clean": "rimraf docs",
-    "build": "rimraf docs && webpack --config config/webpack.prod.js --progress --profile --bail"
+    "build": "npm run clean && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
   "keywords": [
     "css",
