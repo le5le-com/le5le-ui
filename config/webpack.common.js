@@ -27,7 +27,7 @@ var config = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.pcss$/,
         loader: ExtractTextPlugin.extract({
           fallback: "style-loader",
           use: [{
@@ -41,7 +41,7 @@ var config = {
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({
-      test: /\.css$/,
+      test: /\.pcss$/,
       options: {
         postcss: function (bundler) {
           return [
