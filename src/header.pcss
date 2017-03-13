@@ -57,18 +57,28 @@
   display: block;
 }
 
-.header .item.sign {
+.header .item.right {
   text-align: right;
   max-width: inherit;
   padding: 0 .2rem;
 }
 
-.header .item.sign:hover .dropdown {
+.header .item.right:hover .dropdown {
   display: none;
 }
 
-.header .item.sign .user:hover .dropdown {
+.header .item.right .user:hover .dropdown {
   display: block;
+}
+
+.header .item.right .sign a{
+  font-size: .14rem;
+  padding: 0 .1rem;
+}
+
+.header .item .sep {
+  border-right: 1px solid rgba(255, 255, 255, .5);
+  margin-left: -3px;
 }
 
 .header .item.logo {
