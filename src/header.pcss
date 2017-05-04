@@ -9,7 +9,7 @@
   margin: auto;
   height: $header-height;
   line-height: $header-height;
-  background: $color-primary;
+  background: $header-background-color;
   color: #fff;
   z-index: 100;
 }
@@ -20,13 +20,14 @@
   flex-shrink: 0;
   list-style: none;
   position: relative;
+  font-size: $font-size-header;
 }
 
 .header .item a {
   text-decoration: none;
   color: #fff;
   display: inline-block;
-  font-size: .16rem;
+  font-size: $font-size-header;
   padding: 0 .2rem;
 }
 
@@ -72,7 +73,7 @@
 }
 
 .header .item.right .sign a{
-  font-size: .14rem;
+  font-size: $font-size-header;
   padding: 0 .1rem;
 }
 
