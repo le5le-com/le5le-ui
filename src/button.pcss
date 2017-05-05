@@ -17,13 +17,13 @@
 }
 
 a.button:hover {
-  color: #fff!important;
+  color: $color-button-hover!important;
 }
 
 .button[disabled],.button[disabled]:hover {
-  color: color($color a(85%))!important;
-  background-color: #efefef!important;
-  border: 1px solid #bbb!important;
+  color: $color-desc!important;
+  background-color: $color-button-disabled!important;
+  border: 1px solid $color-button-disabled!important;
   cursor: default;
 }
 
@@ -34,8 +34,8 @@ a.button:hover {
 }
 
 .button.primary:hover {
-  color: #fff;
   background-color: $color-primary-hover;
+  border: 1px solid $color-primary-hover;
 }
 
 .button.cyan {
@@ -45,8 +45,8 @@ a.button:hover {
 }
 
 .button.cyan:hover {
-  color: #fff;
   background-color: $color-cyan-hover;
+  border: 1px solid $color-cyan-hover;
 }
 
 .button.success {
@@ -57,6 +57,7 @@ a.button:hover {
 
 .button.success:hover {
   background-color: $color-success-hover;
+  border: 1px solid $color-success-hover;
 }
 
 .button.warning {
@@ -66,8 +67,8 @@ a.button:hover {
 }
 
 .button.warning:hover {
-  color: #fff;
   background-color: $color-warning-hover;
+  border: 1px solid $color-warning-hover;
 }
 
 .button.error {
@@ -77,8 +78,8 @@ a.button:hover {
 }
 
 .button.error:hover {
-  color: #fff;
   background-color: $color-error-hover;
+  border: 1px solid $color-error-hover;
 }
 
 .button.weixin {
@@ -89,6 +90,7 @@ a.button:hover {
 
 .button.weixin:hover {
   background-color: $color-weixin-hover;
+  border-color: $color-weixin-hover;
 }
 
 .button.qq {
@@ -98,17 +100,19 @@ a.button:hover {
 }
 
 .button.qq:hover {
+  border-color: $color-qq-hover;
   background-color: $color-qq-hover;
 }
 
 .button.weibo {
   color: #fff;
   border-color: $color-weibo;
-  background-color: $color-weibo-hover;
+  background-color: $color-weibo;
 }
 
 .button.weibo:hover {
-  background-color: $color-weibo;
+  border-color: $color-weibo-hover;
+  background-color: $color-weibo-hover;
 }
 
 .button.border {

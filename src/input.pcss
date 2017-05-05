@@ -1,12 +1,18 @@
 input {
   padding-left: $input-padding;
   padding-right: $input-padding;
+  color: $color;
 }
 
 input[type='file'] {
   padding-left: 0;
   padding-right: 0;
   cursor: pointer;
+}
+
+textarea {
+  vertical-align: text-top;
+  max-width: 100%;
 }
 
 .input {
@@ -113,14 +119,86 @@ input.ng-touched.ng-invalid{
   top: .03rem;
 }
 
-.checkbox input[type="checkbox"] {
-  vertical-align: middle;
-  position: relative;
-  min-height: $font-size;
+.checkbox input[type="checkbox"], .radio input[type="radio"] {
+  display: none;
 }
 
-.checkbox i {
+.radio>span, .checkbox>span {
+  position: relative;
+  vertical-align: middle;
+  padding-left: .2rem;
+  cursor: pointer;
+}
+
+.radio input[type="radio"]:checked + span:before, .checkbox input[type="checkbox"]:checked +span:before,
+.radio:hover>span:before, .checkbox:hover>span:before {
+  border-color: $color-primary;
+}
+
+.checkbox input[type="checkbox"]:checked +span:before {
+  background-color: $color-primary;
+}
+
+.radio input[disabled] + span:before, .checkbox input[disabled]:checked +span:before {
+  border-color: $color-button-disabled;
+}
+
+.radio>span:before {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: .12rem;
+  height: .12rem;
+  content: '';
+  border: 1px solid #c0c0c0;
+  border-radius: 50%;
+}
+
+.radio>span:after {
+  display: none;
+  position: absolute;
+  top: .01rem;
+  left: .01rem;
+  content: '';
+  width: .12rem;
+  height: .12rem;
+  border-radius: 50%;
+  background: $color-primary;
+  transform: scale(.5);
+}
+
+.radio input:checked + span:after, .checkbox input:checked + span:after {
+  display: block;
+}
+
+.radio input:checked + span:after, .checkbox input:checked + span:after {
+  display: block;
+}
+
+.checkbox>span:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: .12rem;
+  height: .12rem;
+  content: '';
+  border: 1px solid #c0c0c0;
+  border-radius: .03rem;
+}
+
+.checkbox>span:after {
+  display: none;
+  position: absolute;
+  content: '';
+  top: .02rem;
+  left: .05rem;
+  box-sizing: border-box;
+  width: .05rem;
+  height: .08rem;
+  transform: rotate(42deg);
+  border: 2px solid #fff;
+  border-top: 0;
+  border-left: 0;
 }
 
 .ui-switch {
