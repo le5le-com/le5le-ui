@@ -16,23 +16,24 @@ textarea {
 }
 
 .input {
-  padding: 0 $input-padding;
+  padding: $input-padding;
   outline: none;
   border: 1px solid  $color-input-border;
-  line-height: 2;
+  line-height: 1.8;
   box-sizing: border-box;
   background-color: #fff;
+  min-height: .26rem;
 }
 
 .input:hover, .input:focus {
   border-color: $color-input-border-hover;
 }
 
-.input:read-only{
-  background-color: #eee;
+.input[readonly]{
+  background-color: $color-button-disabled;
 }
 
-.input:read-only:hover, .input:read-only:focus{
+.input[readonly]:hover, .input[readonly]:focus{
   border: 1px solid  $color-input-border;
 }
 
@@ -107,16 +108,6 @@ input.ng-touched.ng-invalid{
 
 .comment.input .user>label {
   color: $color;
-}
-
-.required::after {
-  content: "*";
-  color: #f30;
-  font-size: .2rem;
-  vertical-align: middle;
-  line-height: 1;
-  position: relative;
-  top: .03rem;
 }
 
 .checkbox input[type="checkbox"], .radio input[type="radio"] {
@@ -263,17 +254,49 @@ input.ng-touched.ng-invalid{
   background-color: $color-orange;
 }
 
-/*::-webkit-input-placeholder { !* WebKit browsers *!*/
-  /*color: $color-placeholder;*/
-/*}*/
-/*:-moz-placeholder { !* Mozilla Firefox 4 to 18 *!*/
-  /*color: $color-placeholder;*/
-  /*opacity:  1;*/
-/*}*/
-/*::-moz-placeholder { !* Mozilla Firefox 19+ *!*/
-  /*color: $color-placeholder;*/
-  /*opacity:  1;*/
-/*}*/
-/*:-ms-input-placeholder { !* Internet Explorer 10+ *!*/
-  /*color: $color-placeholder;*/
-/*}*/
+.input-group {
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.input-group>i {
+  position: absolute;
+  left: .16rem;
+  font-size: .16rem;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  color: rgba(0,0,0,.55);
+}
+
+.input-group .input {
+  padding-left: .3rem;
+  box-sizing: border-box;
+}
+
+.input-group .right {
+  position: absolute;
+  right: .1rem;
+  top: -55%;
+  bottom: 0;
+}
+
+form>.flex>label {
+  margin-right: .15rem;
+}
+form>.flex>label::after {
+  content: " ";
+  width: .05rem;
+  display: inline-block;
+}
+
+.required::after {
+  content: "*"!important;
+  color: #f30;
+  font-size: .2rem;
+  vertical-align: middle;
+  line-height: 1;
+  position: relative;
+  top: .03rem;
+}

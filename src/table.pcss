@@ -1,31 +1,42 @@
 table {
   border-spacing: 0;
+  border: 1px solid $color-border;
 }
 
 tr th {
   text-align: left;
-  padding:  .05rem .12rem;
-  border: 1px solid color($color-border a(80%));
-  border-right: none;
+  padding:  $td-padding;
+  border-bottom: 1px solid $color-border;
+}
+
+tr th:first-child, tr td:first-child {
+  padding-left: $table-padding;
 }
 
 tr th:last-child, tr td:last-child {
-  border-right: 1px solid color($color-border a(80%));
+  padding-right: $table-padding;
 }
 
 tr td {
   text-align: left;
-  padding:  .05rem .12rem;
-  border-left: 1px solid color($color-border a(80%));
-  border-bottom: 1px solid color($color-border a(80%));
+  padding: $td-padding;
+  border-bottom: 1px solid $color-td;
+}
+tr:last-child td {
+  border-bottom: none;
 }
 
 td.td-input{
   padding: 0;
 }
 
+td.td-input:first-child {
+  padding-left: 0;
+}
+
+
 td.td-input:hover{
-  outline: 1px solid color($color-input-border-hover a(70%));
+  outline: 1px solid $color-input-border-hover;
 }
 
 td.td-input .input{
@@ -34,4 +45,9 @@ td.td-input .input{
   background: transparent;
   outline: none;
   border: none!important;
+  padding-left: $td-padding;
+}
+
+td.td-input:first-child .input{
+  padding-left: $table-padding;
 }

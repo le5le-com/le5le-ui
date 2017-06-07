@@ -20,13 +20,6 @@ a.button:hover {
   color: $color-button-hover!important;
 }
 
-.button[disabled],.button[disabled]:hover {
-  color: $color-desc!important;
-  background-color: $color-button-disabled!important;
-  border: 1px solid $color-button-disabled!important;
-  cursor: default;
-}
-
 .button.primary {
   border: 1px solid $color-primary;
   color: #fff;
@@ -34,6 +27,7 @@ a.button:hover {
 }
 
 .button.primary:hover {
+  color: #fff!important;
   background-color: $color-primary-hover;
   border: 1px solid $color-primary-hover;
 }
@@ -45,6 +39,7 @@ a.button:hover {
 }
 
 .button.cyan:hover {
+  color: #fff!important;
   background-color: $color-cyan-hover;
   border: 1px solid $color-cyan-hover;
 }
@@ -56,6 +51,7 @@ a.button:hover {
 }
 
 .button.success:hover {
+  color: #fff!important;
   background-color: $color-success-hover;
   border: 1px solid $color-success-hover;
 }
@@ -67,6 +63,7 @@ a.button:hover {
 }
 
 .button.warning:hover {
+  color: #fff!important;
   background-color: $color-warning-hover;
   border: 1px solid $color-warning-hover;
 }
@@ -78,6 +75,7 @@ a.button:hover {
 }
 
 .button.error:hover {
+  color: #fff!important;
   background-color: $color-error-hover;
   border: 1px solid $color-error-hover;
 }
@@ -89,6 +87,7 @@ a.button:hover {
 }
 
 .button.weixin:hover {
+  color: #fff!important;
   background-color: $color-weixin-hover;
   border-color: $color-weixin-hover;
 }
@@ -100,6 +99,7 @@ a.button:hover {
 }
 
 .button.qq:hover {
+  color: #fff!important;
   border-color: $color-qq-hover;
   background-color: $color-qq-hover;
 }
@@ -111,6 +111,7 @@ a.button:hover {
 }
 
 .button.weibo:hover {
+  color: #fff!important;
   border-color: $color-weibo-hover;
   background-color: $color-weibo-hover;
 }
@@ -126,7 +127,7 @@ a.button:hover {
 }
 
 .button.primary.border:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: $color-primary;
 }
 
@@ -136,7 +137,7 @@ a.button:hover {
 }
 
 .button.success.border:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: $color-success;
 }
 
@@ -146,7 +147,7 @@ a.button:hover {
 }
 
 .button.success.border:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: $color-success;
 }
 
@@ -156,7 +157,7 @@ a.button:hover {
 }
 
 .button.warning.border:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: $color-warning;
 }
 
@@ -166,7 +167,7 @@ a.button:hover {
 }
 
 .button.error.border:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: $color-error;
 }
 
@@ -186,17 +187,17 @@ a.button:hover {
 }
 
 .button.weixin.border:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: $color-weixin;
 }
 
 .button.qq.border:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: $color-qq;
 }
 
 .button.weibo.border:hover {
-  color: #fff;
+  color: #fff!important;
   background-color: $color-weibo;
 }
 
@@ -211,4 +212,11 @@ a.button:hover {
   height: .4rem;
   line-height: .4rem;
   border-radius: 50%;
+}
+
+.button[disabled],.button[disabled]:hover {
+  color: $color-desc!important;
+  background-color: $color-button-disabled!important;
+  border: 1px solid $color-button-disabled!important;
+  cursor: default;
 }
