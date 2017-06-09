@@ -39,6 +39,10 @@ $border-radius: .04rem;
   padding: .01rem .1rem;
 }
 
+.multi[data-tooltip]:after {
+  padding: .1rem .15rem;
+}
+
 .tooltip-top:before {
   bottom: 100%;
   left: calc(50% - $triangle-size);
@@ -79,6 +83,7 @@ $border-radius: .04rem;
   bottom: 50%;
   transform: translateY(50%);
   margin-right: calc(1.9 * $triangle-size);
+  white-space: pre-wrap;
 }
 
 .tooltip-right:before {
@@ -145,4 +150,28 @@ $border-radius: .04rem;
   top: 100%;
   right: 0;
   margin-top: .04rem;
+}
+
+.default:after {
+  width: 100%;
+}
+
+.bigger:after {
+  width: 120%;
+}
+
+.smaller:after {
+  width: 80%;
+}
+
+.width-2x:after {
+  width: 200%;
+}
+
+.medium:after {
+  width: 2rem;
+}
+
+.large:after {
+  width: 4rem;
 }
