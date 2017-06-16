@@ -1,5 +1,6 @@
 .dropdown {
   position: absolute;
+  top: 100%;
   color: #000;
   box-shadow: 0px 0px 10px rgba(0,0,0,.3);
   display: none;
@@ -9,8 +10,13 @@
   text-align: left;
 }
 
+.right .dropdown {
+  right: 0;
+}
+
 .dropdown-container {
   position: relative;
+  cursor: pointer;
 }
 
 .dropdown-container:hover .dropdown {

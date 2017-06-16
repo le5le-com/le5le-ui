@@ -282,10 +282,11 @@ input.ng-touched.ng-invalid{
   bottom: 0;
 }
 
-form>.flex>label {
+form .flex>label {
   margin-right: .15rem;
+  margin-top: .03rem;
 }
-form>.flex>label::after {
+form .flex>label::after {
   content: " ";
   width: .05rem;
   display: inline-block;
@@ -299,4 +300,11 @@ form>.flex>label::after {
   line-height: 1;
   position: relative;
   top: .03rem;
+}
+
+.form-untouched .error {
+  display: none;
+}
+.form-untouched .ng-touched.error {
+  display: inherit;
 }

@@ -22,3 +22,29 @@
 .nav>label {
   color: $color-desc;
 }
+
+.nav-tab {
+  display: flex;
+  border-bottom: 1px solid $color-border;
+}
+.nav-tab>.item {
+  padding: .1rem 1rem;
+  position: relative;
+  top: 1px;
+  border-right: 1px solid #efefef;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.nav-tab>.item:hover {
+  color: $color-primary!important;
+}
+
+.nav-tab>.item:last-child {
+  border-right: none;
+}
+
+.nav-tab>.item.active {
+  color: $color-title;
+  border-bottom: 2px solid $color-primary;
+}
