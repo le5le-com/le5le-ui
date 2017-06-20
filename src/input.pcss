@@ -29,11 +29,11 @@ textarea {
   border-color: $color-input-border-hover;
 }
 
-.input[readonly]{
+.input[readonly], .input[disabled]{
   background-color: $color-button-disabled;
 }
 
-.input[readonly]:hover, .input[readonly]:focus{
+.input[readonly]:hover, .input[readonly]:focus, .input[disabled]:hover, .input[disabled]:focus {
   border: 1px solid  $color-input-border;
 }
 
@@ -175,6 +175,11 @@ input.ng-touched.ng-invalid{
   content: '';
   border: 1px solid #c0c0c0;
   border-radius: .03rem;
+}
+
+.checkbox.disabled>span:before {
+  border: 1px solid #ddd;
+  background-color: #eee;
 }
 
 .checkbox>span:after {

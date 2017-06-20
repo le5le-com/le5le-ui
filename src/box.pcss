@@ -24,3 +24,29 @@
 .box.dash {
   border-style: dashed!important;
 }
+
+.box.icon {
+  border-radius: .04rem;
+  width: $icon-box-width;
+  height: $icon-box-width;
+  position: relative;
+  text-align: center;
+}
+
+.box.hover:hover {
+  background-color: $color-primary;
+  color: #fff!important;
+  cursor: pointer;
+}
+
+.box.icon>i {
+  font-size: .4rem;
+  margin-top: .05rem;
+}
+
+.box.icon>.desc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: .05rem;
+}
