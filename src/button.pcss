@@ -220,3 +220,19 @@ a.button:hover {
   border: 1px solid $color-button-disabled!important;
   cursor: default;
 }
+
+.button.checked {
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  position: relative;
+}
+
+.button.checked:after {
+  font-family: "iconfont" !important;
+  content: '\E657';
+  position: absolute;
+  top: -.05rem;
+  right: -.05rem;
+  background: #fff;
+  font-size: .16rem;
+}

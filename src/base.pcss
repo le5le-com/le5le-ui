@@ -346,3 +346,20 @@ input[type="number"]{
 ui-loading {
   display: block;
 }
+
+.line {
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+
+.line.one {
+  -webkit-line-clamp: 1;
+}
+.line.two {
+  -webkit-line-clamp: 2;
+}
+.line.three {
+  -webkit-line-clamp: 3;
+}
