@@ -202,35 +202,29 @@ input.ng-touched.ng-invalid{
 }
 
 .ui-switch {
-  color: $color!important;
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+  min-width: .8rem;
+  color: #fff;
+  text-align: center;
   line-height: 1.5;
   border-radius: 1px;
   border: 1px solid $color-primary;
-  min-width: .8rem;
   background-color: $color-primary;
   cursor: pointer;
 }
 
-.ui-switch.disable {
-  color: $color-desc!important;
+.ui-switch>span {
+  width: 50%;
+}
+
+.ui-switch.disabled {
+  color: $color-desc;
   cursor: default;
 }
 
-.ui-switch .desc {
-  display: inline-block;
-  width: 50%;
-  background-color: #fff;
-  text-align: center;
-}
-
-.ui-switch.on .desc {
-  float: right;
-}
-
-.ui-switch.off .desc {
-  float: left;
+.ui-switch .blank {
+  background: #fff;
+  color: #fff;
 }
 
 .ui-switch.off {
