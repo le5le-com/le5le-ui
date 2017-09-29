@@ -54,3 +54,26 @@
   color: $color-title;
   border-bottom: 2px solid $color-primary;
 }
+
+.nav-tab.default .item {
+  border: 1px solid $color-border;
+  padding: .03rem .15rem;
+  flex-grow: inherit;
+  border-radius: .04rem .04rem 0 0;
+  margin-right: .03rem;
+  background-color: #f9f9f9;
+  color: #89949b!important;
+}
+
+.nav-tab.default .item:hover, .nav-tab.default .item a:hover {
+  color: $color-primary!important;
+}
+
+.nav-tab.default .item.active, .nav-tab.default .item.active a {
+  background-color: #fff;
+  color: $color-primary!important;
+}
+
+.nav-tab.default, .nav-tab.default .item.active {
+  border-bottom: none;
+}
