@@ -33,7 +33,7 @@ textarea {
   border-color: $color-input-border;
 }
 
-input[readonly], input[disabled], .input[readonly], .input[disabled], .readonly{
+input[readonly], input[disabled], .input[readonly], .input[disabled], .readonly, .disabled .radio>span:before, .disabled .checkbox>span:before {
   background-color: $color-button-disabled;
 }
 
@@ -127,6 +127,10 @@ input.ng-touched.ng-invalid{
   vertical-align: middle;
   padding-left: .2rem;
   cursor: pointer;
+}
+
+.radio.disabled>span, .checkbox.disabled>span {
+  cursor: default;
 }
 
 .radio input[type="radio"]:checked + span:before, .checkbox input[type="checkbox"]:checked +span:before,
