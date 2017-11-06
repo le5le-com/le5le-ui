@@ -210,34 +210,46 @@ input.ng-touched.ng-invalid{
 }
 
 .ui-switch {
-  display: inline-flex;
-  min-width: .8rem;
+  position: relative;
+  display: inline-block;
+  width: .2rem;
+  height: .1rem;
   color: #fff;
-  text-align: center;
-  line-height: 1.5;
-  border-radius: 1px;
+  border-radius: .1rem;
   border: 1px solid $color-primary;
   background-color: $color-primary;
   cursor: pointer;
+  transition: all .36s;
 }
 
-.ui-switch>span {
-  width: 50%;
+.ui-switch:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  width: .1rem;
+  height: .1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: left .36s ;
+}
+
+.ui-switch.off {
+  border: 1px solid $color-gray!important;
+  background-color: $color-lightgray!important;
+}
+
+.ui-switch.on:after {
+  left: .1rem;
 }
 
 .ui-switch.disabled {
-  color: $color-desc;
-  cursor: default;
+  opacity: .5;
+  cursor: not-allowed;
 }
 
 .ui-switch .blank {
   background: #fff;
   color: #fff;
-}
-
-.ui-switch.off {
-  border: 1px solid $color-gray!important;
-  background-color: $color-gray!important;
 }
 
 .ui-switch.success {
