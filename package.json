@@ -1,6 +1,6 @@
 {
   "name": "le5le-ui",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "Css design for flex, postcss.",
   "main": "index.ts",
   "scripts": {
