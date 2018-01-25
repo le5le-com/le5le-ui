@@ -1,32 +1,36 @@
 table {
   border-spacing: 0;
   border: 1px solid $color-border;
+  border-radius: .05rem;
 }
 
 tr th {
+  font-size: $font-size-th;
   text-align: left;
-  padding:  $td-padding;
+  padding: $td-padding;
+  border-right: 1px solid $color-td;
   border-bottom: 1px solid $color-border;
+  color: $color-th;
+  line-height: .2rem;
+  font-weight: 500;
 }
 
-tr th:first-child, tr td:first-child {
-  padding-left: $table-padding;
-}
-
-tr th:last-child, tr td:last-child {
-  padding-right: $table-padding;
+tr th:last-child {
+  border-right: none;
 }
 
 tr td {
   text-align: left;
   padding: $td-padding;
   border-bottom: 1px solid $color-td;
-}
-tr:last-child td {
-  border-bottom: none;
+  line-height: .18rem;
 }
 
-td.td-input{
+tr:last-child td {
+  border-bottom: 1px solid transparent;
+}
+
+td.td-input {
   padding: 0;
 }
 
@@ -34,34 +38,38 @@ td.td-input:first-child {
   padding-left: 0;
 }
 
-
-td.td-input:hover{
+td.td-input:hover {
   outline: 1px solid $color-input-border-hover;
 }
 
-td.td-input .input{
+td.td-input .input {
   border: none;
   resize: none;
   background: transparent;
   outline: none;
-  border: none!important;
+  border: none !important;
   padding-left: $td-padding;
 }
 
-td.td-input:first-child .input{
+td.td-input:first-child .input {
   padding-left: $table-padding;
 }
 
-table.grid, table.grid td {
+table.grid,
+table.grid td {
   border: none;
   vertical-align: text-top;
 }
 
 tr.deleted {
   text-decoration: line-through;
-  color: $color-gray!important;
+  color: $color-gray !important;
 }
 
 tr.deleted td a {
-  color: $color-gray!important;
+  color: $color-gray !important;
+}
+
+tr td a .iconfont {
+  font-size: .14rem;
 }

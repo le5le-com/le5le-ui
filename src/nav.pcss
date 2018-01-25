@@ -1,13 +1,14 @@
 .nav {
-  font-size: $font-size-nav;
+  font-size: $font-size-title;
+  line-height: 1;
+  font-weight: 500;
 }
 
-.nav>a {
+.nav > a {
   display: inline-block;
-  //font-size: $font-size-popup-title;
 }
 
-.nav>a:after {
+.nav > a:after {
   font-family: "iconfont" !important;
   content: '\e6a8';
   margin-left: .1rem;
@@ -15,11 +16,11 @@
   color: $color-gray;
 }
 
-.nav>a:last-child:after {
+.nav > a:last-child:after {
   content: '';
 }
 
-.nav>label {
+.nav > label {
   color: $color-desc;
 }
 
@@ -27,7 +28,8 @@
   display: flex;
   border-bottom: 1px solid $color-border;
 }
-.nav-tab>.item {
+
+.nav-tab > .item {
   padding: .07rem 1rem;
   position: relative;
   top: 1px;
@@ -36,21 +38,21 @@
   text-align: center;
 }
 
-.nav-tab.no-border>.item {
+.nav-tab.no-border > .item {
   border-right: none;
   flex-grow: 0;
   padding: .07rem .3rem;
 }
 
-.nav-tab>.item:hover {
-  color: $color-primary!important;
+.nav-tab > .item:hover {
+  color: $color-primary !important;
 }
 
-.nav-tab>.item:last-child {
+.nav-tab > .item:last-child {
   border-right: none;
 }
 
-.nav-tab>.item.active {
+.nav-tab > .item.active {
   color: $color-title;
   border-bottom: 2px solid $color-primary;
 }
@@ -62,18 +64,21 @@
   border-radius: .04rem .04rem 0 0;
   margin-right: .03rem;
   background-color: #f9f9f9;
-  color: #89949b!important;
+  color: #89949b !important;
 }
 
-.nav-tab.default .item:hover, .nav-tab.default .item a:hover {
-  color: $color-primary!important;
+.nav-tab.default .item:hover,
+.nav-tab.default .item a:hover {
+  color: $color-primary !important;
 }
 
-.nav-tab.default .item.active, .nav-tab.default .item.active a {
+.nav-tab.default .item.active,
+.nav-tab.default .item.active a {
   background-color: #fff;
-  color: $color-primary!important;
+  color: $color-primary !important;
 }
 
-.nav-tab.default, .nav-tab.default .item.active {
+.nav-tab.default,
+.nav-tab.default .item.active {
   border-bottom: none;
 }

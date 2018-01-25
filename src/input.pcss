@@ -1,12 +1,10 @@
 input {
-  padding-left: $input-padding;
-  padding-right: $input-padding;
+  padding: $input-padding;
   color: $color;
 }
 
 input[type='file'] {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -18,38 +16,49 @@ textarea {
 .input {
   padding: $input-padding;
   outline: none;
-  border: 1px solid  $color-input-border;
-  line-height: 1.8;
+  border: 1px solid $color-input-border;
+  line-height: .28rem;
   box-sizing: border-box;
   background-color: #fff;
-  min-height: .26rem;
+  border-radius: .04rem;
 }
 
-.input:hover, .input:focus {
+.input:hover,
+.input:focus {
   border-color: $color-input-border-hover;
 }
 
-.input.readonly:hover, .input.readonly:focus {
+.input.readonly:hover,
+.input.readonly:focus {
   border-color: $color-input-border;
 }
 
-input[readonly], input[disabled], .input[readonly], .input[disabled], .readonly, .disabled .radio>span:before, .disabled .checkbox>span:before {
+input[readonly],
+input[disabled],
+.input[readonly],
+.input[disabled],
+.readonly,
+.disabled .radio > span:before,
+.disabled .checkbox > span:before {
   background-color: $color-button-disabled;
 }
 
-.input[readonly]:hover, .input[readonly]:focus, .input[disabled]:hover, .input[disabled]:focus {
-  border: 1px solid  $color-input-border;
+.input[readonly]:hover,
+.input[readonly]:focus,
+.input[disabled]:hover,
+.input[disabled]:focus {
+  border: 1px solid $color-input-border;
 }
 
 .input.container {
   display: inline-flex;
-  align-items: center ;
-  background-color: #fff!important;
+  align-items: center;
+  background-color: #fff !important;
   padding: 0;
 }
 
 .input.container.readonly {
-  background-color: $color-button-disabled!important;
+  background-color: $color-button-disabled !important;
 }
 
 .input.container input {
@@ -77,7 +86,7 @@ input[readonly], input[disabled], .input[readonly], .input[disabled], .readonly,
   background-color: color($color-border a(60%));
 }
 
-.input.container .right:nth-child(1n+0){
+.input.container .right:nth-child(1n+0) {
   padding: $input-padding;
   border-left: 1px solid $color-border;
   background-color: color($color-border a(60%));
@@ -85,19 +94,19 @@ input[readonly], input[disabled], .input[readonly], .input[disabled], .readonly,
 
 .input.container i.left {
   color: $color-placeholder;
-  background-color: transparent!important;
-  border: none!important;
-  padding-right: 0!important;
+  background-color: transparent !important;
+  border: none !important;
+  padding-right: 0 !important;
 }
 
 .input.container i.right {
   color: $color-placeholder;
-  background-color: transparent!important;
-  border: none!important;
-  padding-left: 0!important;
+  background-color: transparent !important;
+  border: none !important;
+  padding-left: 0 !important;
 }
 
-input.ng-touched.ng-invalid{
+input.ng-touched.ng-invalid {
   border: 1px solid $color-error;
 }
 
@@ -114,27 +123,32 @@ input.ng-touched.ng-invalid{
   left: $input-padding;
 }
 
-.comment.input .user>label {
+.comment.input .user > label {
   color: $color;
 }
 
-.checkbox input[type="checkbox"], .radio input[type="radio"] {
+.checkbox input[type="checkbox"],
+.radio input[type="radio"] {
   display: none;
 }
 
-.radio>span, .checkbox>span {
+.radio > span,
+.checkbox > span {
   position: relative;
   vertical-align: middle;
   padding-left: .2rem;
   cursor: pointer;
 }
 
-.radio.disabled>span, .checkbox.disabled>span {
+.radio.disabled > span,
+.checkbox.disabled > span {
   cursor: default;
 }
 
-.radio input[type="radio"]:checked + span:before, .checkbox input[type="checkbox"]:checked +span:before,
-.radio:hover>span:before, .checkbox:hover>span:before {
+.radio input[type="radio"]:checked + span:before,
+.checkbox input[type="checkbox"]:checked +span:before,
+.radio:hover > span:before,
+.checkbox:hover > span:before {
   border-color: $color-primary;
 }
 
@@ -142,11 +156,12 @@ input.ng-touched.ng-invalid{
   background-color: $color-primary;
 }
 
-.radio input[disabled] + span:before, .checkbox input[disabled]:checked +span:before {
+.radio input[disabled] + span:before,
+.checkbox input[disabled]:checked +span:before {
   border-color: $color-button-disabled;
 }
 
-.radio>span:before {
+.radio > span:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -157,7 +172,7 @@ input.ng-touched.ng-invalid{
   border-radius: 50%;
 }
 
-.radio>span:after {
+.radio > span:after {
   display: none;
   position: absolute;
   top: .01rem;
@@ -170,15 +185,58 @@ input.ng-touched.ng-invalid{
   transform: scale(.5);
 }
 
-.radio input:checked + span:after, .checkbox input:checked + span:after {
+.radio input:checked + span:after,
+.checkbox input:checked + span:after {
   display: block;
 }
 
-.radio input:checked + span:after, .checkbox input:checked + span:after {
+.radio input:checked + span:after,
+.checkbox input:checked + span:after {
   display: block;
 }
 
-.checkbox>span:before {
+.radio.square > span {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: .2rem;
+  border: 1px solid $color-border;
+  border-radius: $input-border-radius;
+}
+
+.radio.square > span > .img {
+  font-size: .4rem;
+  width: .4rem;
+  line-height: 1;
+}
+
+.radio.square > span > .desc {
+  word-break: break-all;
+  line-height: 1.8;
+  margin-top: .05rem;
+}
+
+.radio.square > span:before {
+  display: none;
+}
+
+.radio.square > span:hover {
+  border-color: $color-primary;
+  color: $color-primary;
+}
+
+.radio.square input:checked + span {
+  border-color: $color-primary;
+  color: $color-primary !important;
+}
+
+.radio.square input:checked + span:after {
+  background: transparent;
+}
+
+.checkbox > span:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -189,12 +247,12 @@ input.ng-touched.ng-invalid{
   border-radius: .03rem;
 }
 
-.checkbox.disabled>span:before {
+.checkbox.disabled > span:before {
   border: 1px solid #ddd;
   background-color: #eee;
 }
 
-.checkbox>span:after {
+.checkbox > span:after {
   display: none;
   position: absolute;
   content: '';
@@ -236,12 +294,12 @@ ui-switch {
   height: .1rem;
   border-radius: 50%;
   background-color: #fff;
-  transition: left .36s ;
+  transition: left .36s;
 }
 
 .ui-switch.off {
-  border: 1px solid $color-gray!important;
-  background-color: $color-lightgray!important;
+  border: 1px solid $color-gray !important;
+  background-color: $color-lightgray !important;
 }
 
 .ui-switch.on:after {
@@ -290,13 +348,13 @@ ui-switch {
   text-align: left;
 }
 
-.input-group>i {
+.input-group > i {
   position: absolute;
   left: .16rem;
   font-size: .16rem;
   top: 50%;
-  transform: translate(-50%,-50%);
-  color: rgba(0,0,0,.55);
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, .55);
 }
 
 .input-group .input {
@@ -311,11 +369,12 @@ ui-switch {
   bottom: 0;
 }
 
-form .flex>label {
-  margin-right: .15rem;
-  margin-top: .03rem;
+form .flex > label {
+  margin-right: .2rem;
+  flex-shrink: 0;
 }
-form .flex>label::after {
+
+form .flex > label::after {
   content: " ";
   width: .05rem;
   display: inline-block;
@@ -327,13 +386,14 @@ form .flex>label::after {
   font-size: .2rem;
   vertical-align: middle;
   line-height: 1;
-  position: relative;
-  top: .03rem;
+  height: .14rem;
+  display: inline-block;
 }
 
 .form-untouched .error {
   display: none;
 }
+
 .form-untouched .ng-touched.error {
   display: inherit;
 }

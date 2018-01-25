@@ -4,30 +4,30 @@
   color: #fff;
   padding: $label-padding;
   line-height: $label-lineheight;
-  border-radius: $label-border-radius;
+  border-radius: $input-border-radius;
 }
 
-.label.primary{
+.label.primary {
   background-color: $color-primary;
 }
 
-.label.success{
+.label.success {
   background-color: $color-success;
 }
 
-.label.warning{
+.label.warning {
   background-color: $color-warning;
 }
 
-.label.error{
+.label.error {
   background-color: $color-error;
 }
 
-.label.cyan{
+.label.cyan {
   background-color: $color-cyan;
 }
 
-.label.orange{
+.label.orange {
   background-color: $color-orange;
 }
 
@@ -39,4 +39,19 @@
   min-width: .2rem;
   text-align: center;
   box-sizing: border-box;
+}
+
+table .label {
+  background-color: #fff;
+  color: $color;
+  border: 1px solid $color-border;
+  padding: 0 .06rem;
+  line-height: .15rem;
+}
+
+table .label .iconfont {
+  font-size: .12rem;
+  display: inline-block;
+  height: .12rem;
+  top: 0;
 }

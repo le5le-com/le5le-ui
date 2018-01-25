@@ -6,8 +6,8 @@
   bottom: 0;
   background-color: $modal-background-color;
   color: $color;
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   text-align: left;
   z-index: 99999;
@@ -15,34 +15,26 @@
 }
 
 .modal .modal-content {
-  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
   background-color: #fff;
   max-width: $modal-max-width;
   max-height: $modal-max-height;
-  min-width: 3rem;
+  min-width: 3.8rem;
   display: flex;
   flex-direction: column;
   border-radius: $input-border-radius;
   margin-top: -1%;
 }
 
-.modal a {
-  cursor: pointer;
-  color: $color-url!important;
-}
-
-.modal a:hover {
-  color: $color-url-hover!important;
-}
-
 .modal-header {
   border-bottom: 1px solid $color-border;
-  padding: .02rem .1rem;
+  padding: $modal-header-padding;
+  line-height: $modal-header-lineheight;
   font-size: .14rem;
+  font-weight: 700;
   display: flex;
-  align-items: center ;
+  align-items: center;
   background-color: $header-background-color;
-  color: #fff;
   border-top-left-radius: $input-border-radius;
   border-top-right-radius: $input-border-radius;
 }
@@ -72,7 +64,6 @@
   color: #fff;
 }
 
-
 .orange .modal-header {
   background-color: $color-orange;
   color: #fff;
@@ -93,25 +84,27 @@
 }
 
 .modal-body {
-  padding: .1rem;
+  padding: .2rem;
   overflow-y: auto;
-  margin-right: .01rem;
 }
 
 .modal-footer {
-  padding: 0 .1rem .1rem;
+  padding: .15rem .2rem;
   display: flex;
-  align-items: center ;
+  align-items: center;
   justify-content: flex-end;
+  border-top: 1px solid #dbdfe1;
+  background-color: #f3f4f5;
 }
 
-.modal-content select, .modal-content input{
+.modal-content select,
+.modal-content input {
   outline: 0;
   min-height: .3rem;
-  border: 1px solid  $color-input-border;
+  border: 1px solid $color-input-border;
 }
 
-.modal-content .input-label{
+.modal-content .input-label {
   line-height: .3rem;
 }
 

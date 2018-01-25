@@ -1,11 +1,12 @@
-.button, a.button {
+.button,
+a.button {
   outline: none;
-  border: 1px solid #aaa;
-  border-radius: .02rem;
+  border: 1px solid $color-button-border;
+  border-radius: .04rem;
   color: $color-button;
-  background-color: transparent;
-  padding: .07rem .12rem;
-  line-height: 1;
+  background-color: #fff;
+  padding: 0 .15rem;
+  line-height: .28rem;
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -13,11 +14,11 @@
 
 .button:hover {
   color: $color-button-hover;
-  border-color: color($color-button-hover a(50%));
+  border-color: $color-button-border-hover;
 }
 
 a.button:hover {
-  color: $color-button-hover!important;
+  color: $color-button-hover !important;
 }
 
 .button.primary {
@@ -27,21 +28,21 @@ a.button:hover {
 }
 
 .button.primary:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-primary-hover;
   border: 1px solid $color-primary-hover;
 }
 
-.button.cyan {
-  border: 1px solid $color-cyan;
+.button.turquoise {
+  border: 1px solid $color-turquoise;
   color: #fff;
-  background-color: $color-cyan;
+  background-color: $color-turquoise;
 }
 
-.button.cyan:hover {
-  color: #fff!important;
-  background-color: $color-cyan-hover;
-  border: 1px solid $color-cyan-hover;
+.button.turquoise:hover {
+  color: #fff !important;
+  background-color: $color-turquoise-hover;
+  border: 1px solid $color-turquoise-hover;
 }
 
 .button.success {
@@ -51,7 +52,7 @@ a.button:hover {
 }
 
 .button.success:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-success-hover;
   border: 1px solid $color-success-hover;
 }
@@ -63,7 +64,7 @@ a.button:hover {
 }
 
 .button.warning:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-warning-hover;
   border: 1px solid $color-warning-hover;
 }
@@ -75,7 +76,7 @@ a.button:hover {
 }
 
 .button.error:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-error-hover;
   border: 1px solid $color-error-hover;
 }
@@ -87,7 +88,7 @@ a.button:hover {
 }
 
 .button.weixin:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-weixin-hover;
   border-color: $color-weixin-hover;
 }
@@ -99,7 +100,7 @@ a.button:hover {
 }
 
 .button.qq:hover {
-  color: #fff!important;
+  color: #fff !important;
   border-color: $color-qq-hover;
   background-color: $color-qq-hover;
 }
@@ -111,7 +112,7 @@ a.button:hover {
 }
 
 .button.weibo:hover {
-  color: #fff!important;
+  color: #fff !important;
   border-color: $color-weibo-hover;
   background-color: $color-weibo-hover;
 }
@@ -127,17 +128,17 @@ a.button:hover {
 }
 
 .button.primary.border:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-primary;
 }
 
-.button.cyan.border {
-  color: $color-cyan;
-  border: 1px solid $color-cyan;
+.button.turquoise.border {
+  color: $color-turquoise;
+  border: 1px solid $color-turquoise;
 }
 
 .button.success.border:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-success;
 }
 
@@ -147,7 +148,7 @@ a.button:hover {
 }
 
 .button.success.border:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-success;
 }
 
@@ -157,7 +158,7 @@ a.button:hover {
 }
 
 .button.warning.border:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-warning;
 }
 
@@ -167,7 +168,7 @@ a.button:hover {
 }
 
 .button.error.border:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-error;
 }
 
@@ -187,17 +188,17 @@ a.button:hover {
 }
 
 .button.weixin.border:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-weixin;
 }
 
 .button.qq.border:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-qq;
 }
 
 .button.weibo.border:hover {
-  color: #fff!important;
+  color: #fff !important;
   background-color: $color-weibo;
 }
 
@@ -214,11 +215,46 @@ a.button:hover {
   border-radius: 50%;
 }
 
-.button[disabled],.button[disabled]:hover {
-  color: $color-desc!important;
-  background-color: $color-button-disabled!important;
-  border: 1px solid $color-button-disabled!important;
+.button[disabled],
+.button[disabled]:hover {
+  color: $color-button-disabled;
+  border: 1px solid $color-button-border-disabled;
   cursor: default;
+}
+
+.button.primary[disabled],
+.button.primary[disabled]:hover {
+  color: #fff;
+  background-color: $color-primary-disabled;
+  border: 1px solid $color-primary-disabled;
+}
+
+.button.success[disabled],
+.button.success[disabled]:hover {
+  color: #fff;
+  background-color: $color-success-disabled;
+  border: 1px solid $color-success-disabled;
+}
+
+.button.warning[disabled],
+.button.warning[disabled]:hover {
+  color: #fff;
+  background-color: $color-warning-disabled;
+  border: 1px solid $color-warning-disabled;
+}
+
+.button.error[disabled],
+.button.error[disabled]:hover {
+  color: #fff;
+  background-color: $color-error-disabled;
+  border: 1px solid $color-error-disabled;
+}
+
+.button.turquoise[disabled],
+.button.turquoise[disabled]:hover {
+  color: #fff;
+  background-color: $color-turquoise-disabled;
+  border: 1px solid $color-turquoise-disabled;
 }
 
 .button.checked {
@@ -231,8 +267,22 @@ a.button:hover {
   font-family: "iconfont" !important;
   content: '\E657';
   position: absolute;
-  top: -.05rem;
+  top: -.1rem;
   right: -.05rem;
   background: #fff;
   font-size: .16rem;
+  display: inline-block;
+  height: .22rem;
+}
+
+.button .iconfont {
+  font-size: .12rem;
+  vertical-align: inherit;
+  margin-right: .07rem;
+}
+
+.nav-button {
+  height: .5rem;
+  border-radius: 0;
+  padding: 0 .2rem;
 }

@@ -6,7 +6,8 @@ $border-radius: .04rem;
   display: inline-block;
 }
 
-[data-tooltip]:before, [data-tooltip]:after {
+[data-tooltip]:before,
+[data-tooltip]:after {
   border-radius: $border-radius;
   position: absolute;
   visibility: hidden;
@@ -15,11 +16,15 @@ $border-radius: .04rem;
   transition-delay: 0ms;
 }
 
-[data-tooltip]:hover, [data-tooltip]:hover {
+.hover[data-tooltip],
+[data-tooltip]:hover {
   transition-delay: 100ms;
 }
 
-[data-tooltip]:hover:before, [data-tooltip]:hover:after {
+.hover[data-tooltip]:before,
+.hover[data-tooltip]:after,
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
   visibility: visible;
   opacity: 1;
 }
