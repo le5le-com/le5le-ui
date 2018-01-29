@@ -45,6 +45,18 @@ a.button:hover {
   border: 1px solid $color-turquoise-hover;
 }
 
+.button.turquoise2 {
+  border: 1px solid #9bbfb3;
+  color: #fff;
+  background-color: #9bbfb3;
+}
+
+.button.turquoise2:hover {
+  color: #fff !important;
+  background-color: #89ab9f;
+  border: 1px solid #89ab9f;
+}
+
 .button.success {
   border: 1px solid $color-success;
   color: #fff;
@@ -285,4 +297,30 @@ a.button:hover {
   height: .5rem;
   border-radius: 0;
   padding: 0 .2rem;
+}
+
+.button-group {
+  display: inline-flex;
+  border: 1px solid $color-primary;
+  border-radius: .04rem;
+  overflow: hidden;
+}
+
+.button-group button {
+  outline: none;
+  border: none;
+  background: #fff;
+  line-height: .28rem;
+  padding: 0 .2rem;
+  border-right: 1px solid $color-button-border;
+  cursor: pointer;
+}
+
+.button-group button:last-child {
+  border-right: none;
+}
+
+.button-group button.active {
+  background: $color-primary;
+  color: #fff;
 }

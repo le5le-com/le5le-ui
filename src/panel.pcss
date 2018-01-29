@@ -1,20 +1,30 @@
 .panel {
+  background-color: #fff;
+  border: 1px solid $color-border;
+  border-radius: .04rem;
 }
 
-.panel>.caption {
-  font-size: .16rem;
+.panel > .caption {
+  font-size: .14rem;
   border-bottom: 1px solid $color-border;
 }
 
-.panel>.caption .button, .panel>.caption .input{
+.panel > .caption .button,
+.panel > .caption .input {
   font-size: $font-size;
 }
 
-.panel>.content {
+.panel > .content {
   padding: .1rem;
 }
 
-.panel>.bottom {
+.panel > .bottom {
   padding: .05rem .1rem;
+  border-top: 1px solid $color-lightgray;
+}
+
+.page-panel {
+  background-color: #fff;
+  padding: .2rem;
   border-top: 1px solid $color-lightgray;
 }
