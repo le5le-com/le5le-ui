@@ -2,7 +2,7 @@
   position: fixed;
   display: flex;
   flex-wrap: nowrap;
-  align-items: center ;
+  align-items: center;
   top: 0;
   left: 0;
   right: 0;
@@ -14,13 +14,13 @@
   z-index: 100;
 }
 
-
 .header .item {
   flex-grow: 0;
   flex-shrink: 0;
   list-style: none;
   position: relative;
   font-size: $font-size-header;
+  box-sizing: border-box;
 }
 
 .header .item a {
@@ -31,19 +31,24 @@
   padding: 0 .2rem;
 }
 
+.header .item .icon-angle-down {
+  font-size: .14rem;
+}
+
 .header .item img {
-  max-height: calc($header-height - .1rem);
+  max-height: .2rem;
   vertical-align: middle;
 }
 
-.header .item.active a, .header .item a.active {
-  color: #fff!important;
-  background-color: rgba(255, 255, 255, .32);
+.header .item.active a,
+.header .item a.active {
+  color: #fff !important;
 }
 
-.header .item a:hover, .header .item .user:hover, .header.item a.active.deactive:hover {
-  color: #fff!important;
-  background-color: rgba(255, 255, 255, .25);
+.header .item a:hover,
+.header .item .user:hover,
+.header.item a.active.deactive:hover {
+  color: #fff !important;
 }
 
 .header .item a.active.deactive {
@@ -54,12 +59,40 @@
   top: $header-height;
 }
 
-.header .dropdown .item a{
-  color: #fff!important;
+.header .item .dropdown::before {
+  content: "\E710";
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  top: -.1rem;
+  left: .1rem;
+  line-height: 1;
+  color: #3f4142;
+}
+
+.header .item .dropdown.right::before {
+  left: inherit;
+  right: .1rem;
 }
 
 .header .item:hover .dropdown {
   display: block;
+}
+
+.header .item .dropdown .item:hover,
+.header .item .dropdown .item:hover a {
+  /* background: transparent !important; */
+  background-color: $color-url !important;
+}
+
+.header .item .dropdown .item.text,
+.header .item .dropdown .item.text:hover,
+.header .item .dropdown .item.text a,
+.header .item .dropdown .item.text a:hover {
+  background: transparent !important;
+  color: $color !important;
 }
 
 .header .item.right {
@@ -76,7 +109,7 @@
   display: block;
 }
 
-.header .item.right .sign a{
+.header .item.right .sign a {
   font-size: $font-size-header;
   padding: 0 .1rem;
 }

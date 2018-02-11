@@ -14,11 +14,12 @@ textarea {
 }
 
 .input {
+  color: $color;
   padding: $input-padding;
   outline: none;
   border: 1px solid $color-input-border;
   line-height: .28rem;
-  height: .3rem;
+  min-height: .3rem;
   box-sizing: border-box;
   background-color: #fff;
   border-radius: .04rem;
@@ -107,7 +108,7 @@ input[disabled],
   padding-left: 0 !important;
 }
 
-input.ng-touched.ng-invalid {
+.input.ng-touched.ng-invalid {
   border: 1px solid $color-error;
 }
 
@@ -202,14 +203,15 @@ input.ng-touched.ng-invalid {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: .2rem;
+  padding: .15rem;
   border: 1px solid $color-border;
   border-radius: $input-border-radius;
+  box-sizing: border-box;
 }
 
 .radio.square > span > .img {
-  font-size: .4rem;
-  width: .4rem;
+  font-size: .3rem;
+  width: .3rem;
   line-height: 1;
 }
 

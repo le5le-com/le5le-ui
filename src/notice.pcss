@@ -29,6 +29,7 @@ $notice-input-line-height: 2;
       top: -.5rem;
     }
   }
+
   100% {
     top: 0;
   }
@@ -38,6 +39,7 @@ $notice-input-line-height: 2;
   0% {
     top: 0;
   }
+
   100% {
     @if $define-notice == 1 {
       top: $notice-top-out;
@@ -50,8 +52,10 @@ $notice-input-line-height: 2;
 .notice {
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
+  width: 3.5rem;
+  border-radius: 4px;
+
   @if $define-notice == 1 {
     z-index: $notice-z-index;
   } @else {
@@ -65,7 +69,6 @@ $notice-input-line-height: 2;
   } @else {
     animation-duration: .2s;
   }
-
   animation-name: topFadeIn;
 }
 
@@ -80,43 +83,42 @@ $notice-input-line-height: 2;
 
 .notice.success {
   @if $define-notice == 1 {
-    background-color: $color-success;
+    background-color: $color-notice-bk-success;
+    color: $color-success;
   } @else {
-    background-color: #5cb85c;
+    background-color: #e7eed9;
+    color: #8da662;
   }
 }
 
 .notice.warning {
   @if $define-notice == 1 {
-    background-color: $color-warning;
+    background-color: $color-notice-bk-warning;
+    color: $color-warning;
   } @else {
-    background-color: #f90;
+    background-color: #fff6dd;
+    color: #d9a116;
   }
 }
+
 .notice.error {
   @if $define-notice == 1 {
-    background-color: $color-error;
+    background-color: $color-notice-bk-error;
+    color: $color-error;
   } @else {
-    background-color: #f30707;
-  }
-}
-.notice.cyan {
-  @if $define-notice == 1 {
-    background-color: $color-cyan;
-  } @else {
-    background-color: #00cbea;
+    background-color: #f7e6e7;
+    color: #cc6164;
   }
 }
 
 .notice .body {
-  padding: .1rem;
+  padding: .1rem .2rem;
+  display: flex;
+  justify-content: space-between;
+
   @if $define-notice == 1 {
-    color: $notice-color;
-    text-align: $notice-text-align;
     font-size: $notice-font-size;
   } @else {
-    color: #fff;
-    text-align: center;
     font-size: .14rem;
   }
 }
@@ -130,6 +132,7 @@ $notice-input-line-height: 2;
   width: 100%;
   border: none;
   outline: none;
+
   @if $define-notice == 1 {
     color: $notice-input-color;
     text-align: $notice-input-text-algin;

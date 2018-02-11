@@ -2,7 +2,7 @@
   position: absolute;
   top: 100%;
   color: #000;
-  box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
   display: none;
   z-index: 9999;
   background-color: #fff;
@@ -19,22 +19,23 @@
   cursor: pointer;
 }
 
-.dropdown-container:hover>.dropdown, .dropdown .item:hover>.dropdown  {
+.dropdown-container:hover > .dropdown,
+.dropdown .item:hover > .dropdown {
   display: block;
 }
 
-.dropdown .item>.dropdown {
+.dropdown .item > .dropdown {
   left: 100%;
   top: 0;
 }
 
-.dropdown .item>.dropdown.left {
+.dropdown .item > .dropdown.left {
   left: initial;
-  right: 100%
+  right: 100%;
 }
 
 .dropdown .item {
-  line-height: 2!important;
+  line-height: 2 !important;
   list-style: none;
   word-break: keep-all;
   position: relative;
@@ -42,48 +43,53 @@
 
 .dropdown .item.separator {
   height: 1px;
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid $color;
 }
 
 .dropdown .item a {
   display: block;
   padding: 0 .1rem;
-  color: $color!important;
-  font-size: .14rem!important;
-  border: none!important;
-  white-space:nowrap;
+  color: $color !important;
+  font-size: .14rem !important;
+  border: none !important;
+  white-space: nowrap;
 }
 
-.dropdown .item:hover, .dropdown .item>.dropdown .item:hover a {
-  background-color: $color-primary!important;
-  color: #fff!important;
+.dropdown .item:hover,
+.dropdown .item > .dropdown .item:hover a {
+  background-color: $color-primary !important;
+  color: #fff !important;
 }
 
-.dropdown .item>.dropdown .item a {
-  color: $color!important;
+.dropdown .item > .dropdown .item a {
+  color: $color !important;
 }
 
-.panel-menu .dropdown .item:hover, .header .dropdown .item:hover {
-  background-color: $color-url!important;
+.panel-menu .dropdown .item:hover {
+  background-color: $color-url !important;
 }
 
 .dropdown .item.text:hover {
-  background-color: transparent!important;
-  color: #fff!important;
+  background-color: transparent !important;
+  color: #fff !important;
 }
 
 .dropdown .item.separator:hover {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
 
-.dropdown .item.disabled, .dropdown .item.disabled:hover, .dropdown .item.disabled a, .dropdown .item.disabled a:hover {
-  color: $color-gray!important;
-  background-color: #fff!important;
+.dropdown .item.disabled,
+.dropdown .item.disabled:hover,
+.dropdown .item.disabled a,
+.dropdown .item.disabled a:hover {
+  color: $color-gray !important;
+  background-color: #fff !important;
   cursor: default;
 }
 
-.dropdown .item:hover a, .header .dropdown .item:hover a {
-  color: #fff!important;
+.dropdown .item:hover a,
+.header .dropdown .item:hover a {
+  color: #fff !important;
 }
 
 .dropdown .item:hover .button {
@@ -98,7 +104,7 @@
 
 .dropdown .item .separator {
   padding: 0;
-  border-left: none!important;
+  border-left: none !important;
   border-bottom: 1px solid #a9a9a9;
 }
 
