@@ -30,18 +30,11 @@
 }
 
 .nav-tab > .item {
-  padding: .07rem 1rem;
+  line-height: .4rem;
+  margin-left: .2rem;
   position: relative;
   top: 1px;
-  border-right: 1px solid #efefef;
-  flex-grow: 1;
   text-align: center;
-}
-
-.nav-tab.no-border > .item {
-  border-right: none;
-  flex-grow: 0;
-  padding: .07rem .3rem;
 }
 
 .nav-tab > .item:hover {
@@ -55,6 +48,7 @@
 .nav-tab > .item.active {
   color: $color-title;
   border-bottom: 2px solid $color-primary;
+  font-weight: 700;
 }
 
 .nav-tab.default .item {
@@ -62,9 +56,11 @@
   padding: .03rem .15rem;
   flex-grow: inherit;
   border-radius: .04rem .04rem 0 0;
+  margin-left: 0;
   margin-right: .03rem;
   background-color: #f9f9f9;
   color: #89949b !important;
+  line-height: .26rem;
 }
 
 .nav-tab.default .item:hover,

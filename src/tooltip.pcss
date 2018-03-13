@@ -4,6 +4,7 @@ $border-radius: .04rem;
 [data-tooltip] {
   position: relative;
   display: inline-block;
+  font-size: $font-size;
 }
 
 [data-tooltip]:before,
@@ -14,6 +15,8 @@ $border-radius: .04rem;
   opacity: 0;
   z-index: 9999999;
   transition-delay: 0ms;
+  line-height: $line-height;
+  text-align: left;
 }
 
 .hover[data-tooltip],
