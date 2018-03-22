@@ -35,10 +35,10 @@ a.hover:hover {
 }
 
 blockquote {
-  border-left: .05rem solid $color-primary;
+  border-left: 0.05rem solid $color-primary;
   background-color: #e1e1e1;
-  padding: .1rem;
-  margin: .1rem;
+  padding: 0.1rem;
+  margin: 0.1rem;
 }
 
 pre,
@@ -79,7 +79,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -132,7 +132,7 @@ textarea:focus:invalid {
 }
 
 .clearfix:after {
-  content: ".";
+  content: '.';
   display: block;
   height: 0;
   clear: both;
@@ -295,6 +295,11 @@ textarea:focus:invalid {
   white-space: nowrap;
 }
 
+.word-break {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
 .primary {
   color: $color-primary;
 }
@@ -334,7 +339,7 @@ textarea:focus:invalid {
 
 .border {
   border: 1px solid $color-border;
-  border-radius: .04rem;
+  border-radius: 0.04rem;
 }
 
 .border-none {
@@ -390,8 +395,8 @@ textarea:focus:invalid {
 }
 
 ::-webkit-scrollbar {
-  width: .1rem;
-  height: .1rem;
+  width: 0.1rem;
+  height: 0.1rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -412,7 +417,6 @@ textarea:focus:invalid {
 
 .icon-spin {
   display: inline-block;
-  -webkit-animation: icon-spin $spin-duration infinite linear;
   animation: icon-spin $spin-duration infinite linear;
 }
 
@@ -460,7 +464,7 @@ ui-loading {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: .36rem;
-  height: .36rem;
+  width: 0.36rem;
+  height: 0.36rem;
   overflow: hidden;
 }

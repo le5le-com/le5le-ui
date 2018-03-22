@@ -26,35 +26,34 @@ $notice-input-line-height: 2;
     @if $define-notice == 1 {
       top: $notice-top-in;
     } @else {
-      top: -.5rem;
+      top: -0.5rem;
     }
   }
 
   100% {
-    top: 0;
   }
 }
 
 @keyframes topFadeOut {
   0% {
-    top: 0;
   }
 
   100% {
     @if $define-notice == 1 {
       top: $notice-top-out;
     } @else {
-      top: -.5rem;
+      top: -0.5rem;
     }
   }
 }
 
 .notice {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 0.1rem;
+  right: 0.1rem;
   width: 3.5rem;
-  border-radius: 4px;
+  border: 1px solid #7dd6f6;
+  background: #e9f7fb;
 
   @if $define-notice == 1 {
     z-index: $notice-z-index;
@@ -67,7 +66,7 @@ $notice-input-line-height: 2;
   @if $define-notice == 1 {
     animation-duration: $notice-in-duration;
   } @else {
-    animation-duration: .2s;
+    animation-duration: 0.2s;
   }
   animation-name: topFadeIn;
 }
@@ -76,7 +75,7 @@ $notice-input-line-height: 2;
   @if $define-notice == 1 {
     animation-duration: $notice-out-duration;
   } @else {
-    animation-duration: 1s;
+    animation-duration: 0.5s;
   }
   animation-name: topFadeOut;
 }
@@ -86,8 +85,9 @@ $notice-input-line-height: 2;
     background-color: $color-notice-bk-success;
     color: $color-success;
   } @else {
-    background-color: #e7eed9;
-    color: #8da662;
+    background-color: #f4f8e6;
+    border-color: #bbd767;
+    color: #74a919;
   }
 }
 
@@ -96,7 +96,8 @@ $notice-input-line-height: 2;
     background-color: $color-notice-bk-warning;
     color: $color-warning;
   } @else {
-    background-color: #fff6dd;
+    background-color: #fdf7d9;
+    border-color: #f2ca00;
     color: #d9a116;
   }
 }
@@ -106,22 +107,49 @@ $notice-input-line-height: 2;
     background-color: $color-notice-bk-error;
     color: $color-error;
   } @else {
-    background-color: #f7e6e7;
-    color: #cc6164;
+    background-color: #fceeed;
+    border-color: #e67c73;
+    color: #a9484b;
   }
 }
 
 .notice .body {
-  padding: .1rem .2rem;
+  padding: 0.1rem;
   display: flex;
-  justify-content: space-between;
   word-break: break-word;
+  line-height: 0.26rem;
 
   @if $define-notice == 1 {
     font-size: $notice-font-size;
   } @else {
-    font-size: .14rem;
+    font-size: 0.14rem;
   }
+}
+
+.notice .body > .icon {
+  font-size: 0.16rem;
+  margin-right: 0.05rem;
+  color: #26bbf0;
+}
+
+.notice.success .body > .icon {
+  color: #8da662;
+}
+
+.notice.warning .body > .icon {
+  color: #ffbc0b;
+}
+
+.notice.error .body > .icon {
+  color: #cc6164;
+}
+
+.notice .body > .notice-text {
+  width: 100%;
+}
+
+.notice .body > div {
+  width: 100%;
 }
 
 .notice div.input {
@@ -146,7 +174,6 @@ $notice-input-line-height: 2;
 }
 
 .notice .icon-close {
-  position: relative;
-  left: .15rem;
-  top: -.12rem;
+  font-size: 0.14rem;
+  padding-left: 0.15rem;
 }
