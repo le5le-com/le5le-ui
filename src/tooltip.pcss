@@ -1,5 +1,5 @@
-$triangle-size: .06rem;
-$border-radius: .04rem;
+$triangle-size: 0.06rem;
+$border-radius: 0.04rem;
 
 [data-tooltip] {
   position: relative;
@@ -44,41 +44,41 @@ $border-radius: .04rem;
   content: attr(data-tooltip);
   background: $tooltip-background-color;
   color: white;
-  padding: .01rem .1rem;
+  padding: 0.1rem 0.15rem;
   white-space: pre-wrap;
   min-width: 1.2rem;
 }
 
 .multi[data-tooltip]:after {
-  padding: .1rem .15rem;
+  padding: 0.1rem 0.15rem;
 }
 
 .tooltip-top:before {
   bottom: 100%;
   left: calc(50% - $triangle-size);
   border-top-color: $tooltip-background-color;
-  margin-bottom: -.07rem;
+  margin-bottom: -0.07rem;
 }
 
 .tooltip-top:after {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: .04rem;
+  margin-bottom: 0.04rem;
 }
 
 .tooltip-bottom:before {
   top: 100%;
   left: calc(50% - $triangle-size);
   border-bottom-color: $tooltip-background-color;
-  margin-top: -.07rem;
+  margin-top: -0.07rem;
 }
 
 .tooltip-bottom:after {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: .04rem;
+  margin-top: 0.04rem;
 }
 
 .tooltip-left:before {
@@ -113,52 +113,52 @@ $border-radius: .04rem;
   bottom: 100%;
   left: $border-radius;
   border-top-color: $tooltip-background-color;
-  margin-bottom: -.07rem;
+  margin-bottom: -0.07rem;
 }
 
 .tooltip-top-left:after {
   bottom: 100%;
   left: 0;
-  margin-bottom: .04rem;
+  margin-bottom: 0.04rem;
 }
 
 .tooltip-top-right:before {
   bottom: 100%;
   right: $border-radius;
   border-top-color: $tooltip-background-color;
-  margin-bottom: -.07rem;
+  margin-bottom: -0.07rem;
 }
 
 .tooltip-top-right:after {
   bottom: 100%;
   right: 0;
-  margin-bottom: .04rem;
+  margin-bottom: 0.04rem;
 }
 
 .tooltip-bottom-left:before {
   top: 100%;
   left: $border-radius;
   border-bottom-color: $tooltip-background-color;
-  margin-top: -.07rem;
+  margin-top: -0.07rem;
 }
 
 .tooltip-bottom-left:after {
   top: 100%;
   left: 0;
-  margin-top: .04rem;
+  margin-top: 0.04rem;
 }
 
 .tooltip-bottom-right:before {
   top: 100%;
   right: $border-radius;
   border-bottom-color: $tooltip-background-color;
-  margin-top: -.07rem;
+  margin-top: -0.07rem;
 }
 
 .tooltip-bottom-right:after {
   top: 100%;
   right: 0;
-  margin-top: .04rem;
+  margin-top: 0.04rem;
 }
 
 .default:after {

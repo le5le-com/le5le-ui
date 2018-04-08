@@ -18,11 +18,11 @@ textarea {
   padding: $input-padding;
   outline: none;
   border: 1px solid $color-input-border;
-  line-height: .28rem;
-  min-height: .3rem;
+  line-height: 0.28rem;
+  min-height: 0.3rem;
   box-sizing: border-box;
   background-color: #fff;
-  border-radius: .04rem;
+  border-radius: 0.04rem;
 }
 
 .input:hover,
@@ -82,13 +82,13 @@ input[disabled],
   color: $color-url-hover;
 }
 
-.input.container .left:nth-child(1n+0) {
+.input.container .left:nth-child(1n + 0) {
   padding: $input-padding;
   border-right: 1px solid $color-border;
   background-color: color($color-border a(60%));
 }
 
-.input.container .right:nth-child(1n+0) {
+.input.container .right:nth-child(1n + 0) {
   padding: $input-padding;
   border-left: 1px solid $color-border;
   background-color: color($color-border a(60%));
@@ -108,7 +108,8 @@ input[disabled],
   padding-left: 0 !important;
 }
 
-.input.ng-touched.ng-invalid {
+.input.ng-touched.ng-invalid,
+form.ng-touched .input.ng-invalid {
   border: 1px solid $color-error;
 }
 
@@ -121,7 +122,7 @@ input[disabled],
 .comment.input .user {
   position: absolute;
   color: $color-url-hover;
-  top: .02rem;
+  top: 0.02rem;
   left: $input-padding;
 }
 
@@ -129,8 +130,8 @@ input[disabled],
   color: $color;
 }
 
-.checkbox input[type="checkbox"],
-.radio input[type="radio"] {
+.checkbox input[type='checkbox'],
+.radio input[type='radio'] {
   display: none;
 }
 
@@ -138,7 +139,7 @@ input[disabled],
 .checkbox > span {
   position: relative;
   vertical-align: middle;
-  padding-left: .2rem;
+  padding-left: 0.2rem;
   cursor: pointer;
 }
 
@@ -147,19 +148,19 @@ input[disabled],
   cursor: default;
 }
 
-.radio input[type="radio"]:checked + span:before,
-.checkbox input[type="checkbox"]:checked +span:before,
+.radio input[type='radio']:checked + span:before,
+.checkbox input[type='checkbox']:checked + span:before,
 .radio:hover > span:before,
 .checkbox:hover > span:before {
   border-color: $color-primary;
 }
 
-.checkbox input[type="checkbox"]:checked +span:before {
+.checkbox input[type='checkbox']:checked + span:before {
   background-color: $color-primary;
 }
 
 .radio input[disabled] + span:before,
-.checkbox input[disabled]:checked +span:before {
+.checkbox input[disabled]:checked + span:before {
   border-color: $color-button-disabled;
 }
 
@@ -167,8 +168,8 @@ input[disabled],
   position: absolute;
   top: 0;
   left: 0;
-  width: .12rem;
-  height: .12rem;
+  width: 0.12rem;
+  height: 0.12rem;
   content: '';
   border: 1px solid #c0c0c0;
   border-radius: 50%;
@@ -177,14 +178,14 @@ input[disabled],
 .radio > span:after {
   display: none;
   position: absolute;
-  top: .01rem;
-  left: .01rem;
+  top: 0.01rem;
+  left: 0.01rem;
   content: '';
-  width: .12rem;
-  height: .12rem;
+  width: 0.12rem;
+  height: 0.12rem;
   border-radius: 50%;
   background: $color-primary;
-  transform: scale(.5);
+  transform: scale(0.5);
 }
 
 .radio input:checked + span:after,
@@ -203,22 +204,22 @@ input[disabled],
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: .15rem;
+  padding: 0.15rem;
   border: 1px solid $color-border;
   border-radius: $input-border-radius;
   box-sizing: border-box;
 }
 
 .radio.square > span > .img {
-  font-size: .3rem;
-  width: .3rem;
+  font-size: 0.3rem;
+  width: 0.3rem;
   line-height: 1;
 }
 
 .radio.square > span > .desc {
   word-break: break-word;
   line-height: 1.8;
-  margin-top: .05rem;
+  margin-top: 0.05rem;
 }
 
 .radio.square > span:before {
@@ -243,11 +244,11 @@ input[disabled],
   position: absolute;
   top: 0;
   left: 0;
-  width: .12rem;
-  height: .12rem;
+  width: 0.12rem;
+  height: 0.12rem;
   content: '';
   border: 1px solid #c0c0c0;
-  border-radius: .03rem;
+  border-radius: 0.03rem;
 }
 
 .checkbox.disabled > span:before {
@@ -259,11 +260,11 @@ input[disabled],
   display: none;
   position: absolute;
   content: '';
-  top: .02rem;
-  left: .05rem;
+  top: 0.02rem;
+  left: 0.05rem;
   box-sizing: border-box;
-  width: .05rem;
-  height: .08rem;
+  width: 0.05rem;
+  height: 0.08rem;
   transform: rotate(42deg);
   border: 2px solid #fff;
   border-top: 0;
@@ -272,32 +273,32 @@ input[disabled],
 
 ui-switch {
   display: inline-block;
-  height: .14rem;
+  height: 0.14rem;
   vertical-align: middle;
 }
 
 .ui-switch {
   position: relative;
   display: inline-block;
-  width: .2rem;
-  height: .1rem;
+  width: 0.2rem;
+  height: 0.1rem;
   color: #fff;
-  border-radius: .1rem;
+  border-radius: 0.1rem;
   border: 1px solid $color-primary;
   background-color: $color-primary;
   cursor: pointer;
-  transition: all .36s;
+  transition: all 0.36s;
 }
 
 .ui-switch:after {
   content: ' ';
   position: absolute;
   left: 0;
-  width: .1rem;
-  height: .1rem;
+  width: 0.1rem;
+  height: 0.1rem;
   border-radius: 50%;
   background-color: #fff;
-  transition: left .36s;
+  transition: left 0.36s;
 }
 
 .ui-switch.off {
@@ -306,11 +307,11 @@ ui-switch {
 }
 
 .ui-switch.on:after {
-  left: .1rem;
+  left: 0.1rem;
 }
 
 .ui-switch.disabled {
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -353,43 +354,43 @@ ui-switch {
 
 .input-group > i {
   position: absolute;
-  left: .16rem;
-  font-size: .16rem;
+  left: 0.16rem;
+  font-size: 0.16rem;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: rgba(0, 0, 0, .55);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .input-group .input {
-  padding-left: .3rem;
+  padding-left: 0.3rem;
   box-sizing: border-box;
 }
 
 .input-group .right {
   position: absolute;
-  right: .1rem;
+  right: 0.1rem;
   top: -55%;
   bottom: 0;
 }
 
 form .flex > label {
-  margin-right: .2rem;
+  margin-right: 0.2rem;
   flex-shrink: 0;
 }
 
 form .flex > label::after {
-  content: " ";
-  width: .05rem;
+  content: ' ';
+  width: 0.05rem;
   display: inline-block;
 }
 
 .required::after {
-  content: "*"!important;
+  content: '*' !important;
   color: #f30;
-  font-size: .2rem;
+  font-size: 0.2rem;
   vertical-align: middle;
   line-height: 1;
-  height: .14rem;
+  height: 0.14rem;
   display: inline-block;
 }
 
@@ -397,6 +398,8 @@ form .error {
   display: none;
 }
 
-form .ng-touched.error {
+.ng-touched.error,
+form.ng-touched .error,
+.form.ng-touched .error {
   display: inherit;
 }
