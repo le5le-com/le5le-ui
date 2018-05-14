@@ -39,9 +39,7 @@ input[readonly],
 input[disabled],
 .input[readonly],
 .input[disabled],
-.readonly,
-.disabled .radio > span:before,
-.disabled .checkbox > span:before {
+.readonly {
   background-color: $color-input-disabled;
 }
 
@@ -160,8 +158,19 @@ input[disabled],
 }
 
 .radio input[disabled] + span:before,
-.checkbox input[disabled]:checked + span:before {
+.checkbox input[disabled] + span:before {
   border-color: $color-button-disabled;
+  background-color: $color-input-disabled;
+}
+
+.radio input[disabled]:checked + span:before,
+.checkbox input[disabled]:checked + span:before {
+  border-color: color($color-primary a(60%));
+}
+
+.radio input[disabled]:checked + span:after,
+.checkbox input[disabled]:checked + span:after {
+  background: color($color-primary a(60%));
 }
 
 .radio > span:before {
