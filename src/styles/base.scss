@@ -1,0 +1,407 @@
+html {
+  font-size: 100px;
+  font-family: $font-family;
+  line-height: $line-height;
+  background-color: $html-background;
+}
+
+body {
+  font-size: $font-size;
+  color: $color;
+  min-height: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $color-url;
+}
+
+a.hover {
+  color: $color-primary !important;
+}
+
+a:hover,
+.hover:hover {
+  color: $color-url-hover !important;
+}
+
+a.hover:hover {
+  color: $color-primary-hover !important;
+}
+
+blockquote {
+  border-left: 0.05rem solid $color-primary;
+  background-color: #e1e1e1;
+  padding: 0.1rem;
+  margin: 0.1rem;
+}
+
+pre,
+p {
+  word-wrap: break-word;
+  word-break: normal;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.font-2x {
+  font-size: 2em;
+}
+
+.font-3x {
+  font-size: 3em;
+}
+
+.font-4x {
+  font-size: 4em;
+}
+
+.font-5x {
+  font-size: 5em;
+}
+
+/* 移除上下小箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[required]:invalid,
+input:focus:invalid,
+textarea[required]:invalid,
+textarea:focus:invalid {
+  box-shadow: none;
+}
+
+.abs {
+  position: absolute !important;
+}
+
+.rel {
+  position: relative !important;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.full {
+  width: 100% !important;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.clearfix {
+  overflow: hidden;
+  _zoom: 1;
+}
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.mt60 {
+  margin-top: 0.6rem;
+}
+
+@each $item in $padding-list {
+  .m#{$item} {
+    margin: #{$item * 0.01}rem !important;
+  }
+
+  .mv#{$item} {
+    margin-top: #{$item * 0.01}rem !important;
+    margin-bottom: #{$item * 0.01}rem !important;
+  }
+
+  .mh#{$item} {
+    margin-left: #{$item * 0.01}rem !important;
+    margin-right: #{$item * 0.01}rem !important;
+  }
+
+  .ml#{$item} {
+    margin-left: #{$item * 0.01}rem !important;
+  }
+
+  .mt#{$item} {
+    margin-top: #{$item * 0.01}rem !important;
+  }
+
+  .mr#{$item} {
+    margin-right: #{$item * 0.01}rem !important;
+  }
+
+  .mb#{$item} {
+    margin-bottom: #{$item * 0.01}rem !important;
+  }
+
+  .p#{$item} {
+    padding: #{$item * 0.01}rem !important;
+  }
+
+  .pv#{$item} {
+    padding-top: #{$item * 0.01}rem !important;
+    padding-bottom: #{$item * 0.01}rem !important;
+  }
+
+  .ph#{$item} {
+    padding-left: #{$item * 0.01}rem !important;
+    padding-right: #{$item * 0.01}rem !important;
+  }
+
+  .pl#{$item} {
+    padding-left: #{$item * 0.01}rem !important;
+  }
+
+  .pt#{$item} {
+    padding-top: #{$item * 0.01}rem !important;
+  }
+
+  .pr#{$item} {
+    padding-right: #{$item * 0.01}rem !important;
+  }
+
+  .pb#{$item} {
+    padding-bottom: #{$item * 0.01}rem !important;
+  }
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.middle {
+  vertical-align: middle !important;
+  align-items: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.no-radius {
+  border-radius: 0;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.word-break {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.primary {
+  color: $color-primary;
+}
+
+.warning {
+  color: $color-warning;
+}
+
+.success {
+  color: $color-success;
+}
+
+.error {
+  color: $color-error;
+  line-height: 1.8;
+}
+
+.gray {
+  color: $color-gray;
+}
+
+.normal {
+  font-weight: normal !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.border {
+  border: 1px solid $color-border;
+  border-radius: 0.04rem;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.border-top {
+  border-top: 1px solid $color-border;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $color-border;
+}
+
+.border-left {
+  border-left: 1px solid $color-border;
+}
+
+.border-right {
+  border-right: 1px solid $color-border;
+}
+
+.text-desc {
+  color: $color-desc;
+}
+
+.line-height {
+  line-height: 1.5;
+}
+
+.pre {
+  white-space: pre;
+}
+
+.text-line {
+  width: 100%;
+  border-bottom: 1px solid color($color-border a(90%));
+  height: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0.1rem;
+  height: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(50, 50, 50, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(50, 50, 50, 0.6);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(50, 50, 50, 0.1);
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(50, 50, 50, 0.2);
+}
+
+.icon-spin {
+  display: inline-block;
+  animation: icon-spin $spin-duration infinite linear;
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+ui-loading {
+  display: block;
+}
+
+.line {
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-word;
+}
+
+.line.one {
+  -webkit-line-clamp: 1;
+  display: block;
+  white-space: nowrap;
+}
+
+.line.two {
+  -webkit-line-clamp: 2;
+}
+
+.line.three {
+  -webkit-line-clamp: 3;
+}
+
+.avatar {
+  border: 1px solid $color-border;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.36rem;
+  height: 0.36rem;
+  overflow: hidden;
+}

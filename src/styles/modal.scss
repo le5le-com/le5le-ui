@@ -1,0 +1,113 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $modal-background-color;
+  color: $color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  z-index: 99999;
+  font-size: $font-size;
+}
+
+.modal .modal-content {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  max-width: $modal-max-width;
+  max-height: $modal-max-height;
+  min-width: 3.8rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: $input-border-radius;
+  margin-top: -1%;
+}
+
+.modal-header {
+  flex-shrink: 0;
+  border-bottom: 1px solid $color-border;
+  padding: $modal-header-padding;
+  line-height: $modal-header-lineheight;
+  font-size: 0.14rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  background-color: $header-background-color;
+  border-top-left-radius: $input-border-radius;
+  border-top-right-radius: $input-border-radius;
+}
+
+.primary .modal-header {
+  background-color: $color-primary;
+  color: #fff;
+}
+
+.success .modal-header {
+  background-color: $color-success;
+  color: #fff;
+}
+
+.warning .modal-header {
+  background-color: $color-warning;
+  color: #fff;
+}
+
+.error .modal-header {
+  background-color: $color-error;
+  color: #fff;
+}
+
+.modal-header .caption {
+  flex-grow: 1;
+}
+
+.modal-header i {
+  float: right;
+  font-size: 0.18rem;
+  cursor: pointer;
+}
+
+.modal-header i:hover {
+  color: $color-warning;
+}
+
+.modal-body {
+  padding: 0.2rem;
+  overflow-y: auto;
+  height: calc(100% - 1rem);
+}
+
+.modal-footer {
+  flex-shrink: 0;
+  padding: 0.15rem 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid #dbdfe1;
+  background-color: #f3f4f5;
+  border-bottom-left-radius: $input-border-radius;
+  border-bottom-right-radius: $input-border-radius;
+}
+
+.modal-content select,
+.modal-content input {
+  outline: 0;
+  min-height: 0.3rem;
+  border: 1px solid $color-input-border;
+}
+
+.modal-content .input-label {
+  line-height: 0.3rem;
+}
+
+.modal.medium input {
+  min-width: 3.5rem;
+}
+
+.modal.medium .modal-body {
+  max-width: 4.9rem;
+  box-sizing: border-box;
+}

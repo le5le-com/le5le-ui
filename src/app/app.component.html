@@ -1,0 +1,66 @@
+<div class="header">
+  <div class="item ml20">
+    <a style="padding:0" routerLink="/">乐吾乐</a>
+    <span class="ml5"> - </span>
+  </div>
+  <div class="item">
+    <a class="pl10" routerLink="/">
+      CSS库
+      <i class="iconfont icon-angle-down"></i>
+    </a>
+    <div class="dropdown ml20">
+      <div class="item">
+        <a>
+          Angular组件库
+        </a>
+      </div>
+      <div class="item">
+        <a>
+          Angular Store
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="item" [class.active]="isActive('/')">
+    <a routerLink="/">首页</a>
+  </div>
+  <div class="item" [class.active]="isActive('/guide')">
+    <a routerLink="/guide">使用</a>
+  </div>
+  <div class="item full"></div>
+  <div class="item">
+    <a class="pointer" style="padding: 0 .08rem">
+      <i class="iconfont icon-help-circle mr5"></i>
+      <i class="iconfont icon-angle-down"></i>
+    </a>
+    <div class="dropdown">
+      <div class="item">
+        <a target="_blank">帮助文档</a>
+      </div>
+      <div class="item">
+        <a>关于</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="item right">
+    <div class="user">
+      <a class="pointer" style="padding: 0 .08rem">
+        <!--<img [src]="user.avatar">-->
+        <label>
+          <i class="iconfont icon-people mr5"></i> 小乐
+        </label>
+        <i class="iconfont icon-angle-down"></i>
+      </a>
+      <div class="dropdown right">
+        <div class="item">
+          <a>退出</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="body-height mt60">
+  <router-outlet></router-outlet>
+</div>
+
