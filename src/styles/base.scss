@@ -9,6 +9,8 @@ body {
   font-size: $font-size;
   color: $color;
   min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -313,7 +315,7 @@ textarea:focus:invalid {
 
 .text-line {
   width: 100%;
-  border-bottom: 1px solid color($color-border a(90%));
+  border-bottom: 1px solid transparentize($color-border, 0.9);
   height: 10px;
   text-align: center;
   margin-bottom: 10px;

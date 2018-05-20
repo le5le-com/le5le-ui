@@ -83,13 +83,13 @@ input[disabled],
 .input.container .left:nth-child(1n + 0) {
   padding: $input-padding;
   border-right: 1px solid $color-border;
-  background-color: color($color-border a(60%));
+  background-color: transparentize($color-border, 0.6);
 }
 
 .input.container .right:nth-child(1n + 0) {
   padding: $input-padding;
   border-left: 1px solid $color-border;
-  background-color: color($color-border a(60%));
+  background-color: transparentize($color-border, 0.6);
 }
 
 .input.container i.left {
@@ -165,12 +165,12 @@ input[disabled],
 
 .radio input[disabled]:checked + span:before,
 .checkbox input[disabled]:checked + span:before {
-  border-color: color($color-primary a(60%));
+  border-color: transparentize($color-primary, 0.6);
 }
 
 .radio input[disabled]:checked + span:after,
 .checkbox input[disabled]:checked + span:after {
-  background: color($color-primary a(60%));
+  background: transparentize($color-primary, 0.6);
 }
 
 .radio > span:before {
