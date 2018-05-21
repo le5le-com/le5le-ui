@@ -1,0 +1,121 @@
+@keyframes topFadeIn {
+  0% {
+    top: $notice-top-in;
+  }
+
+  100% {
+  }
+}
+
+@keyframes topFadeOut {
+  0% {
+  }
+
+  100% {
+    top: $notice-top-out;
+  }
+}
+
+.notice {
+  position: fixed;
+  margin-top: $notice-top;
+  top: 0.1rem;
+  right: 0.1rem;
+  width: 3.5rem;
+  border: 1px solid #7dd6f6;
+  background: #e9f7fb;
+
+  z-index: $notice-z-index;
+}
+
+.notice.in {
+  animation-duration: $notice-in-duration;
+  animation-name: topFadeIn;
+}
+
+.notice.out {
+  animation-duration: $notice-out-duration;
+  animation-name: topFadeOut;
+}
+
+.notice.success {
+  background-color: #f4f8e6;
+  border-color: #bbd767;
+  color: #74a919;
+}
+
+.notice.warning {
+  background-color: #fdf7d9;
+  border-color: #f2ca00;
+  color: #d9a116;
+}
+
+.notice.error {
+  background-color: #fceeed;
+  border-color: #e67c73;
+  color: #a9484b;
+}
+
+.notice .body {
+  padding: 0.1rem;
+  display: flex;
+  word-break: break-word;
+  line-height: 0.26rem;
+  font-size: $notice-font-size;
+}
+
+.notice .body > .icon {
+  font-size: 0.16rem;
+  margin-right: 0.05rem;
+  color: #26bbf0;
+}
+
+.notice.success .body > .icon {
+  color: #8da662;
+}
+
+.notice.warning .body > .icon {
+  color: #ffbc0b;
+}
+
+.notice.error .body > .icon {
+  color: #cc6164;
+}
+
+.notice .body > .notice-text {
+  width: 100%;
+}
+
+.notice .body > div {
+  width: 100%;
+}
+
+.notice div.input {
+  border: none;
+  padding: 0;
+}
+
+.notice input {
+  width: 100%;
+  border: none;
+  outline: none;
+
+  color: $notice-input-color;
+  text-align: $notice-input-text-algin;
+  line-height: $notice-input-line-height;
+}
+
+.notice .icon-close {
+  font-size: 0.14rem;
+  padding-left: 0.15rem;
+}
+
+.notice-panel {
+  line-height: 0.2rem;
+  padding: 0.1rem 0.2rem;
+}
+
+.notice-panel.warning {
+  background: #fff6dd;
+  color: #d9a116;
+}
