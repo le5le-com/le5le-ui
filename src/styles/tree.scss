@@ -1,33 +1,37 @@
 .tree {
   flex-grow: 0;
   flex-shrink: 0;
-  padding-top: .1rem;
+  padding-top: 0.1rem;
   overflow: auto;
+  line-height: 2.8;
 }
 
-.tree .item{
+.tree .item {
   display: block;
   padding: 0 $tree-indent;
 }
 
-.tree .item a{
+.tree .item a {
   color: $color;
 }
 
 .tree .item i {
-  width: .15rem;
+  width: 0.15rem;
   vertical-align: middle;
 }
 
-.tree .item.active, .tree .item.active a, .tree .item a.active, .tree .item:hover {
+.tree .item.active,
+.tree .item.active a,
+.tree .item a.active,
+.tree .item:hover {
   color: $color-url-hover;
 }
 
-.tree .item.flex{
+.tree .item.flex {
   display: flex;
 }
 
-.tree .item.small{
-  padding-top: .07rem;
-  padding-bottom: .07rem;
+.tree .item.small {
+  padding-top: 0.07rem;
+  padding-bottom: 0.07rem;
 }
