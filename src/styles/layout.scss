@@ -33,3 +33,7 @@
 .flex.column {
   flex-direction: column;
 }
+
+.flex label {
+  flex-shrink: 0;
+}

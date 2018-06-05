@@ -209,7 +209,9 @@ input[disabled],
 
 .radio.square > span {
   position: relative;
-  display: flex;
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -242,7 +244,8 @@ input[disabled],
 
 .radio.square input:checked + span {
   border-color: $color-primary;
-  color: $color-primary !important;
+  color: #fff !important;
+  background: $color-primary;
 }
 
 .radio.square input:checked + span:after {
@@ -289,8 +292,8 @@ ui-switch {
 .ui-switch {
   position: relative;
   display: inline-block;
-  width: 0.2rem;
-  height: 0.1rem;
+  width: 0.22rem;
+  height: 0.12rem;
   color: #fff;
   border-radius: 0.1rem;
   border: 1px solid $color-primary;
@@ -400,4 +403,25 @@ form .error {
 .ng-touched.error,
 .submited .error {
   display: inherit;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: $color-placeholder;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: $color-placeholder;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: $color-placeholder;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: $color-placeholder;
 }
