@@ -128,17 +128,10 @@ textarea:focus:invalid {
   position: fixed;
 }
 
-.clearfix {
-  overflow: hidden;
-  _zoom: 1;
-}
-
 .clearfix:after {
-  content: '.';
+  content: '';
   display: block;
-  height: 0;
   clear: both;
-  visibility: hidden;
 }
 
 .mt60 {

@@ -22,8 +22,10 @@
   align-items: center;
 }
 
-.flex .full {
+.flex > .full {
   flex-grow: 1;
+  min-width: auto !important;
+  width: auto !important;
 }
 
 .flex.grid > div {

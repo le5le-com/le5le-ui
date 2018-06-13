@@ -396,7 +396,8 @@ form .flex > label::after {
   display: inline-block;
 }
 
-form .error {
+form .error,
+.form .error {
   display: none;
 }
 
