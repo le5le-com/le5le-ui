@@ -50,6 +50,7 @@
   width: 3.5rem;
   border-radius: 0.05rem;
   border: 1px solid #ddd;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   background: #fff;
   margin-bottom: 0.1rem;
 }
@@ -71,15 +72,15 @@
   display: flex;
   word-break: break-word;
   font-size: $notice-font-size;
-  color: #6f787e !important;
+  color: #666 !important;
 }
 
 .notice .body > .icon {
   flex-shrink: 0;
-  font-size: 0.16rem;
+  font-size: 0.18rem;
   margin-right: 0.2rem;
-  color: #26bbf0;
-  background: #26bbf018;
+  color: #fff;
+  background: #26bbf0;
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;
@@ -87,24 +88,21 @@
 }
 
 .notice .body > .icon::before {
-  top: 0.04rem;
+  top: 0.03rem;
   position: relative;
 }
 
 .notice.success .body > .icon {
-  color: #36d068;
-  background: #36d06818;
+  background: #36d068;
   font-weight: 700;
 }
 
 .notice.warning .body > .icon {
-  color: #ffbc0b;
-  background: #ffbe0b18;
+  background: #ffbe0b;
 }
 
 .notice.error .body > .icon {
-  color: #f55656;
-  background: #f5565618;
+  background: #f55656;
 }
 
 .notice .body > .notice-text {
