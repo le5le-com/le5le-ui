@@ -1,85 +1,110 @@
-@keyframes topFadeIn {
+@keyframes rightFadeIn {
   0% {
-    top: $notice-top-in;
+    right: -3.7rem;
+  }
+
+  50% {
+    right: -1rem;
   }
 
   100% {
   }
 }
 
-@keyframes topFadeOut {
+@keyframes bkFadeOut {
   0% {
   }
 
-  100% {
-    top: $notice-top-out;
+  70% {
+    opacity: 0.3;
   }
+
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.notice-container {
+  display: flex;
+  flex-direction: column;
+  z-index: $notice-z-index;
+  position: fixed;
+  top: 0.1rem;
+  right: 0.1rem;
+}
+
+.system-container {
+  display: flex;
+  flex-direction: column;
+  z-index: $notice-z-index + 1;
+  position: fixed;
+  top: 0.1rem;
+  left: calc(50vw - 5rem);
 }
 
 .notice {
-  position: fixed;
-  margin-top: $notice-top;
-  top: 0.1rem;
-  right: 0.1rem;
+  position: relative;
   width: 3.5rem;
-  border: 1px solid #7dd6f6;
-  background: #e9f7fb;
-
-  z-index: $notice-z-index;
+  border-radius: 0.05rem;
+  border: 1px solid #ddd;
+  background: #fff;
+  margin-bottom: 0.1rem;
 }
 
 .notice.in {
   animation-duration: $notice-in-duration;
-  animation-name: topFadeIn;
+  animation-name: rightFadeIn;
+  animation-timing-function: ease-in;
 }
 
 .notice.out {
   animation-duration: $notice-out-duration;
-  animation-name: topFadeOut;
-}
-
-.notice.success {
-  background-color: #f4f8e6;
-  border-color: #bbd767;
-  color: #74a919;
-}
-
-.notice.warning {
-  background-color: #fdf7d9;
-  border-color: #f2ca00;
-  color: #d9a116;
-}
-
-.notice.error {
-  background-color: #fceeed;
-  border-color: #e67c73;
-  color: #a9484b;
+  animation-name: bkFadeOut;
+  animation-timing-function: ease-out;
 }
 
 .notice .body {
-  padding: 0.1rem;
+  padding: 0.2rem;
   display: flex;
   word-break: break-word;
-  line-height: 0.26rem;
   font-size: $notice-font-size;
+  color: #6f787e !important;
 }
 
 .notice .body > .icon {
+  flex-shrink: 0;
   font-size: 0.16rem;
-  margin-right: 0.05rem;
+  margin-right: 0.2rem;
   color: #26bbf0;
+  background: #26bbf018;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.notice .body > .icon::before {
+  top: 0.04rem;
+  position: relative;
 }
 
 .notice.success .body > .icon {
-  color: #8da662;
+  color: #36d068;
+  background: #36d06818;
+  font-weight: 700;
 }
 
 .notice.warning .body > .icon {
   color: #ffbc0b;
+  background: #ffbe0b18;
 }
 
 .notice.error .body > .icon {
-  color: #cc6164;
+  color: #f55656;
+  background: #f5565618;
 }
 
 .notice .body > .notice-text {
@@ -107,7 +132,40 @@
 
 .notice .icon-close {
   font-size: 0.14rem;
-  padding-left: 0.15rem;
+  padding: 0 0.07rem;
+  position: absolute;
+  top: 0.01rem;
+  right: 0;
+}
+
+.notice .icon-close:hover {
+  color: #26bbf0;
+}
+
+.notice .modal-footer {
+  background-color: #fff;
+  padding: 0;
+  display: flex;
+  flex-grow: 1;
+  border-color: #f3f4f5;
+}
+
+.notice .modal-footer .button {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #26bbf0;
+  margin: 0 !important;
+  flex-grow: 1;
+  line-height: 0.4rem;
+}
+
+.notice .modal-footer .button:hover {
+  color: #16a2cc !important;
+}
+
+.notice .modal-footer .button.default {
+  border-right: 1px solid #f3f4f5;
 }
 
 .notice-panel {
@@ -118,4 +176,31 @@
 .notice-panel.warning {
   background: #fff6dd;
   color: #d9a116;
+}
+
+.notice.system-notice {
+  background-color: #fdf7d9;
+  border-color: #f2ca00;
+  color: #d9a116;
+  width: 10rem;
+  border-radius: 0;
+}
+
+.notice.system-notice.in {
+  animation-name: none;
+}
+
+.notice.system-notice .body {
+  padding: 0.1rem 0.2rem;
+}
+
+.notice.system-notice .body > .icon {
+  display: none;
+}
+
+.notice.system-notice .icon-close {
+  font-size: 0.14rem;
+  padding: 0;
+  position: static;
+  line-height: 0.24rem;
 }
