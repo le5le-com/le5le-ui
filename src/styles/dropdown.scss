@@ -47,13 +47,18 @@
   border-top: 1px solid $color;
 }
 
-.dropdown .item a {
+.dropdown .item a,
+.dropdown .item label {
   display: block;
   padding: 0 0.15rem;
   color: $color;
   font-size: 0.14rem !important;
   border: none !important;
   white-space: nowrap;
+}
+
+.dropdown .item .gray {
+  color: $color-gray;
 }
 
 .dropdown .item:hover,

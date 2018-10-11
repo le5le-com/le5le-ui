@@ -106,6 +106,10 @@ input[disabled],
   padding-left: 0 !important;
 }
 
+.input-error {
+  border: 1px solid $color-error !important;
+}
+
 .input.ng-touched.ng-invalid,
 .submited .input.ng-invalid {
   border: 1px solid $color-error;
