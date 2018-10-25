@@ -92,6 +92,12 @@
   border-bottom-right-radius: $input-border-radius;
 }
 
+.modal-footer > .full {
+  flex-grow: 1;
+  min-width: auto !important;
+  width: auto !important;
+}
+
 .modal-content select,
 .modal-content input {
   outline: 0;

@@ -70,6 +70,7 @@
 .notice .body {
   padding: 0.2rem;
   display: flex;
+  word-break: break-all;
   word-break: break-word;
   font-size: $notice-font-size;
   color: #666 !important;

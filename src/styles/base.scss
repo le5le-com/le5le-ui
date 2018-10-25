@@ -3,6 +3,7 @@
   margin: 0;
   outline: none;
   box-sizing: border-box;
+  word-break: break-all;
   word-break: break-word;
 }
 
@@ -47,6 +48,7 @@ blockquote {
 
 pre,
 p {
+  word-break: break-all;
   word-wrap: break-word;
   word-break: normal;
 }
@@ -236,6 +238,7 @@ textarea:focus:invalid {
 }
 
 .word-break {
+  word-break: break-all;
   word-wrap: break-word;
   word-break: break-word;
 }
@@ -374,6 +377,7 @@ ui-loading {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
+  word-break: break-all;
   word-break: break-word;
 }
 

@@ -232,6 +232,7 @@ input[disabled],
 }
 
 .radio.square > span > .desc {
+  word-break: break-all;
   word-break: break-word;
   line-height: 1.8;
   margin-top: 0.05rem;
