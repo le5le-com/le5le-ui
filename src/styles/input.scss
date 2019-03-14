@@ -22,7 +22,7 @@ textarea {
   min-height: 0.3rem;
   box-sizing: border-box;
   background-color: #fff;
-  border-radius: 0.04rem;
+  border-radius: $input-border-radius;
 }
 
 .input:hover,
@@ -401,16 +401,6 @@ form .flex > label::after {
   display: inline-block;
 }
 
-form .error,
-.form .error {
-  display: none;
-}
-
-.ng-touched.error,
-.submited .error {
-  display: inherit;
-}
-
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   /* WebKit browsers */
@@ -430,4 +420,40 @@ input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: $color-placeholder;
+}
+
+.input + .status {
+  position: relative;
+  display: block;
+  color: $color-error;
+  line-height: 1.5;
+  margin-top: 0.03rem;
+}
+
+.input + .status::after {
+  position: absolute;
+  right: 0.05rem;
+  top: -0.38rem;
+}
+
+.input.ng-pristine.ng-untouched + .status,
+.input.ng-valid + .status {
+  color: transparent;
+  height: 0;
+}
+
+.input.ng-pristine.ng-untouched + .status::after {
+  content: '' !important;
+}
+
+.input.ng-valid + .status::after {
+  font-size: 0.16rem;
+  content: '\e656';
+  color: $color-success;
+}
+
+.input.ng-invalid + .status::after {
+  font-size: 0.16rem;
+  content: '\e658';
+  color: $color-error;
 }

@@ -1,5 +1,4 @@
 .nav {
-  font-size: $font-size-title;
   line-height: 1;
   font-weight: 500;
 }
@@ -9,10 +8,10 @@
 }
 
 .nav > a:after {
-  font-family: "iconfont" !important;
+  font-family: 'iconfont' !important;
   content: '\e6a8';
-  margin-left: .1rem;
-  margin-right: .05rem;
+  margin-left: 0.1rem;
+  margin-right: 0.05rem;
   color: $color-gray;
 }
 
@@ -30,8 +29,8 @@
 }
 
 .nav-tab > .item {
-  line-height: .4rem;
-  margin-left: .2rem;
+  line-height: 0.4rem;
+  margin-left: 0.2rem;
   position: relative;
   top: 1px;
   text-align: center;
@@ -53,14 +52,14 @@
 
 .nav-tab.default .item {
   border: 1px solid $color-border;
-  padding: .03rem .15rem;
+  padding: 0.03rem 0.15rem;
   flex-grow: inherit;
-  border-radius: .04rem .04rem 0 0;
+  border-radius: 0.04rem 0.04rem 0 0;
   margin-left: 0;
-  margin-right: .03rem;
+  margin-right: 0.03rem;
   background-color: #f9f9f9;
   color: #89949b !important;
-  line-height: .26rem;
+  line-height: 0.26rem;
 }
 
 .nav-tab.default .item:hover,

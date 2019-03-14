@@ -39,6 +39,10 @@ a.hover:hover {
   color: $color-primary-hover !important;
 }
 
+a.error {
+  color: $color-error !important;
+}
+
 blockquote {
   border-left: 0.05rem solid $color-primary;
   background-color: #e1e1e1;
@@ -139,6 +143,11 @@ textarea:focus:invalid {
 
 .mt60 {
   margin-top: 0.6rem;
+}
+
+.title {
+  color: $color-title;
+  font-weight: 600;
 }
 
 @each $item in $padding-list {
@@ -257,7 +266,6 @@ textarea:focus:invalid {
 
 .error {
   color: $color-error;
-  line-height: 1.8;
 }
 
 .gray {

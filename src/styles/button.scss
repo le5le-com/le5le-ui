@@ -2,11 +2,11 @@
 a.button {
   outline: none;
   border: 1px solid $color-button-border;
-  border-radius: .04rem;
+  border-radius: $input-border-radius;
   color: $color-button;
   background-color: #fff;
-  padding: 0 .15rem;
-  line-height: .28rem;
+  padding: 0 0.15rem;
+  line-height: 0.28rem;
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -215,15 +215,15 @@ a.button:hover {
 }
 
 .button.radius {
-  padding: .08rem .2rem;
-  border-radius: .2rem;
+  padding: 0.08rem 0.2rem;
+  border-radius: 0.2rem;
 }
 
 .button.circle {
   padding: 0;
-  width: .4rem;
-  height: .4rem;
-  line-height: .4rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
   border-radius: 50%;
 }
 
@@ -276,33 +276,33 @@ a.button:hover {
 }
 
 .button.checked:after {
-  font-family: "iconfont" !important;
+  font-family: 'iconfont' !important;
   content: '\E657';
   position: absolute;
-  top: -.1rem;
-  right: -.05rem;
+  top: -0.1rem;
+  right: -0.05rem;
   background: #fff;
-  font-size: .16rem;
+  font-size: 0.16rem;
   display: inline-block;
-  height: .22rem;
+  height: 0.22rem;
 }
 
 .button .iconfont {
-  font-size: .12rem;
+  font-size: 0.12rem;
   vertical-align: inherit;
-  margin-right: .07rem;
+  margin-right: 0.07rem;
 }
 
 .nav-button {
-  height: .5rem;
+  height: 0.5rem;
   border-radius: 0;
-  padding: 0 .2rem;
+  padding: 0 0.2rem;
 }
 
 .button-group {
   display: inline-flex;
   border: 1px solid $color-primary;
-  border-radius: .04rem;
+  border-radius: $input-border-radius;
   overflow: hidden;
 }
 
@@ -310,8 +310,8 @@ a.button:hover {
   outline: none;
   border: none;
   background: #fff;
-  line-height: .28rem;
-  padding: 0 .2rem;
+  line-height: 0.28rem;
+  padding: 0 0.2rem;
   border-right: 1px solid $color-button-border;
   cursor: pointer;
 }

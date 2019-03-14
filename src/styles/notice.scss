@@ -49,7 +49,7 @@
   position: relative;
   width: 3.5rem;
   border-radius: 0.05rem;
-  border: 1px solid #ddd;
+  border: 1px solid $color-border;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   background: #fff;
   margin-bottom: 0.1rem;
@@ -72,8 +72,6 @@
   display: flex;
   word-break: break-all;
   word-break: break-word;
-  font-size: $notice-font-size;
-  color: #666 !important;
 }
 
 .notice .body > .icon {
@@ -81,7 +79,7 @@
   font-size: 0.18rem;
   margin-right: 0.2rem;
   color: #fff;
-  background: #26bbf0;
+  background: $color-primary;
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;
@@ -94,16 +92,16 @@
 }
 
 .notice.success .body > .icon {
-  background: #36d068;
+  background: $color-success;
   font-weight: 700;
 }
 
 .notice.warning .body > .icon {
-  background: #ffbe0b;
+  background: $color-warning;
 }
 
 .notice.error .body > .icon {
-  background: #f55656;
+  background: $color-error;
 }
 
 .notice .body > .notice-text {
@@ -138,7 +136,7 @@
 }
 
 .notice .icon-close:hover {
-  color: #26bbf0;
+  color: $color-primary;
 }
 
 .notice .modal-footer {
@@ -146,25 +144,25 @@
   padding: 0;
   display: flex;
   flex-grow: 1;
-  border-color: #f3f4f5;
+  border-color: $color-border;
 }
 
 .notice .modal-footer .button {
   border: none;
   border-radius: 0;
   background: transparent;
-  color: #26bbf0;
+  color: $color-primary;
   margin: 0 !important;
   flex-grow: 1;
   line-height: 0.4rem;
 }
 
 .notice .modal-footer .button:hover {
-  color: #16a2cc !important;
+  color: $color-primary-hover !important;
 }
 
 .notice .modal-footer .button.default {
-  border-right: 1px solid #f3f4f5;
+  border-right: 1px solid $color-sub-border;
 }
 
 .notice-panel {
