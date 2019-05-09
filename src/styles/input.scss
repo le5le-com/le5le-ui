@@ -163,18 +163,8 @@ input[disabled],
 
 .radio input[disabled] + span:before,
 .checkbox input[disabled] + span:before {
-  border-color: $color-button-disabled;
-  background-color: $color-input-disabled;
-}
-
-.radio input[disabled]:checked + span:before,
-.checkbox input[disabled]:checked + span:before {
-  border-color: transparentize($color-primary, 0.6);
-}
-
-.radio input[disabled]:checked + span:after,
-.checkbox input[disabled]:checked + span:after {
-  background: transparentize($color-primary, 0.6);
+  border-color: transparentize($color-primary, 0.6) !important;
+  background-color: transparentize($color-primary, 0.6) !important;
 }
 
 .radio > span:before {
