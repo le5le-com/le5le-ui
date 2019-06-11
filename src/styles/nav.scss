@@ -26,6 +26,12 @@
 .nav-tab {
   display: flex;
   border-bottom: 1px solid $color-border;
+  flex-wrap: wrap;
+}
+
+.nav-tab .full {
+  flex: 1;
+  width: initial !important;
 }
 
 .nav-tab > .item {

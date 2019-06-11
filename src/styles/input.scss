@@ -370,17 +370,6 @@ ui-switch {
   bottom: 0;
 }
 
-form .flex > label {
-  margin-right: 0.2rem;
-  flex-shrink: 0;
-}
-
-form .flex > label::after {
-  content: ' ';
-  width: 0.05rem;
-  display: inline-block;
-}
-
 .required::after {
   content: '*' !important;
   color: #f30;
@@ -446,4 +435,29 @@ textarea:-ms-input-placeholder {
   font-size: 0.16rem;
   content: '\e658';
   color: $color-error;
+}
+
+form {
+  .error {
+    display: none;
+    &.ng-touched {
+      display: block;
+    }
+  }
+
+  &.ng-touched {
+    .error {
+      display: block;
+    }
+  }
+
+  .flex > label {
+    margin-right: 0.2rem;
+    flex-shrink: 0;
+    &::after {
+      content: ' ';
+      width: 0.05rem;
+      display: inline-block;
+    }
+  }
 }
