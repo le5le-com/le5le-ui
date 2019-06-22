@@ -32,7 +32,6 @@
   padding: $modal-header-padding;
   line-height: $modal-header-lineheight;
   font-size: 0.14rem;
-  font-weight: 700;
   display: flex;
   align-items: center;
   background-color: $header-background-color;
@@ -62,11 +61,12 @@
 
 .modal-header .caption {
   flex-grow: 1;
+  color: #fff;
 }
 
 .modal-header i {
+  color: #fff;
   float: right;
-  font-size: 0.18rem;
   cursor: pointer;
 }
 

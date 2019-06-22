@@ -18,8 +18,8 @@ textarea {
   padding: $input-padding;
   outline: none;
   border: 1px solid $color-input-border;
-  line-height: 0.28rem;
-  min-height: 0.3rem;
+  line-height: calc($input-line-height - 2px);
+  min-height: $input-line-height;
   box-sizing: border-box;
   background-color: #fff;
   border-radius: $input-border-radius;
@@ -50,25 +50,25 @@ input[disabled],
   border: 1px solid $color-input-border;
 }
 
-.input.container {
+.input.group {
   display: inline-flex;
   align-items: center;
   background-color: #fff !important;
   padding: 0;
 }
 
-.input.container.readonly {
+.input.group.readonly {
   background-color: $color-button-disabled !important;
 }
 
-.input.container input {
+.input.group input {
   border: none;
   outline: none;
   padding: $input-padding;
   flex-grow: 1;
 }
 
-.input.container button {
+.input.group button {
   border: none;
   outline: none;
   padding: $input-padding;
@@ -76,30 +76,30 @@ input[disabled],
   cursor: pointer;
 }
 
-.input.container button:hover {
+.input.group button:hover {
   color: $color-url-hover;
 }
 
-.input.container .left:nth-child(1n + 0) {
+.input.group .left:nth-child(1n + 0) {
   padding: $input-padding;
   border-right: 1px solid $color-border;
   background-color: transparentize($color-border, 0.6);
 }
 
-.input.container .right:nth-child(1n + 0) {
+.input.group .right:nth-child(1n + 0) {
   padding: $input-padding;
   border-left: 1px solid $color-border;
   background-color: transparentize($color-border, 0.6);
 }
 
-.input.container i.left {
+.input.group i.left {
   color: $color-placeholder;
   background-color: transparent !important;
   border: none !important;
   padding-right: 0 !important;
 }
 
-.input.container i.right {
+.input.group i.right {
   color: $color-placeholder;
   background-color: transparent !important;
   border: none !important;
@@ -110,26 +110,8 @@ input[disabled],
   border: 1px solid $color-error !important;
 }
 
-.input.ng-touched.ng-invalid,
-.submited .input.ng-invalid {
+.input.ng-touched.ng-invalid {
   border: 1px solid $color-error;
-}
-
-.comment.input textarea {
-  border: none;
-  outline: none;
-  resize: none;
-}
-
-.comment.input .user {
-  position: absolute;
-  color: $color-url-hover;
-  top: 0.02rem;
-  left: $input-padding;
-}
-
-.comment.input .user > label {
-  color: $color;
 }
 
 .checkbox input[type='checkbox'],
@@ -342,34 +324,6 @@ ui-switch {
   background-color: $color-error;
 }
 
-.input-group {
-  position: relative;
-  white-space: nowrap;
-  vertical-align: middle;
-  text-align: left;
-}
-
-.input-group > i {
-  position: absolute;
-  left: 0.16rem;
-  font-size: 0.16rem;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(0, 0, 0, 0.55);
-}
-
-.input-group .input {
-  padding-left: 0.3rem;
-  box-sizing: border-box;
-}
-
-.input-group .right {
-  position: absolute;
-  right: 0.1rem;
-  top: -55%;
-  bottom: 0;
-}
-
 .required::after {
   content: '*' !important;
   color: #f30;
@@ -405,14 +359,13 @@ textarea:-ms-input-placeholder {
   position: relative;
   display: block;
   color: $color-error;
-  line-height: 1.5;
-  margin-top: 0.03rem;
+  line-height: $input-line-height;
+  top: -$input-line-height;
 }
 
 .input + .status::after {
   position: absolute;
   right: 0.05rem;
-  top: -0.38rem;
 }
 
 .input.ng-pristine.ng-untouched + .status,
@@ -445,12 +398,6 @@ form {
     }
   }
 
-  &.ng-touched {
-    .error {
-      display: block;
-    }
-  }
-
   .flex > label {
     margin-right: 0.2rem;
     flex-shrink: 0;
@@ -460,4 +407,9 @@ form {
       display: inline-block;
     }
   }
+}
+
+.submited .error,
+.ng-invalid.ng-touched ~ .error {
+  display: block;
 }
