@@ -27,6 +27,7 @@
 }
 
 .modal-header {
+  color: #fff;
   flex-shrink: 0;
   border-bottom: 1px solid $color-border;
   padding: $modal-header-padding;
@@ -37,26 +38,6 @@
   background-color: $header-background-color;
   border-top-left-radius: $input-border-radius;
   border-top-right-radius: $input-border-radius;
-}
-
-.primary .modal-header {
-  background-color: $color-primary;
-  color: #fff;
-}
-
-.success .modal-header {
-  background-color: $color-success;
-  color: #fff;
-}
-
-.warning .modal-header {
-  background-color: $color-warning;
-  color: #fff;
-}
-
-.error .modal-header {
-  background-color: $color-error;
-  color: #fff;
 }
 
 .modal-header .caption {

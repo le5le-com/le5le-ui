@@ -9,9 +9,9 @@ th {
   font-size: $font-size-th;
   text-align: left;
   padding: $td-padding;
-  border-right: 1px solid $color-td;
-  border-bottom: 1px solid $color-border;
-  color: $color-th;
+  border-right: 1px solid $color-th-border;
+  border-bottom: 1px solid $color-td-border;
+  color: $color;
   line-height: 0.2rem;
   font-weight: 500;
 }
@@ -23,11 +23,11 @@ th:last-child {
 tr td {
   text-align: left;
   padding: $td-padding;
-  border-bottom: 1px solid $color-td;
+  border-bottom: 1px solid $color-td-border;
   line-height: 0.18rem;
 }
 
-tr:last-child td {
+tbody:last-child tr:last-child td {
   border-bottom: 1px solid transparent;
 }
 
