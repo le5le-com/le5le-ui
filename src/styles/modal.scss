@@ -27,7 +27,7 @@
 }
 
 .modal-header {
-  color: #fff;
+  color: $header-color;
   flex-shrink: 0;
   border-bottom: 1px solid $color-border;
   padding: $modal-header-padding;
@@ -42,11 +42,11 @@
 
 .modal-header .caption {
   flex-grow: 1;
-  color: #fff;
+  color: $header-color;
 }
 
 .modal-header i {
-  color: #fff;
+  color: $header-color;
   float: right;
   cursor: pointer;
 }
@@ -63,12 +63,12 @@
 
 .modal-footer {
   flex-shrink: 0;
-  padding: 0.15rem 0.2rem;
+  padding: $modal-footer-padding;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border-top: 1px solid #dbdfe1;
-  background-color: #f3f4f5;
+  border-top: $header-footer-border;
+  background-color: $header-footer-color;
   border-bottom-left-radius: $input-border-radius;
   border-bottom-right-radius: $input-border-radius;
 }
