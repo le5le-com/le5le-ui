@@ -22,19 +22,14 @@ body {
 
 a {
   text-decoration: none;
-  cursor: pointer;
   color: $color-url;
 
   &.hover {
-    color: $color-primary !important;
-  }
-
-  &.hover:hover {
-    color: $color-primary-hover !important;
+    color: $color-url-hover;
   }
 
   &.error {
-    color: $color-error !important;
+    color: $color-error;
   }
 
   &.disabled {
@@ -47,6 +42,7 @@ a {
 
 a:hover,
 .hover:hover {
+  cursor: pointer;
   color: $color-url-hover !important;
 }
 
@@ -95,7 +91,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -143,7 +139,7 @@ textarea:focus:invalid {
 }
 
 .clearfix:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -341,7 +337,7 @@ textarea:focus:invalid {
 }
 
 .overflow-y-auto {
-  overflow-x: auto;
+  overflow-y: auto;
 }
 
 ::-webkit-scrollbar {

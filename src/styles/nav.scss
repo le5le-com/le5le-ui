@@ -1,85 +1,91 @@
 .nav {
   line-height: 1;
   font-weight: 500;
-}
 
-.nav > a {
-  display: inline-block;
-}
+  & > a {
+    display: inline-block;
+    &:after {
+      font-family: "iconfont" !important;
+      content: "\e6a8";
+      margin-left: 0.1rem;
+      margin-right: 0.05rem;
+      color: $color-gray;
+    }
 
-.nav > a:after {
-  font-family: 'iconfont' !important;
-  content: '\e6a8';
-  margin-left: 0.1rem;
-  margin-right: 0.05rem;
-  color: $color-gray;
-}
+    &:last-child:after {
+      content: "";
+    }
+  }
 
-.nav > a:last-child:after {
-  content: '';
-}
-
-.nav > label {
-  color: $color-title;
+  & > label {
+    color: $color-title;
+  }
 }
 
 .nav-tab {
   display: flex;
   border-bottom: 1px solid $color-border;
   flex-wrap: wrap;
-}
 
-.nav-tab .full {
-  flex: 1;
-  width: initial !important;
-}
+  .full {
+    flex: 1;
+    width: initial !important;
+  }
 
-.nav-tab > .item {
-  line-height: 0.4rem;
-  margin-left: 0.2rem;
-  position: relative;
-  top: 1px;
-  text-align: center;
-}
+  & > .item {
+    line-height: 0.4rem;
+    margin-left: 0.2rem;
+    position: relative;
+    top: 1px;
+    text-align: center;
 
-.nav-tab > .item:hover {
-  color: $color-primary !important;
-}
+    a {
+      display: inline-block;
+    }
 
-.nav-tab > .item:last-child {
-  border-right: none;
-}
+    &:hover {
+      color: $color-primary !important;
+    }
 
-.nav-tab > .item.active {
-  color: $color-title;
-  border-bottom: 2px solid $color-primary;
-  font-weight: 700;
-}
+    &:last-child {
+      border-right: none;
+    }
 
-.nav-tab.default .item {
-  border: 1px solid $color-border;
-  padding: 0.03rem 0.15rem;
-  flex-grow: inherit;
-  border-radius: 0.04rem 0.04rem 0 0;
-  margin-left: 0;
-  margin-right: 0.03rem;
-  background-color: #f9f9f9;
-  color: #89949b !important;
-  line-height: 0.26rem;
-}
+    &.active {
+      color: $color-title;
+      border-bottom: 2px solid $color-primary;
+      font-weight: 700;
+    }
+  }
 
-.nav-tab.default .item:hover,
-.nav-tab.default .item a:hover {
-  color: $color-primary !important;
-}
+  &.default {
+    border-bottom: none;
 
-.nav-tab.default .item.active,
-.nav-tab.default .item.active a {
-  background-color: #fff;
-  color: $color-primary !important;
-}
+    .item {
+      border: 1px solid $color-border;
+      padding: 0.03rem 0.15rem;
+      flex-grow: inherit;
+      border-radius: 0.04rem 0.04rem 0 0;
+      margin-left: 0;
+      margin-right: 0.03rem;
+      background-color: #f9f9f9;
+      color: #89949b !important;
+      line-height: 0.26rem;
 
-.nav-tab.default,
-.nav-tab.default .item.active {
-  border-bottom: none;
+      &:hover,
+      a:hover {
+        color: $color-primary !important;
+      }
+
+      &.active {
+        border-bottom: none;
+
+        &,
+        a {
+          background-color: #fff;
+          color: $color-primary !important;
+        }
+      }
+    }
+  }
 }
