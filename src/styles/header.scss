@@ -65,8 +65,8 @@
 }
 
 .header .item .dropdown::before {
-  content: '\E710';
-  font-family: 'iconfont' !important;
+  content: "\E710";
+  font-family: "iconfont" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -133,7 +133,7 @@
 }
 
 .header .item.logo img {
-  height: calc(0.8 * $header-height);
+  height: calc(0.8 * #{$header-height});
   vertical-align: middle;
   margin-right: 0.1rem;
 }

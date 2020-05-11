@@ -33,7 +33,7 @@ $border-radius: 0.04rem;
 }
 
 [data-tooltip]:before {
-  content: '';
+  content: "";
   position: absolute;
   background: transparent;
   border: $triangle-size solid transparent;
@@ -57,7 +57,7 @@ $border-radius: 0.04rem;
 
 .tooltip-top:before {
   bottom: 100%;
-  left: calc(50% - $triangle-size);
+  left: calc(50% - #{$triangle-size});
   border-top-color: $tooltip-background-color;
   margin-bottom: -0.07rem;
 }
@@ -71,7 +71,7 @@ $border-radius: 0.04rem;
 
 .tooltip-bottom:before {
   top: 100%;
-  left: calc(50% - $triangle-size);
+  left: calc(50% - #{$triangle-size});
   border-bottom-color: $tooltip-background-color;
   margin-top: -0.07rem;
 }
@@ -94,7 +94,7 @@ $border-radius: 0.04rem;
   right: 100%;
   bottom: 50%;
   transform: translateY(50%);
-  margin-right: calc(1.9 * $triangle-size);
+  margin-right: calc(1.9 * #{$triangle-size});
 }
 
 .tooltip-right:before {
@@ -108,7 +108,7 @@ $border-radius: 0.04rem;
   left: 100%;
   bottom: 50%;
   transform: translateY(50%);
-  margin-left: calc(1.8 * $triangle-size);
+  margin-left: calc(1.8 * #{$triangle-size});
 }
 
 .tooltip-top-left:before {

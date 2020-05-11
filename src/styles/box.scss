@@ -2,58 +2,57 @@
   display: inline-flex;
   flex-direction: column;
   width: $box-width;
-  height: calc($box-width*$box-aspect-ratio);
-  border: 1px solid $color-border!important;
+  height: calc(#{$box-width} * #{$box-aspect-ratio});
+  border: 1px solid $color-border !important;
 }
 
 .box .content {
   flex-grow: 1;
-  padding: .1rem;
+  padding: 0.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .box .bottom {
-  line-height: .3rem;
+  line-height: 0.3rem;
   background-color: $color-lightgray;
   text-align: center;
   overflow: hidden;
 }
 
 .box.dash {
-  border-style: dashed!important;
+  border-style: dashed !important;
 }
 
 .box.icon {
-  border-radius: .04rem;
+  border-radius: 0.04rem;
   width: $icon-box-width;
   height: $icon-box-width;
   position: relative;
   text-align: center;
 }
 
-
 .box.active {
   background-color: $color-primary;
-  color: #fff!important;
-  border-color: $color-primary!important;
+  color: #fff !important;
+  border-color: $color-primary !important;
 }
 
 .box.hover:hover {
   color: $color-primary;
-  border-color: $color-primary!important;
+  border-color: $color-primary !important;
   cursor: pointer;
 }
 
-.box.icon>i {
-  font-size: .4rem;
-  margin-top: .05rem;
+.box.icon > i {
+  font-size: 0.4rem;
+  margin-top: 0.05rem;
 }
 
-.box.icon>.desc {
+.box.icon > .desc {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: .05rem;
+  bottom: 0.05rem;
 }

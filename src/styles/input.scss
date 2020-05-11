@@ -3,7 +3,7 @@ input {
   color: $color;
 }
 
-input[type='file'] {
+input[type="file"] {
   padding: 0;
   cursor: pointer;
 }
@@ -18,7 +18,7 @@ textarea {
   padding: $input-padding;
   outline: none;
   border: 1px solid $color-input-border;
-  line-height: calc($input-line-height - 2px);
+  line-height: calc(#{$input-line-height} - 2px);
   min-height: $input-line-height;
   box-sizing: border-box;
   background-color: #fff;
@@ -114,8 +114,8 @@ input[disabled],
   border: 1px solid $color-error;
 }
 
-.checkbox input[type='checkbox'],
-.radio input[type='radio'] {
+.checkbox input[type="checkbox"],
+.radio input[type="radio"] {
   display: none;
 }
 
@@ -132,14 +132,14 @@ input[disabled],
   cursor: default;
 }
 
-.radio input[type='radio']:checked + span:before,
-.checkbox input[type='checkbox']:checked + span:before,
+.radio input[type="radio"]:checked + span:before,
+.checkbox input[type="checkbox"]:checked + span:before,
 .radio:hover > span:before,
 .checkbox:hover > span:before {
   border-color: $color-primary;
 }
 
-.checkbox input[type='checkbox']:checked + span:before {
+.checkbox input[type="checkbox"]:checked + span:before {
   background-color: $color-primary;
 }
 
@@ -155,7 +155,7 @@ input[disabled],
   left: 0;
   width: 0.12rem;
   height: 0.12rem;
-  content: '';
+  content: "";
   border: 1px solid #c0c0c0;
   border-radius: 50%;
 }
@@ -165,7 +165,7 @@ input[disabled],
   position: absolute;
   top: 0.01rem;
   left: 0.01rem;
-  content: '';
+  content: "";
   width: 0.12rem;
   height: 0.12rem;
   border-radius: 50%;
@@ -235,7 +235,7 @@ input[disabled],
   left: 0;
   width: 0.12rem;
   height: 0.12rem;
-  content: '';
+  content: "";
   border: 1px solid #c0c0c0;
   border-radius: 0.03rem;
 }
@@ -248,7 +248,7 @@ input[disabled],
 .checkbox > span:after {
   display: none;
   position: absolute;
-  content: '';
+  content: "";
   top: 0.02rem;
   left: 0.05rem;
   box-sizing: border-box;
@@ -280,7 +280,7 @@ ui-switch {
 }
 
 .ui-switch:after {
-  content: ' ';
+  content: " ";
   position: absolute;
   left: 0;
   width: 0.1rem;
@@ -325,7 +325,7 @@ ui-switch {
 }
 
 .required::after {
-  content: '*' !important;
+  content: "*" !important;
   color: #f30;
   font-size: 0.2rem;
   vertical-align: middle;
@@ -375,18 +375,18 @@ textarea:-ms-input-placeholder {
 }
 
 .input.ng-pristine.ng-untouched + .status::after {
-  content: '' !important;
+  content: "" !important;
 }
 
 .input.ng-valid + .status::after {
   font-size: 0.16rem;
-  content: '\e656';
+  content: "\e656";
   color: $color-success;
 }
 
 .input.ng-invalid + .status::after {
   font-size: 0.16rem;
-  content: '\e658';
+  content: "\e658";
   color: $color-error;
 }
 
@@ -402,7 +402,7 @@ form {
     margin-right: 0.2rem;
     flex-shrink: 0;
     &::after {
-      content: ' ';
+      content: " ";
       width: 0.05rem;
       display: inline-block;
     }
